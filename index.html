@@ -1,31 +1,4 @@
-<!doctype html>
-<html>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=10.0,user-scalable=no">
-    <title>IMVF</title>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    
-<link href='https://fonts.googleapis.com/css?family=Hanken Grotesk' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
-    
-<script src="https://code.highcharts.com/maps/highmaps.js"></script>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-more.js"></script>
-<script src="https://code.highcharts.com/modules/dumbbell.js"></script>
-<script src="https://code.highcharts.com/modules/lollipop.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-</head>
-    
-<body>   
-    
-    
 <!-- COPIAR A PARTIR DAQUI -->
     
     
@@ -89,7 +62,7 @@
 }
 .flip-card-3D-wrapper {
   width: 262.5px;
-  /*height: 150px;*/
+  height: 400px;
   position: relative;
   -o-perspective: 1000px;
   -webkit-perspective: 1000px;
@@ -110,7 +83,13 @@
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
-    background-color: #eefcdc;
+  background-color: #e4e0d2;
+    /* border: 1px solid black; */
+    height: 100%;
+}
+
+.flip-card img{
+    max-width: none !important;
 }
 .do-flip {
   -o-transform: rotateY(-180deg);
@@ -1231,8 +1210,8 @@ td p{
 
     <div style="max-width: 1200px; margin: 0 auto; width: 100%">
          <img class="clique-mais" src="https://static.publicocdn.com/Multimedia/Infografias/618/img/clique.svg">
-         <div style="max-width: 1200px; margin: 0 auto; width: 100%;">
-            <div class="imvf-tres-graficos">
+         <div  class="imvf-tres-graficos">
+            <div>
                 <div class="flip-card-3D-wrapper">
                     <div id="flip-card" class="flip-card">
                         <div class="flip-card-front"><p></p>
@@ -1246,7 +1225,7 @@ td p{
                     </div>
                 </div>
             </div>
-            <div class="imvf-tres-graficos">
+            <div>
                 <div class="flip-card-3D-wrapper">
                     <div id="flip-card1" class="flip-card">
                         <div class="flip-card-front"><p></p>
@@ -1260,7 +1239,7 @@ td p{
                     </div>
                 </div>
             </div>
-            <div class="imvf-tres-graficos">
+            <div>
                 <div class="flip-card-3D-wrapper">
                     <div id="flip-card2" class="flip-card">
                         <div class="flip-card-front"><p></p>
@@ -1316,16 +1295,25 @@ A total of around 478.000€ spent on Social Cohesion activities, including spor
 
 <p class="imvf-subtitulo">All project</p>
 
-<pre>CARTÃO 1 - The project specifically addressed my needs and interests as a woman
-    97,8% of women surveyed agreed or strongly agree
-   
-   CARTÃO 2 - The project specifically addressed my needs and interests as a young person
-   96,2% of youth surveyed strongly agreed 
-   
-   CARTÃO 3 – Improved awareness of the risks of irregular migration and about how to access local economic opportunities in the Gambia 
-   92,6% of respondents agreed</pre>
 
+   <div class="imvf-tres-graficos">
+    <div>
+        <img src="img/woman.svg">
+        <p style="color: #006193; margin-top: 0;"><b>The project specifically addressed my needs and interests as a woman
+            <u>97,8% of women surveyed agreed or strongly agree</u></b></p>
+    </div>
+    <div>
+        <img src="img/sports.svg">
+        <p style="color: #006193; margin-top: 0;"><b>The project specifically addressed my needs and interests as a young person
+            <u>96,2% of youth surveyed strongly agreed</u></b></p>
+    </div>
+    <div>
+        <img src="img/migration.svg">
+        <p style="color: #006193; margin-top: 0;"><b>Improved awareness of the risks of irregular migration and about how to access local economic opportunities in the Gambia 
+            <u>92,6% of respondents agreed</u></b></p>
+    </div>
 
+ </div>
     
     
  <p class="imvf-subtitulo">Testemunhos:</p>   
@@ -2425,7 +2413,7 @@ A total of around 478.000€ spent on Social Cohesion activities, including spor
 page-----------------------------begin--->
 <!--change the width and height value as you want.--> 
 <!-- Do change "index.htm" to your real html name of the flippingbook--> 
-<iframe  style="width:100%;height:600px"  src="http://online.anyflip.com/wzcd/rxjt/index.html"  
+<iframe  style="width:100%;height:600px"  src="https://online.anyflip.com/wzcd/rxjt/index.html"  
 seamless="seamless" scrolling="no" frameborder="0" 
 allowtransparency="true"></iframe>
 
@@ -4046,8 +4034,3 @@ $(function() {
 
     
 <!--    ATÉ AQUI-->
-
-</body>
-    
-
-</html>
