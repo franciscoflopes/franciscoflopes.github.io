@@ -21491,6 +21491,8 @@ fieldset#p9, fieldset#p10, fieldset#p13{
                   <p class="ffms-texto-corrido" style="text-align: center;">Metade dos que são favoráveis a um alargamento apontam para um país em particular: a <b>Ucrânia</b>.
                     </p>
                 </div>
+				<span style="height: 15vh; width: 100%;position: relative;" ></span>
+                <span id="passo-23-rev"></span>
               </div>
 
               <div id="passo-24" class="caixas-txt parte2">
@@ -21498,6 +21500,8 @@ fieldset#p9, fieldset#p10, fieldset#p13{
                   <p class="ffms-texto-corrido" style="text-align: center;">Por outro lado, para a maioria, os países que desrespeitam os princípios democráticos devem ser excluídos da UE.
                     </p>
                 </div>
+				<span style="height: 10vh; width: 100%;position: relative;" ></span>
+                <span id="passo-24-rev"></span>
               </div>
 
               <div id="passo-25" class="caixas-txt parte2">
@@ -22117,6 +22121,23 @@ const anim11 = just.animate({
    }
 });
 
+const anim11Reverse = just.animate({
+   targets: '#target',
+   duration: 1500,
+   props: {
+      d: {
+         interpolate: svgMorph,
+         easing: 'cubic-bezier(.5,0,.5,1)',
+         value: [
+         '#m12 path',
+         '#m3 path',
+         '#m11 path'
+         ]
+      }
+   }
+});
+
+
 const anim12 = just.animate({
    targets: '#target',
    duration: 1000,
@@ -22132,6 +22153,20 @@ const anim12 = just.animate({
    }
 });
 
+const anim12Reverse = just.animate({
+   targets: '#target',
+   duration: 1000,
+   props: {
+      d: {
+         interpolate: svgMorph,
+         easing: 'cubic-bezier(.5,0,.5,1)',
+         value: [
+         '#m13 path',
+         '#m12 path'
+         ]
+      }
+   }
+});
 
 const anim13 = just.animate({
    targets: '#target',
@@ -23509,7 +23544,35 @@ var scene18Rev = new ScrollMagic.Scene({ triggerElement: "#passo-19-rev", durati
 
       });
 
+ // CODIGO DO PASSO 3
+ var scene22Rev = new ScrollMagic.Scene({ triggerElement: "#passo-23-rev", duration: heightW / 3 })
+        //.setTween("#fatia4, #fatia5", { fill: 'white', ease: Back.ease }) // the tween durtion can be omitted and defaults to 1
+        .addTo(controller);
+      // FIM DO CÓDIGO DO PASSO 3 
 
+      scene22Rev.on("enter", function () {
+
+        if(scrollDir == "FORWARD"){
+          
+        } else if (scrollDir == "REVERSE"){
+
+			$('#b9').css({'opacity': 0, 'transition-delay': '0s'});
+
+			$('#mapa').css({'opacity': 1, 'transition-delay': '0.5s'});
+
+			$('#ucrania').css({'fill': '#C5B69D', 'transition-delay': '0s'});
+			
+			$('#hungria').css({'fill': '#EDE8E0', 'transition-delay': '0s'});
+
+			setTimeout(function () {
+				
+				anim11Reverse.play();
+				$('#txt-paises-democracia').css({'opacity': 1, 'transition-delay': '0.8s'});
+			}, 500);
+
+        }
+
+      });
       
         // CODIGO DO PASSO 3
         var scene23 = new ScrollMagic.Scene({ triggerElement: "#passo-24", duration: heightW / 3 })
@@ -23537,6 +23600,38 @@ var scene18Rev = new ScrollMagic.Scene({ triggerElement: "#passo-19-rev", durati
 
       });
 
+	   // CODIGO DO PASSO 3
+	   var scene23Rev = new ScrollMagic.Scene({ triggerElement: "#passo-24-rev", duration: heightW / 3 })
+        //.setTween("#fatia4, #fatia5", { fill: 'white', ease: Back.ease }) // the tween durtion can be omitted and defaults to 1
+        .addTo(controller);
+      // FIM DO CÓDIGO DO PASSO 3 
+
+      scene23Rev.on("enter", function () {
+
+        if(scrollDir == "FORWARD"){
+          
+         
+
+        } else if (scrollDir == "REVERSE"){
+
+			$('#txt-paises-hungria').css({'opacity': 0, 'transition-delay': '0s'});
+
+			$('#mapa').css({'opacity': 0, 'transition-delay': '0s'});
+
+			$('#ucrania').css({'fill': '#C5B69D', 'transition-delay': '0.5s'});
+			
+			$('#hungria').css({'fill': '#EDE8E0', 'transition-delay': '0.5s'});
+
+
+          setTimeout(function () {
+            anim12Reverse.play();
+
+			$('#b9').css({'opacity': 1, 'transition-delay': '1s'});
+          }, 500);
+
+        }
+
+      });
 
 	          // CODIGO DO PASSO 3
 			  var scene24 = new ScrollMagic.Scene({ triggerElement: "#passo-25", duration: heightW / 3 })
