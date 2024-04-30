@@ -18817,6 +18817,7 @@ fieldset#p9, fieldset#p10, fieldset#p13{
 		C265.1,359.3,263.6,359.3,262.7,360.2z"/>
 		</symbol>
 
+<g id="tudo">
         <g id="b3">
 			<g id="euro">
 				<g id="txt-euro">
@@ -20061,7 +20062,7 @@ fieldset#p9, fieldset#p10, fieldset#p13{
 		
         <path id="target" />
         <path id="target1" />
-
+</g>
         </svg>
 
 
@@ -22600,6 +22601,10 @@ var valorBolaX = 51;
 
 if(scrollDir == "FORWARD"){
 
+	if(widthW > 500) {
+				$('#tudo').css({'transform': 'translateX(50%)'});
+			} else {}
+
   $('#queijo1').css({'opacity': 1, 'transform': 'scale(21) translate(1.9px, 5.6px)'});
 
   $('#queijo2').css({'opacity': 1, 'transform': 'scale(21) translate(-2.3px, 2.8px)'});
@@ -22626,6 +22631,10 @@ if(scrollDir == "FORWARD"){
       scene7.on("enter", function () {
 
         if(scrollDir == "FORWARD"){
+
+			if(widthW > 500) {
+				$('#tudo').css({'transform': 'translateX(50%)'});
+			} else {}
 
           $('#queijo1').css({'opacity': 1, 'transform': 'scale(21) translate(1.9px, 5.6px)'});
 
