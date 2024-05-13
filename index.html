@@ -2504,7 +2504,13 @@ div.box {
 
             }
 
-
+            $(".abreu-info-titulo-accordion").click(function () {
+              var self = this;
+              setTimeout(function () {
+                theOffset = $(self).offset();
+                $("body,html").animate({ scrollTop: theOffset.top - 50 });
+              }, 350); // ensure the collapse animation is done
+            });
 
 
         </script>
