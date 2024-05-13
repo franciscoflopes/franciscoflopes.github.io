@@ -12,7 +12,7 @@
 
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
 
@@ -394,10 +394,10 @@
 }
 
 .box-b {
-  --s: 531px;
-  --p: 17px;
-  left: calc(-556px / 2);
-  top: 188px;
+    --s: 548px;
+    --p: 17px;
+    left: calc(-572px / 2);
+    top: 181px;
 }
 
 
@@ -476,6 +476,74 @@ div.box {
   #cartoes > div:nth-child(4){
     transform: rotate(375deg) translate(-33px, 44px);
   }
+
+  	/* Portrait */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #abreu-info-body {
+    padding: 0px 20px;
+}
+
+    #cartoes {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    .scroll-cards-img {
+    margin-left: 0px; 
+    width: 100%;
+}
+    .scroll-cards__item {
+      --offset: 0.25em;
+    min-height: 16em;
+    padding: 4em 5em 4em 4em;
+    width: calc(72% - 5* var(--offset));
+}
+
+
+#pme-container img {
+    height: auto;
+    margin-right: auto;
+    top: 100px;
+}
+
+
+#cartoes > div:nth-child(1){
+  transform: rotate(3deg) translate(0px, 14px);
+  }
+
+  #cartoes > div:nth-child(2){
+    transform: rotate(354deg) translate(-3px, -3px);
+  }
+
+  #cartoes > div:nth-child(3){
+    transform: rotate(-7deg) translate(0px, -10px);
+  }
+
+  #cartoes > div:nth-child(4){
+    transform: rotate(366deg) translate(0px, -15px);
+  }
+
+
+	}
+
+	/* Landscape */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {}
+
+	@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #cartoes {
+    max-width: 750px;
+    
+}
+
+.scroll-cards__item {
+        --offset: 0.25em;
+        min-height: 20em;
+        padding: 4em 5em 4em 4em;
+        width: calc(100% - 5* var(--offset));
+    }
+	}
+
 
 @media only screen and (max-width: 500px) {
 
@@ -715,6 +783,8 @@ div.box {
             <p class="abreu-info-texto">Independentemente do estatuto de PME, as sociedades com sede ou direção efetiva em Portugal são tributadas pelo lucro, em sede de IRC. No entanto, existem algumas regras especiais aplicáveis às PME, que incluem:</p>
         </div>
 
+
+        <img style="width: 50px; margin: 0 auto; display: block; margin-bottom: 15px;" src="img/icone.svg">
 
         <div id="cartoes">
 
@@ -2021,9 +2091,9 @@ div.box {
                     A localização da empresa e do seu quadro de pessoal pois há municípios que não cobram ou não cobram a totalidade da Derrama Municipal que representa até 1,5% do lucro tributável;
                         Há ainda municípios que concedem benefícios fiscais de IMT e de IMI às empresas que se instalarem no seu território;
                         Vantagens de estabelecer uma estrutura de holding, como:<br>
-                    (i)	isenção de tributação dos lucros distribuídos pelas subsidiárias, bem como isenção de mais-valias na venda das subsidiárias, cumpridas que estejam determinadas condições (regime participation exemption);
-                    (ii)	a possibilidade de implementar mecanismos de financiamento intragrupo, com claras vantagens face ao endividamento junto da banca;
-                    (iii)	possibilidade de evitar/ substituir garantias pessoais por garantias corporativas;
+                    (i)	isenção de tributação dos lucros distribuídos pelas subsidiárias, bem como isenção de mais-valias na venda das subsidiárias, cumpridas que estejam determinadas condições (regime participation exemption);<br>
+                    (ii)	a possibilidade de implementar mecanismos de financiamento intragrupo, com claras vantagens face ao endividamento junto da banca;<br>
+                    (iii)	possibilidade de evitar/ substituir garantias pessoais por garantias corporativas;<br>
                     (iv)	criação de uma reserva de valor e preparação de cenários de parcerias e venda.
                   </div>
 
@@ -2103,9 +2173,9 @@ div.box {
             <p class="abreu-info-texto">A localização da empresa e do seu quadro de pessoal pois há municípios que não cobram ou não cobram a totalidade da Derrama Municipal que representa até 1,5% do lucro tributável;
             Há ainda municípios que concedem benefícios fiscais de IMT e de IMI às empresas que se instalarem no seu território;
             Vantagens de estabelecer uma estrutura de holding, como:<br>
-            (i)	isenção de tributação dos lucros distribuídos pelas subsidiárias, bem como isenção de mais-valias na venda das subsidiárias, cumpridas que estejam determinadas condições (regime participation exemption);
-            (ii)	a possibilidade de implementar mecanismos de financiamento intragrupo, com claras vantagens face ao endividamento junto da banca;
-            (iii)	possibilidade de evitar/ substituir garantias pessoais por garantias corporativas;
+            (i)	isenção de tributação dos lucros distribuídos pelas subsidiárias, bem como isenção de mais-valias na venda das subsidiárias, cumpridas que estejam determinadas condições (regime participation exemption);<br>
+            (ii)	a possibilidade de implementar mecanismos de financiamento intragrupo, com claras vantagens face ao endividamento junto da banca;<br>
+            (iii)	possibilidade de evitar/ substituir garantias pessoais por garantias corporativas;<br>
             (iv)	criação de uma reserva de valor e preparação de cenários de parcerias e venda.</p>
                   </div>
                   <p class="abreu-info-titulo-accordion"><img src="img/btn-1.svg">Limitar riscos pessoais</p>
@@ -2143,7 +2213,7 @@ div.box {
           </div>
                   <p class="abreu-info-titulo-accordion"><img src="img/btn-9.svg">Utilização de benefícios fiscais</p>
                   <div>
-            <p class="abreu-info-texto">Possibilidade de utilizar alguns dos benefícios fiscais existentes e que incluem: (i)	Regime Fiscal de Apoio ao Investimento (RFAI), que permite deduções em sede de  IRC por investimentos em ativos não correntes. (ii)	SIFIDE II, que prevê deduções das despesas com investigação e desenvolvimento</p>
+            <p class="abreu-info-texto">Possibilidade de utilizar alguns dos benefícios fiscais existentes e que incluem:<br>(i)	Regime Fiscal de Apoio ao Investimento (RFAI), que permite deduções em sede de  IRC por investimentos em ativos não correntes.<br> (ii)	SIFIDE II, que prevê deduções das despesas com investigação e desenvolvimento</p>
           </div>
                   <p class="abreu-info-titulo-accordion"><img src="img/btn-10.svg">Fiscalização Externa</p>
                   <div>
@@ -2369,13 +2439,10 @@ div.box {
 
                   console.log(btnClicado);
                   
-
                   $("#" + btnId + " .st2").css("stroke", "#EDEDED");
                   
                   $("#" + btnId + " text").css("opacity", 0);
-
-      
-                
+ 
                 });
 
                 botoes[i].addEventListener("click", function(){
@@ -2402,12 +2469,8 @@ div.box {
                   } else if ($(textEstrutar[i]).hasClass('box-c')) {
                     $(".stcircle").attr({'r': 190});
                   } else {
-                    $(".stcircle").attr({'r': 310});
+                    $(".stcircle").attr({'r': 315});
                   }
-
-
-
-                  
 
                   $(".stcircle").css({'stroke': 'black'});
 
