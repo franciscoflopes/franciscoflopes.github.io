@@ -450,10 +450,11 @@ select#cars:focus-visible {
 	.info-titulo {
 		margin-top: 40px;
 		padding: 0px 10px;
+		font-size: 23px;
 	}
 
 	.info-titulo-tema {
-		font-size: 30px;
+		font-size: 27px;
 	}
 
 	.img-separador {
@@ -516,6 +517,11 @@ margin-top: 0px;
 	align-items: flex-end;
 }
 
+/* #perfis-txt, #barras{
+	transform: scale(1.25);
+    transform-origin: 360px 260px;
+} */
+
 }
 
 
@@ -538,7 +544,7 @@ margin-top: 0px;
 
 		<div id="perfis-container">
 
-		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		<svg version="1.1" id="perfis-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		viewBox="-3 0 726 800" style="enable-background:new 0 0 720 800;" xml:space="preserve">
 	<style type="text/css">
 		.st0{fill:#688BCA;}
@@ -4061,6 +4067,19 @@ margin-top: 0px;
 </div>	
 
 <script>
+
+var heightW = window.innerHeight;
+	var widthW = window.innerWidth;
+	var scrollDir = 0;
+	var shape = document.getElementById("perfis-svg");
+
+	if(widthW < 500 ){
+
+		shape.setAttribute("viewBox", "110 0 500 800");
+
+	} else {
+		
+	}
 
 
 $("#perfis > g").hover(function(){
