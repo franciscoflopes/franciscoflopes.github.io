@@ -425,10 +425,18 @@ select#cars:focus-visible {
     left: 36%;
 }
 
+#nuances-graficos p {
+    font-weight: 600;
+}
+
 @media only screen and (max-width: 500px){
 
 	.info-body {
     overflow-x: hidden;
+}
+
+.info-body img {
+	margin: 0 auto;
 }
 
 	.info-desktop{display: none;}
@@ -439,6 +447,7 @@ select#cars:focus-visible {
 
 	.info-titulo-geral {
     font-size: 45px;
+	line-height: 47px;
 }
 
 .info-entrada {
@@ -453,22 +462,23 @@ select#cars:focus-visible {
 	}
 
     .info-bloco {
-        padding: 40px 10px;
+        padding: 40px 0px;
     }
 
-	.info-titulo {
-		margin-top: 40px;
-		padding: 0px 10px;
-		font-size: 23px;
-	}
+    .info-titulo {
+        margin-top: 60px;
+        padding: 0px 10px;
+        font-size: 23px;
+        margin-bottom: 15px;
+    }
+
+	.info-valor {
+    margin-bottom: 15px;
+}
 
 	.info-titulo-tema {
 		font-size: 27px;
 		width: 87%;
-	}
-
-	.info-bloco .info-titulo-tema {
-		width: auto;
 	}
 
 	.img-separador {
@@ -482,6 +492,12 @@ select#cars:focus-visible {
 	}
 
 	#nuances-graficos > div{
+		margin-bottom: 30px;
+		padding: 0;
+	}
+
+	#nuances-graficos > div:last-child{
+		margin-bottom: 0px;
 	}
 
 	.altura{
@@ -495,12 +511,13 @@ select#cars:focus-visible {
 #regioes-graficos > div{
 	width: 46%;
 	padding: 0px 5px;
+	margin-bottom: 15px;
 }
 
 #idades-graficos > div, #idades-graficos1 > div{
-	width: 48%;
-	padding: 0px 3px;
-	margin: 7px 0px;
+	width: 47%;
+        padding: 0px 3px;
+        margin: 10px 0px;
 }
 
 #idades-graficos > div p, #idades-graficos1 > div p{
@@ -519,8 +536,10 @@ margin-top: 0px;
 }
 
 #btn-grupos-prof button {
-    width: 95px;
-}
+        width: 97px;
+		height: 35px;
+    }
+
 
 #btn-grupos-prof {
     display: flex;
@@ -568,8 +587,29 @@ margin-top: 0px;
     left: 26%;
 }
 
+.info-btn button {
+    height: 45px;
+}
+
+.info-grafico {
+	
+    margin: 10px auto;
+}
+
+.seta-var {
+	font-size: 14px;
+    line-height: 20px;
+}
 
 #assistentes-tecnicas-tp, #assistentes-operacionais-tp, #tecnicos-superiores-tp, #enfermeiros-tp, #ts-diagnostico-tp, #farmaceuticos-tp, #ts-saude-tp, #medicos-internos-tp, #medico-especialista-tp, #perfil-geral-tp{display: none;}
+
+}
+
+@media only screen and (max-width: 350px){
+
+    .aumentos > button {
+        width: 63px;
+    }
 
 }
 
@@ -589,7 +629,7 @@ margin-top: 0px;
 
     <div>
         <p class="info-titulo-tema">perfil dos profissionais do sns</p>
-        <p class="info-texto">A figura apresenta o perfil elaborado com base nas caraterísticas mais frequentes dos RH do SNS (prestador), nos anos de 2017 e 2023. Com pequenas variações, o perfil profissional predominante mantém-se o de uma mulher, enfermeira, com nacionalidade portuguesa, que trabalha nos cuidados hospitalares, está afeta à ARS do Norte, com idade entre 35 e 44 anos. Em 2017 uma profissional com exatamente estas características representava 2,1% do total dos profissionais do SNS prestador de cuidados enquanto em 2023 o perfil profissional com estas características predominantes já representa 3,1% do quadro profissional prestador de serviços de saúde públicos.</p>
+
 
 		<div id="perfis-container">
 
@@ -3740,6 +3780,8 @@ margin-top: 0px;
 			
 		</div>
 
+		<p class="info-texto">A figura apresenta o perfil elaborado com base nas caraterísticas mais frequentes dos RH do SNS (prestador), nos anos de 2017 e 2023. Com pequenas variações, o perfil profissional predominante mantém-se o de uma mulher, enfermeira, com nacionalidade portuguesa, que trabalha nos cuidados hospitalares, está afeta à ARS do Norte, com idade entre 35 e 44 anos. Em 2017 uma profissional com exatamente estas características representava 2,1% do total dos profissionais do SNS prestador de cuidados enquanto em 2023 o perfil profissional com estas características predominantes já representa 3,1% do quadro profissional prestador de serviços de saúde públicos.</p>
+
     </div>
 
 
@@ -3766,7 +3808,7 @@ margin-top: 0px;
 		
 		<img class="info-desktop" src="img/mapa-evolucao-profissionais.svg">
 
-		<img class="info-mobile" src="img/mapa-evolucao-profissionais-mobile.svg">
+		<img class="info-mobile" style="width: 95%;" src="img/mapa-evolucao-profissionais-mobile.svg">
 
 		<p class="info-texto">O crescimento do número de profissionais de saúde no SNS é comum a todas as regiões, mas com intensidades diferentes. Destaca-se o aumento registado no Norte, única região onde o peso relativo aumenta. Alentejo e Centro têm as menores subidas.</p>
 
@@ -3859,7 +3901,7 @@ margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     width: 250px;
-    display: block;"><img style="margin-bottom: 4px;" src="img/seta.svg"><i>Variação 2017-2023</i></span>
+    display: block;"><img style="margin-bottom: 4px;" src="img/seta.svg"><i>Variação<br class="info-mobile"> 2017-2023</i></span>
 
 
     <p class="info-titulo">Nuances por Setor e Região</p>
@@ -3893,7 +3935,7 @@ margin-top: 0px;
         </div>
 
         <div>
-            <p>ALENTEJO</p>
+            <p>ALENTEJO<br class="info-mobile"><br class="info-mobile"></p>
             <div class="info-grafico" id="container-grafico-nuances-4"></div>
 			<span class="seta-var seta-csp">1,07%</span>
 			<span class="seta-var seta-csh" style="display: none">2,84%</span>
@@ -3907,7 +3949,7 @@ margin-top: 0px;
         </div>
     </div>
 
-    <br><br>
+	
     <p class="info-texto">A densidade de recursos humanos de saúde é bastante maior nos Cuidados de Saúde Hospitalares do que nos Cuidados de Saúde Primários. A tendência é de crescimento em ambos os casos em todas as regiões, tal como é comum o agravamento das disparidades regionais.  Ao nível dos Cuidados de Saúde Hospitalares, é no Centro que há maior densidade, enquanto a mais desfavorecida é o Algarve. Quanto aos Cuidados de Saúde Primários, a região do Alentejo é a mais bem posicionada e a de Lisboa e Vale do Tejo a que apresenta os piores números. </p>
 
 
@@ -7104,8 +7146,27 @@ xAxis: {
 	
     series: [{
 		color: '#385076',
-        data: [13,14,15,17,17,17,16]
-    } ]
+        data: [{y:13, dataLabels:{enabled:true}},14,15,17,17,17,{y:16, dataLabels:{enabled:true}}]
+    } ],
+
+	responsive: {
+rules: [{
+	condition: {
+		maxWidth: 180
+	},
+	chartOptions: {
+		plotOptions: {
+			series: {
+				dataLabels:{
+					enabled:false,
+				},
+			}
+		},
+	}
+}]
+}
+
+
 });
 var chart7 = Highcharts.chart('container-grupos-idades2', {
     chart: {
@@ -7213,8 +7274,25 @@ xAxis: {
 	
     series: [{
 		color: '#385076',
-        data: [25,26,27,29,31,34,35]
-    } ]
+        data: [{y:25, dataLabels:{enabled:true}},26,27,29,31,34,{y:35, dataLabels:{enabled:true}}]
+    } ],
+
+	responsive: {
+rules: [{
+	condition: {
+		maxWidth: 180
+	},
+	chartOptions: {
+		plotOptions: {
+			series: {
+				dataLabels:{
+					enabled:false,
+				},
+			}
+		},
+	}
+}]
+}
 });
 var chart8 = Highcharts.chart('container-grupos-idades3', {
     chart: {
@@ -7324,8 +7402,25 @@ xAxis: {
 	
     series: [{
 		color: '#385076',
-        data: [18,17,16,15,16,16,17]
-    } ]
+        data: [{y:18, dataLabels:{enabled:true}},17,16,15,16,16,{y:17, dataLabels:{enabled:true}}]
+    } ],
+
+	responsive: {
+rules: [{
+	condition: {
+		maxWidth: 180
+	},
+	chartOptions: {
+		plotOptions: {
+			series: {
+				dataLabels:{
+					enabled:false,
+				},
+			}
+		},
+	}
+}]
+}
 });
 var chart9 = Highcharts.chart('container-grupos-idades4', {
     chart: {
@@ -7435,8 +7530,25 @@ xAxis: {
 	
     series: [{
 		color: '#385076',
-        data: [38,36,33,29,25,22,20]
-    } ]
+        data: [{y:38, dataLabels:{enabled:true}},36,33,29,25,22,{y:20, dataLabels:{enabled:true}}]
+    } ],
+
+	responsive: {
+rules: [{
+	condition: {
+		maxWidth: 180
+	},
+	chartOptions: {
+		plotOptions: {
+			series: {
+				dataLabels:{
+					enabled:false,
+				},
+			}
+		},
+	}
+}]
+}
 });
 var chart10 = Highcharts.chart('container-grupos-idades5', {
     chart: {
@@ -7546,8 +7658,25 @@ xAxis: {
 	
     series: [{
 		color: '#385076',
-        data: [6,7,9,10,11,11,12]
-    } ]
+        data: [{y:6, dataLabels:{enabled:true}},7,9,10,11,11,{y:12, dataLabels:{enabled:true}}]
+    } ],
+
+	responsive: {
+rules: [{
+	condition: {
+		maxWidth: 180
+	},
+	chartOptions: {
+		plotOptions: {
+			series: {
+				dataLabels:{
+					enabled:false,
+				},
+			}
+		},
+	}
+}]
+}
 });
 	
   $('#btn-me').click(function() {
@@ -7796,6 +7925,10 @@ Highcharts.chart('container-piramides', {
         type:'columnpyramid',
         height: 400,
         marginTop:30,
+		style:{
+			fontFamily: '"Rubik", sans-serif',
+			fontSize: '18px'
+		}
     },
     title: {text: null
     },
@@ -7817,8 +7950,6 @@ Highcharts.chart('container-piramides', {
             align:'center',
             reserveSpace: true,
             style: {
-                fontFamily: 'apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif',
-                color: 'rgb(103, 103, 103)',
                 fontWeight: '400',
                 fontSize: '16px'
                 }
@@ -7838,7 +7969,6 @@ Highcharts.chart('container-piramides', {
             y: -3,
             format: '{value}',
             style: {
-                fontFamily: 'apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif',
                 color: '#585858',
                 textOutline:'0px',
                 fontWeight: 'regular',
@@ -7868,7 +7998,6 @@ Highcharts.chart('container-piramides', {
         useHTML: true,
 
         style: {
-            fontFamily: 'apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif',
             color: '#2f2f2f',
             textOutline:'0px',
             fontWeight: 'regular',
@@ -7900,7 +8029,8 @@ Highcharts.chart('container-piramides', {
 				style:{
 					fontSize: '16px',
 					textOutline: 'none',
-					fontWeight:'regular',
+					
+					fontWeight:'600',
 					},
 				},
           	},
@@ -7944,8 +8074,12 @@ var chartPiramide = Highcharts.chart('container-piramides1', {
      chart: {
         backgroundColor: null,
         type:'columnpyramid',
-        height: 330,
+        height: 400,
          marginTop:50,
+		 style:{
+			fontFamily: '"Rubik", sans-serif',
+			fontSize: '18px'
+		}
     },
     title: {text: null
     },
@@ -7967,8 +8101,6 @@ var chartPiramide = Highcharts.chart('container-piramides1', {
             align:'center',
             reserveSpace: true,
             style: {
-                fontFamily: 'apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif',
-                color: 'rgb(103, 103, 103)',
                 fontWeight: '400',
                 fontSize: '16px'
                 }
@@ -7988,7 +8120,6 @@ var chartPiramide = Highcharts.chart('container-piramides1', {
             y: -3,
             format: '{value}',
             style: {
-                fontFamily: 'apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif',
                 color: '#585858',
                 textOutline:'0px',
                 fontWeight: 'regular',
@@ -8018,7 +8149,6 @@ var chartPiramide = Highcharts.chart('container-piramides1', {
         useHTML: true,
 
         style: {
-            fontFamily: 'apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif',
             color: '#2f2f2f',
             textOutline:'0px',
             fontWeight: 'regular',
@@ -8033,7 +8163,7 @@ var chartPiramide = Highcharts.chart('container-piramides1', {
 		},
     plotOptions: {
         series: {
-			pointWidth: 30,
+			pointWidth: 45,
             borderWidth: 0,
             lineWidth:3,
             pointPadding: 0,
@@ -8045,11 +8175,12 @@ var chartPiramide = Highcharts.chart('container-piramides1', {
 			dataLabels: {
 				enabled: true,
 				color: 'black',
+				format:'{point.y}%',
 				allowOverlap:true,
 				style:{
 					fontSize: '16px',
 					textOutline: 'none',
-					fontWeight:'regular',
+					fontWeight:'600',
 					},
 				},
           	},
@@ -8074,14 +8205,14 @@ var chartPiramide = Highcharts.chart('container-piramides1', {
             		},
             chartOptions: {
                 chart:{
-					
+					height:330
 					},
                 xAxis: {
                     labels: {}
                 	},
 					plotOptions: {
 						series: {
-							pointWidth: 25,}}
+							pointWidth: 20,}}
             	},
         }]
     }
