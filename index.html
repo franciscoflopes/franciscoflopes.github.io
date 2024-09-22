@@ -45,8 +45,9 @@ body{margin: 0}
 
 html {scroll-behavior: smooth;}
 
-.info-desktop{display: block;}
+.info-desktop{display: block; margin: 0 auto;}
 .info-mobile{display: none;}
+
 
 .info-body {
     font-family: "Rubik", sans-serif;
@@ -225,6 +226,7 @@ path.highcharts-lollipop-stem {
 	display: flex;
 	justify-content: center;
 }
+
 
 
 .btn-grupos > button {
@@ -425,8 +427,15 @@ select#cars:focus-visible {
 
 @media only screen and (max-width: 500px){
 
+	.info-body {
+    overflow-x: hidden;
+}
+
 	.info-desktop{display: none;}
 	.info-mobile{display: block;width: 100%;}
+
+	.info-mobile1{visibility:visible;}
+
 
 	.info-titulo-geral {
     font-size: 45px;
@@ -455,6 +464,11 @@ select#cars:focus-visible {
 
 	.info-titulo-tema {
 		font-size: 27px;
+		width: 87%;
+	}
+
+	.info-bloco .info-titulo-tema {
+		width: auto;
 	}
 
 	.img-separador {
@@ -517,10 +531,45 @@ margin-top: 0px;
 	align-items: flex-end;
 }
 
-/* #perfis-txt, #barras{
-	transform: scale(1.25);
+#perfis-txt, #barras{
+	transform: scale(1.13) translateY(-12px);
     transform-origin: 360px 260px;
-} */
+} 
+
+#btn-grupos-aumentos{
+	flex-wrap: wrap;
+}
+
+.aumentos > button {
+    width: 70px;
+}
+
+#perfis > g{
+	transform: scale(0.8);
+}
+
+#perfis-txt > g > g:first-child{
+	transform: translateY(25px);
+}
+
+#btn-grupos, #btn-grupos1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#btn-grupos button, #btn-grupos1 button{
+	width: 80px;
+	margin: 10px 0px auto;
+}
+
+.v1 {
+    width: 54%;
+    left: 26%;
+}
+
+
+#assistentes-tecnicas-tp, #assistentes-operacionais-tp, #tecnicos-superiores-tp, #enfermeiros-tp, #ts-diagnostico-tp, #farmaceuticos-tp, #ts-saude-tp, #medicos-internos-tp, #medico-especialista-tp, #perfil-geral-tp{display: none;}
 
 }
 
@@ -950,7 +999,6 @@ margin-top: 0px;
 			</g>
 		</g>
 		<g id="farmaceuticos-numeros" class="st1">
-			<g class="st6">
 				<g>
 					<text transform="matrix(1 0 0 1 266.809 48.1982)" class="st7 st8 st9">FARMACÊUTICOS</text>
 				</g>
@@ -1020,7 +1068,6 @@ margin-top: 0px;
 						<text transform="matrix(1 0 0 1 318.8943 566.0756)" class="st14 st10 st11">40%</text>
 					</g>
 				</g>
-			</g>
 		</g>
 		<g id="ts-diagnostico-numeros" class="st1">
 			<g>
@@ -3732,7 +3779,7 @@ margin-top: 0px;
 
 		<p class="info-texto" style="color: gray;margin-bottom: 0px;"><i>Compare o número de profissionais, selecione no máximo 4 grupos por comparação.</i></p>
 
-		<div class='btn-grupos aumentos' id='btn-grupos-aumentos'>
+		<div class='btn-grupos aumentos info-desktop' id='btn-grupos-aumentos'>
 			<button class='active1'><span style="background-color: #688bca; color: white;">Médicos Internos</span><img src="img/med-internos-var.svg"></button>
 			<button class='active1'><span style="background-color: #385076; color: white;">Médicos Especialistas</span><img src="img/med-especialista-var.svg"></button>
 			<button class='active1'><span style="background-color: #acdaa0; top: -21px;">Enfermeiros</span><img src="img/enfermeiros-var.svg"></button>
@@ -3745,6 +3792,21 @@ margin-top: 0px;
 
 		
 		</div>
+
+		<div class="info-mobile">
+		<div class='btn-grupos aumentos' id='btn-grupos-aumentos'>
+			<button class='active1'><span style="background-color: #688bca; color: white;">Médicos Internos</span><img src="img/med-internos-var-mob.svg"></button>
+			<button class='active1'><span style="background-color: #385076; color: white;">Médicos Especialistas</span><img src="img/med-especialista-var-mob.svg"></button>
+			<button class='active1'><span style="background-color: #acdaa0; top: -21px;">Enfermeiros</span><img src="img/enfermeiros-var-mob.svg"></button>
+			<button><span style="background-color: #83c4e9;">Técnicos de Diagonóstico</span><img src="img/tec-diagnostico-var-mob.svg"></button>
+			<button><span style="background-color: #bec5d7;  top: -21px;">Farmacêuticos</span><img src="img/farmaceuticos-var-mob.svg"></button>
+			<button ><span style="background-color: #f8a45a; top: -52px;">Técnicos Superiores de Saúde</span><img src="img/tec-sup-saude-var-mob.svg"></button>
+			<button><span style="background-color: #fcdfc2;">Técnicos Superiores</span><img src="img/tec-superior-var-mob.svg"></button>
+			<button><span style="background-color: #fabfc9;">Assistentes Operacionais</span><img src="img/ass-operaciona-var-mob.svg"></button>
+			<button><span style="background-color: #96121f; color: white;">Assistentes Técnicos</span><img src="img/ass-tecnic-var-mob.svg"></button>
+		</div>
+	</div>
+
 
 		<span style="font-size: 15px; top: 5px; position: relative;"><img style="margin-bottom: 8px;" src="img/seta.svg"><i>Variação 2017-2023</i></span>
 
@@ -4075,7 +4137,7 @@ var heightW = window.innerHeight;
 
 	if(widthW < 500 ){
 
-		shape.setAttribute("viewBox", "110 0 500 800");
+		shape.setAttribute("viewBox", "110 -20 500 800");
 
 	} else {
 		
@@ -4101,17 +4163,39 @@ $("#perfis > g").click(function(){
 var rotacao = $(this).attr('data-rotacao');
 var idPerfil = $(this).attr('id');
 
-if (rotacao > 180){
-	rotacaoAcumulada += (360 - rotacao);
-	$('#perfis').css('transform', 'rotate(' + (360 - rotacaoAcumulada) + 'deg)');
-	$('#perfis > g').css({'transform': 'rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(1)', 'pointer-events': 'all'});
-	$(this).css({'transform': 'scale(1.25) rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(0)', 'pointer-events': 'none'});
+if(widthW > 500) {
+
+	if (rotacao > 180){
+		rotacaoAcumulada += (360 - rotacao);
+		$('#perfis').css('transform', 'rotate(' + (360 - rotacaoAcumulada) + 'deg)');
+		$('#perfis > g').css({'transform': 'rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(1)', 'pointer-events': 'all'});
+		$(this).css({'transform': 'scale(1.25) rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(0)', 'pointer-events': 'none'});
+
+	} else {
+		rotacaoAcumulada += parseInt(rotacao);
+		$('#perfis').css('transform', 'rotate(' + rotacaoAcumulada + 'deg)');
+		$('#perfis > g').css({'transform': 'rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(1)', 'pointer-events': 'all'});
+		$(this).css({'transform': 'scale(1.25) rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(0)', 'pointer-events': 'none'});
+	}
 
 } else {
-	rotacaoAcumulada += parseInt(rotacao);
-	$('#perfis').css('transform', 'rotate(' + rotacaoAcumulada + 'deg)');
-	$('#perfis > g').css({'transform': 'rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(1)', 'pointer-events': 'all'});
-	$(this).css({'transform': 'scale(1.25) rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(0)', 'pointer-events': 'none'});
+
+	if (rotacao > 180){
+		rotacaoAcumulada += (360 - rotacao);
+		$('#perfis').css('transform', 'rotate(' + (360 - rotacaoAcumulada) + 'deg)');
+		$('#perfis > g').css({'transform': 'scale(0.8) rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(1)', 'pointer-events': 'all'});
+		$(this).css({'transform': 'scale(1.25) rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(0)', 'pointer-events': 'none'});
+
+	} else {
+		rotacaoAcumulada += parseInt(rotacao);
+		$('#perfis').css('transform', 'rotate(' + rotacaoAcumulada + 'deg)');
+		$('#perfis > g').css({'transform': 'scale(0.8) rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(1)', 'pointer-events': 'all'});
+		$(this).css({'transform': 'scale(1.25) rotate(' + (-rotacaoAcumulada) + 'deg)', 'filter': 'grayscale(0)', 'pointer-events': 'none'});
+	}
+
+
+
+
 }
 
 if(idPerfil == 'perfil-geral'){
