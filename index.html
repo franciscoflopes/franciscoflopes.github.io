@@ -501,7 +501,7 @@ select#cars:focus-visible {
 	}
 
 	.altura{
-	height: 130px
+	height: 150px
 }
 
 #regioes-graficos{
@@ -536,8 +536,9 @@ margin-top: 0px;
 }
 
 #btn-grupos-prof button {
-        width: 97px;
-		height: 35px;
+	width: 100px;
+        height: 35px;
+        margin: 3px;
     }
 
 
@@ -599,6 +600,20 @@ margin-top: 0px;
 .seta-var {
 	font-size: 14px;
     line-height: 20px;
+}
+
+.btn-grupos > button:hover {
+        filter: grayscale(1);
+		transform: scale(1);
+}
+
+.btn-grupos > button:hover span{
+	opacity: 0;
+}
+
+.btn-grupos > button.active1 {
+    filter: none !important;
+    transform: scale(1.15) !important;
 }
 
 #assistentes-tecnicas-tp, #assistentes-operacionais-tp, #tecnicos-superiores-tp, #enfermeiros-tp, #ts-diagnostico-tp, #farmaceuticos-tp, #ts-saude-tp, #medicos-internos-tp, #medico-especialista-tp, #perfil-geral-tp{display: none;}
@@ -3821,34 +3836,46 @@ margin-top: 0px;
 
 		<p class="info-texto" style="color: gray;margin-bottom: 0px;"><i>Compare o número de profissionais, selecione no máximo 4 grupos por comparação.</i></p>
 
-		<div class='btn-grupos aumentos info-desktop' id='btn-grupos-aumentos'>
-			<button class='active1'><span style="background-color: #688bca; color: white;">Médicos Internos</span><img src="img/med-internos-var.svg"></button>
-			<button class='active1'><span style="background-color: #385076; color: white;">Médicos Especialistas</span><img src="img/med-especialista-var.svg"></button>
-			<button class='active1'><span style="background-color: #acdaa0; top: -21px;">Enfermeiros</span><img src="img/enfermeiros-var.svg"></button>
-			<button><span style="background-color: #83c4e9;">Técnicos de Diagonóstico</span><img src="img/tec-diagnostico-var.svg"></button>
-			<button><span style="background-color: #bec5d7;  top: -21px;">Farmacêuticos</span><img src="img/farmaceuticos-var.svg"></button>
-			<button ><span style="background-color: #f8a45a; top: -52px;">Técnicos Superiores de Saúde</span><img src="img/tec-sup-saude-var.svg"></button>
-			<button><span style="background-color: #fcdfc2;">Técnicos Superiores</span><img src="img/tec-superior-var.svg"></button>
-			<button><span style="background-color: #fabfc9;">Assistentes Operacionais</span><img src="img/ass-operaciona-var.svg"></button>
-			<button><span style="background-color: #96121f; color: white;">Assistentes Técnicos</span><img src="img/ass-tecnic-var.svg"></button>
+		<div class='btn-grupos aumentos' id='btn-grupos-aumentos'>
+			<button class='active1'><span style="background-color: #688bca; color: white;">Médicos Internos</span>
+				<img class="info-desktop" src="img/med-internos-var.svg">
+				<img class="info-mobile" src="img/med-internos-var-mob.svg">
+			</button>
+			<button class='active1'><span style="background-color: #385076; color: white;">Médicos Especialistas</span>
+				<img class="info-desktop" src="img/med-especialista-var.svg">
+				<img class="info-mobile" src="img/med-especialista-var-mob.svg">
+			</button>
+			<button class='active1'><span style="background-color: #acdaa0; top: -21px;">Enfermeiros</span>
+				<img class="info-desktop" src="img/enfermeiros-var.svg">
+				<img class="info-mobile" src="img/enfermeiros-var-mob.svg">
+			</button>
+			<button><span style="background-color: #83c4e9;">Técnicos de Diagonóstico</span>
+				<img class="info-desktop" src="img/tec-diagnostico-var.svg">
+				<img class="info-mobile" src="img/tec-diagnostico-var-mob.svg">
+			</button>
+			<button><span style="background-color: #bec5d7;  top: -21px;">Farmacêuticos</span>
+				<img class="info-desktop" src="img/farmaceuticos-var.svg">
+				<img class="info-mobile" src="img/farmaceuticos-var-mob.svg">
+			</button>
+			<button ><span style="background-color: #f8a45a; top: -52px;">Técnicos Superiores de Saúde</span>
+				<img class="info-desktop" src="img/tec-sup-saude-var.svg">
+				<img class="info-mobile" src="img/tec-sup-saude-var-mob.svg">
+			</button>
+			<button><span style="background-color: #fcdfc2;">Técnicos Superiores</span>
+				<img class="info-desktop" src="img/tec-superior-var.svg">
+				<img class="info-mobile" src="img/tec-superior-var-mob.svg">
+			</button>
+			<button><span style="background-color: #fabfc9;">Assistentes Operacionais</span>
+				<img class="info-desktop" src="img/ass-operaciona-var.svg">
+				<img class="info-mobile" src="img/ass-operaciona-var-mob.svg">
+			</button>
+			<button><span style="background-color: #96121f; color: white;">Assistentes Técnicos</span>
+				<img class="info-desktop" src="img/ass-tecnic-var.svg">
+				<img class="info-mobile" src="img/ass-tecnic-var-mob.svg">
+			</button>
 
 		
 		</div>
-
-		<div class="info-mobile">
-		<div class='btn-grupos aumentos' id='btn-grupos-aumentos'>
-			<button class='active1'><span style="background-color: #688bca; color: white;">Médicos Internos</span><img src="img/med-internos-var-mob.svg"></button>
-			<button class='active1'><span style="background-color: #385076; color: white;">Médicos Especialistas</span><img src="img/med-especialista-var-mob.svg"></button>
-			<button class='active1'><span style="background-color: #acdaa0; top: -21px;">Enfermeiros</span><img src="img/enfermeiros-var-mob.svg"></button>
-			<button><span style="background-color: #83c4e9;">Técnicos de Diagonóstico</span><img src="img/tec-diagnostico-var-mob.svg"></button>
-			<button><span style="background-color: #bec5d7;  top: -21px;">Farmacêuticos</span><img src="img/farmaceuticos-var-mob.svg"></button>
-			<button ><span style="background-color: #f8a45a; top: -52px;">Técnicos Superiores de Saúde</span><img src="img/tec-sup-saude-var-mob.svg"></button>
-			<button><span style="background-color: #fcdfc2;">Técnicos Superiores</span><img src="img/tec-superior-var-mob.svg"></button>
-			<button><span style="background-color: #fabfc9;">Assistentes Operacionais</span><img src="img/ass-operaciona-var-mob.svg"></button>
-			<button><span style="background-color: #96121f; color: white;">Assistentes Técnicos</span><img src="img/ass-tecnic-var-mob.svg"></button>
-		</div>
-	</div>
-
 
 		<span style="font-size: 15px; top: 5px; position: relative;"><img style="margin-bottom: 8px;" src="img/seta.svg"><i>Variação 2017-2023</i></span>
 
@@ -5053,7 +5080,14 @@ rules: [{
         maxWidth: 500
     },
     chartOptions: {
-		chart: {}
+		chart: {},
+		plotOptions: {
+			series: {
+				dataLabels:{
+					enabled: true
+				},
+			}
+		},
     }
 }]
 }
@@ -5178,6 +5212,13 @@ rules: [{
         maxWidth: 500
     },
     chartOptions: {
+		plotOptions: {
+			series: {
+				dataLabels:{
+					enabled: true
+				},
+			}
+		},
     }
 }]
 }
@@ -5301,6 +5342,13 @@ rules: [{
         maxWidth: 500
     },
     chartOptions: {
+		plotOptions: {
+			series: {
+				dataLabels:{
+					enabled: true
+				},
+			}
+		},
     }
 }]
 }
@@ -8048,7 +8096,7 @@ Highcharts.chart('container-piramides', {
 	  zIndex: 1,
   }],
      
-    responsive: {
+  responsive: {
         rules: [{
             condition: {
 					maxWidth: 450
@@ -8056,13 +8104,18 @@ Highcharts.chart('container-piramides', {
             chartOptions: {
                 chart:{
 					height:330
-					},
-                xAxis: {
-                    labels: {}
-                	},
-					plotOptions: {
-						series: {
-							pointWidth: 25,}}
+				},
+				xAxis: {
+					labels: {
+						distance: 5,
+						style: {
+							fontSize: '15px'
+							}
+						},
+				},
+				plotOptions: {
+					series: {
+						pointWidth: 20,}}
             	},
         }]
     }
@@ -8206,13 +8259,18 @@ var chartPiramide = Highcharts.chart('container-piramides1', {
             chartOptions: {
                 chart:{
 					height:330
-					},
-                xAxis: {
-                    labels: {}
-                	},
-					plotOptions: {
-						series: {
-							pointWidth: 20,}}
+				},
+				xAxis: {
+					labels: {
+						distance: 5,
+						style: {
+							fontSize: '15px'
+							}
+						},
+				},
+				plotOptions: {
+					series: {
+						pointWidth: 20,}}
             	},
         }]
     }
