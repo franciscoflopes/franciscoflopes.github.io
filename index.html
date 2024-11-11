@@ -23,10 +23,16 @@
 
 <style> 
 
+body{
+  margin: 0;
+}
 .infog-body{
   font-family: "Archivo",sans-serif;
 }
 
+.infog-mobile{
+  display: none;
+}
 
 html {
         scroll-behavior: smooth;
@@ -349,7 +355,7 @@ img.timeline-cabeca-mobile{
         font-size: 70px;
         font-family: "Archivo",sans-serif;
         font-weight: 700;
-        margin-top: 10px;
+        margin-top: 30px;
         margin-bottom: 0;
       }
 
@@ -387,12 +393,12 @@ img.timeline-cabeca-mobile{
         cursor: pointer;
       }
 
-      #btn .st21{
+      #btn .st52{
         transition: 0.3s;
 
       }
 
-      #btn>g:hover .st21{
+      #btn>g:hover .st52{
         fill: #2e3192;
       }
 
@@ -405,7 +411,8 @@ img.timeline-cabeca-mobile{
     top: 2vh;
     background-color: white;
     padding: 2vh 35px;
-    left: calc(766px/2);
+    left: calc(-766px / 2);
+    margin-left: 50%;
     height: 92vh;
     overflow-y: scroll;
     border: 1px solid black;
@@ -508,6 +515,52 @@ img.timeline-cabeca-mobile{
       }
 
 
+      
+.img-tt{
+  width: 100%;
+}
+.img-esq-2, .img-esq-3{
+  float: left;
+  margin: 4px 15px 10px 0px;
+}
+.img-dir-2, .img-dir-3{
+  float: right;
+  margin: 4px 0px 10px 15px;
+}
+
+.img-esq-2,.img-dir-2{
+  width: 45%;
+}
+
+.img-esq-3,.img-dir-3{
+  width: 55%;
+}
+
+.img-lado > img{
+  width: 49%;
+}
+
+.img-lado > div{
+  width: 49%;
+}
+
+
+.img-esq-2 img,.img-dir-2 img, .img-esq-3 img,.img-dir-3 img, .img-tt img{
+  width: 100%;
+}
+
+.destaque-txt{
+  /* border-bottom: 4px solid #2e3192; */
+    font-weight: 700;
+}
+
+.img-lado{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 /* Portrait */
 @media only screen 
   and (min-device-width: 768px) 
@@ -576,9 +629,11 @@ img.timeline-cabeca-mobile{
   }
 
   .entrada-info-geral {
-    font-size: 20px;
-    padding: 0px 10px;
-  }
+        font-size: 18px;
+        padding: 0px 10px;
+        line-height: 22px;
+        text-align: left;
+    }
 
   img.timeline-cabeca-mobile {
     display: block;
@@ -652,6 +707,10 @@ img.timeline-cabeca-mobile{
   .infog-desktop{
     display: none;
   }
+
+  .infog-mobile{
+    display: block;
+  }
    
   .infog-body img {
     padding: 0px 0px;
@@ -698,7 +757,7 @@ img.timeline-cabeca-mobile{
   }
 
   .popup{
-    display: block;
+    
     width: calc(94% - 30px);
     left: 3%;
     padding: 15px;
@@ -721,7 +780,7 @@ img.timeline-cabeca-mobile{
 }
 
 .p-titulo {
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .p-destaque {
@@ -739,59 +798,45 @@ img.timeline-cabeca-mobile{
     align-items: center;
     flex-direction: row;
 }
+
+
+.img-esq-2, .img-esq-3, .img-dir-2, .img-dir-3{
+  float: none;
+  margin: 4px 0px 10px 0px;
 }
 
-.img-tt{
-  width: 100%;
-}
-.img-esq-2, .img-esq-3{
-  float: left;
-  margin: 4px 15px 10px 0px;
-}
-.img-dir-2, .img-dir-3{
-  float: right;
-  margin: 4px 0px 10px 15px;
-}
-
-.img-esq-2,.img-dir-2{
-  width: 45%;
-}
-
-.img-esq-3,.img-dir-3{
-  width: 55%;
-}
-
-.img-esq-2 img,.img-dir-2 img, .img-esq-3 img,.img-dir-3 img, .img-tt img{
+.img-esq-2,.img-dir-2, .img-esq-3,.img-dir-3, .img-lado > img, .img-lado > div{
   width: 100%;
 }
 
-.destaque-txt{
-  /* border-bottom: 4px solid #2e3192; */
-    font-weight: 700;
+.p-close {
+    position: fixed;
+    right: 25px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.15s;
+    /* width: 90%; */
+    top: 25px;
+    z-index: 50;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    padding: 0px 5px;
+    border: 1px solid black;
+}
 }
 
-.img-lado{
-  display: flex;
-  justify-content: space-between;
-}
-
-.img-lado > img{
-  width: 49%;
-}
-
-.img-lado > div{
-  width: 49%;
-}
     </style>
     
     
 <div class="infog-body" id="infog-body"> 
 
+  <img style="width: 100%;" src="img/topo.jpg">
   <div style="margin: 0 auto; text-align: center; max-width: 900px;">
     
     <p class="titulo-info-geral">Titulo</p>
     <p class="entrada-info-geral">Em 1776 e 1789 o mundo assistia às duas Revoluções que deram origem ao mundo moderno e ocidental. A primeira, a Americana, originava um republicanismo liberal e a segunda, a Francesa, um republicanismo igualitário. Foi o princípio prático de duas vertentes do Iluminismo suficientemente semelhantes para que os estados se pudessem entender – e mais tarde aliar – mas suficientemente diferentes para que o Ocidente nunca tenho sido e nunca vá ser uma entidade valorativa una. Esta é a história política dessas diferenças e semelhanças. Tem duas grandes partes: na primeira de 1776 a 1945, a Europa dominava o mundo; os Estados Unidos eram um pequeno poder que se batia por não se envolver em guerras europeias ou em disputas de poder que não conseguiria vencer. De 1945 até hoje, os Estados Unidos tornaram-se a maior potência do mundo livre e reorganizaram o mundo tendo a Europa como sua principal aliada. Nestes quase 250 anos tivemos quatro transições de poder e estamos a entrar numa quinta que não sabemos onde nos levará. Esta história serve para perceber o nosso passado e pensar os futuros que temos à nossa frente.
-<br><br>
+      <br><br>
       Escolhemos onze momentos que nos parecem cruciais para perceber a história do que hoje chamamos relações transatlânticas:
       </p>
   
@@ -820,83 +865,97 @@ img.timeline-cabeca-mobile{
 
     <div class="svg-container">
       
-      <?xml version="1.0" encoding="utf-8"?>
-      <!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         viewBox="0 0 1000 14586" style="enable-background:new 0 0 1000 14586;" xml:space="preserve">
+      
+      
+      
+      <svg id="desk" class="infog-desktop" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 1000 14123.2" style="enable-background:new 0 0 1000 14123.2;" xml:space="preserve">
       <style type="text/css">
-        .st0{fill:none;stroke:#00AEEF;stroke-width:31.6;stroke-miterlimit:10;}
-        .st1{fill:none;stroke:#00AEEF;stroke-width:30.2656;stroke-miterlimit:10;}
-        .st2{fill:none;stroke:#00AEEF;stroke-width:34.7;stroke-miterlimit:10;}
-        .st3{fill:none;stroke:#2E3192;stroke-width:34;stroke-miterlimit:10;}
-        .st4{fill:#2E3192;}
-        .st5{fill:#00AEEF;}
-        .st6{fill:none;}
-        .st7{font-family: "Archivo",sans-serif; font-weight: 200;}
-        .st8{font-size:15px;}
-        .st9{opacity:0.7;clip-path:url(#SVGID_2_);mix-blend-mode: hard-light;}
-        .st10{clip-path:url(#SVGID_2_);fill:url(#SVGID_3_);}
-        .st11{clip-path:url(#SVGID_2_);fill:url(#SVGID_4_);}
-        .st12{opacity:0.3;fill:url(#SVGID_5_);}
-        .st13{opacity:0.3;fill:url(#SVGID_6_);}
-        .st14{fill:#FFFFFF;}
-        .st15{fill:#6B6B6B;}
-        .st16{font-family: "Archivo",sans-serif; font-weight: 700;}
-        .st17{font-size:30px;}
-        .st18{display:none;}
-        .st19{display:inline;fill:#FFFFFF;}
-        .st20{display:inline;}
-        .st21{stroke:#FFFFFF;}
-        .st22{font-family: "Archivo",sans-serif; font-weight: 800;}
-        .st23{font-family: "Archivo",sans-serif; font-weight: 300;}
-        .st24{font-size:20px;}
-        .st25{font-family: "Archivo",sans-serif; font-weight: 300;}
-        .st26{font-size:18px;}
-        .st27{fill:#0072BC;}
-        .st28{fill:#ED1C24;}
-        .st29{font-size:27px;}
-        .st30{fill:#E52525;}
-        .st31{filter:url(#Adobe_OpacityMaskFilter);}
-        .st32{fill:url(#SVGID_8_);}
-        .st33{fill:url(#SVGID_9_);}
-        .st34{mask:url(#SVGID_7_);mix-blend-mode: hard-light;}
-        .st35{filter:url(#Adobe_OpacityMaskFilter_1_);}
-        .st36{fill:url(#SVGID_11_);}
-        .st37{fill:url(#SVGID_12_);}
-        .st38{mask:url(#SVGID_10_); mix-blend-mode: hard-light;}
-        .st39{clip-path:url(#XMLID_3_);}
-        .st40{font-family: "Archivo",sans-serif; font-weight: 700; font-style: italic;}
-        .st41{font-size:25px;}
-        .st42{font-size:23px;}
-        .st43{fill:#575756;}
-        .st44{font-size:16px;}
-        .st45{font-size:17px;}
-        .st46{clip-path:url(#SVGID_14_);mix-blend-mode: hard-light;}
-        .st47{clip-path:url(#SVGID_14_);fill:url(#SVGID_15_);}
-        .st48{clip-path:url(#SVGID_14_);fill:url(#SVGID_16_);}
-        .st49{opacity:0.3;fill:url(#SVGID_17_);}
-        .st50{fill:#70D1F6;}
-        .st51{font-size:23.1644px;}
-        .st52{fill:#ABACD3;}
+        #desk .st0{fill:none;stroke:#00AEEF;stroke-width:31.6;stroke-miterlimit:10;}
+        #desk .st1{fill:none;stroke:#00AEEF;stroke-width:30.2656;stroke-miterlimit:10; fill:url(#patt1)}
+        #desk .st2{fill:none;stroke:#00AEEF;stroke-width:34.7;stroke-miterlimit:10;}
+        #desk .st3{fill:none;stroke:#2E3192;stroke-width:34;stroke-miterlimit:10;}
+        #desk .st4{fill:#2E3192;}
+        #desk .st5{fill:#00AEEF;}
+        #desk .st6{fill:none;}
+        #desk .st7{font-family: "Archivo",sans-serif; font-weight: 200;}
+        #desk .st8{font-size:15px;}
+        #desk .st9{opacity:0.7;clip-path:url(#SVGID_2_);}
+        #desk .st10{clip-path:url(#SVGID_2_);fill:url(#SVGID_3_);}
+        #desk .st11{clip-path:url(#SVGID_2_);fill:url(#SVGID_4_);}
+        #desk .st12{opacity:0.3;fill:url(#SVGID_5_);}
+        #desk .st13{opacity:0.3;fill:url(#SVGID_6_);}
+        #desk .st14{fill:#FFFFFF;}
+        #desk .st15{fill:#6B6B6B;}
+        #desk .st16{font-family: "Archivo",sans-serif; font-weight: 700;}
+        #desk .st17{font-size:30px;}
+        #desk .st18{filter:url(#Adobe_OpacityMaskFilter);}
+        #desk .st19{fill:url(#SVGID_8_);}
+        #desk .st20{fill:url(#SVGID_9_);}
+        #desk .st21{mask:url(#SVGID_7_); mix-blend-mode: hard-light;}
+        #desk .st22{font-family: "Archivo",sans-serif; font-weight: 800;}
+        #desk .st23{font-family: "Archivo",sans-serif; font-weight: 300;}
+        #desk .st24{font-size:20px;}
+        #desk .st25{font-size:18px;}
+        #desk .st26{fill:#0072BC;}
+        #desk .st27{fill:#E52525;}
+        #desk .st28{fill:#ED1C24;}
+        #desk .st29{font-size:27px;}
+        #desk .st30{filter:url(#Adobe_OpacityMaskFilter_1_);}
+        #desk .st31{fill:url(#SVGID_11_);}
+        #desk .st32{fill:url(#SVGID_12_);}
+        #desk .st33{mask:url(#SVGID_10_);mix-blend-mode: hard-light;}
+        #desk .st34{filter:url(#Adobe_OpacityMaskFilter_2_);}
+        #desk .st35{fill:url(#SVGID_14_);}
+        #desk .st36{fill:url(#SVGID_15_);}
+        #desk .st37{mask:url(#SVGID_13_);mix-blend-mode: hard-light;}
+        #desk .st38{clip-path:url(#XMLID_4_);}
+        #desk .st39{font-family: "Archivo",sans-serif; font-weight: 700; font-style: italic;}
+        #desk .st40{font-size:25px;}
+        #desk .st41{font-size:23px;}
+        #desk .st42{fill:#575756;}
+        #desk .st43{font-size:16px;}
+        #desk .st44{filter:url(#Adobe_OpacityMaskFilter_3_);}
+        #desk .st45{fill:url(#SVGID_17_);}
+        #desk .st46{fill:url(#SVGID_18_);}
+        #desk .st47{mask:url(#SVGID_16_);mix-blend-mode: hard-light;}
+        #desk .st48{filter:url(#Adobe_OpacityMaskFilter_4_);}
+        #desk .st49{fill:url(#SVGID_20_);}
+        #desk .st50{fill:url(#SVGID_21_);}
+        #desk .st51{mask:url(#SVGID_19_);mix-blend-mode: hard-light;}
+        #desk .st52{stroke:#FFFFFF;}
+        #desk .st53{font-size:17px;}
+        #desk .st54{clip-path:url(#SVGID_23_);}
+        #desk .st55{fill:url(#SVGID_24_);}
+        #desk .st56{fill:url(#SVGID_25_);}
+        #desk .st57{opacity:0.3;fill:url(#SVGID_26_);}
+        #desk .st58{fill:#70D1F6;}
+        #desk .st59{font-size:23.1644px;}
+        #desk .st60{fill:#ABACD3;}
       </style>
+      <defs>
+        <pattern id="patt1" x="0" y="0" width="452" height="640" patternUnits="userSpaceOnUse">
+          <image style="overflow:visible;" width="452" height="640" xlink:href="img/stars-galaxy.gif">
+        </pattern>
+      </defs>
+
       <g id="Layer_1">
-        <path class="st0" d="M478.9,11706.9c-18-128.7,267.3-72.5,267.3-248.7v-47.5"/>
-        <path class="st1" d="M468.8,10795c-31.2-26.4,12.7-72.2-15.3-99.4"/>
-        <path class="st1" d="M866.3,10279.9c-15.5,33.9-52.1,11.7-66.2,45.5c-14.9,33.2,29.6,66.5,12.2,99.6c-18.2,32.4-61.6-3-80.9,26.6
+        <path class="st0" d="M478.9,11310c-18-128.7,267.3-72.5,267.3-248.7v-47.5"/>
+        <path class="st1" d="M468.8,10537.1c-31.2-26.4,12.7-72.2-15.3-99.4"/>
+        <path class="st1" d="M866.3,10022c-15.5,33.9-52.1,11.7-66.2,45.5c-14.9,33.2,29.6,66.5,12.2,99.6c-18.2,32.4-61.6-3-80.9,26.6
           c-20.1,28.9,22,66.2-0.7,94.6c-23.5,27.7-64.2-11.3-88.4,13.6c-24.9,24.2,14.1,64.8-13.5,88.2c-28.4,22.7-65.7-19.4-94.5,0.6
           c-29.5,19.2,5.9,62.6-26.5,80.8"/>
-        <path class="st2" d="M239.6,13765.7c0-69.9-91.7-136.1-64.9-190.7"/>
-        <path class="st2" d="M357.4,13549.6c31-9.5-21.3-156.9,29.4-190.5"/>
+        <path class="st2" d="M239.6,13368.8c0-69.9-91.7-136.1-64.9-190.7"/>
+        <path class="st2" d="M357.4,13152.7c31-9.5-21.3-156.9,29.4-190.5"/>
         <path class="st3" d="M689.1,4207.9c58.7,54.3,39.3,161.1,39.3,223.1"/>
-        <path class="st2" d="M572.5,13410.4c21.3-24.4-19.5-62.9-53.2-108.7c-5.7-7.8-5.7-20.4-5.7-20.4v-4.2"/>
-        <path class="st4" d="M37.7,9337c0-149.2,297-216.7,297-265h59.2c0,78.1-276.2,137.7-276.2,265H37.7z"/>
-        <path class="st4" d="M283,8312.5c0-403.4,534.8-597.1,534.8-830.7h-59.2c0,233.6-719.7,372.5-719.7,830.7H283z"/>
-        <path class="st4" d="M290.9,8939.6c0-403.4-7.9-393.4-7.9-627H38.9c2,172.2,1.9,269,7.9,489.1L290.9,8939.6z"/>
-        <path class="st5" d="M334.7,7967.7c0-231.2,423.9-271.1,423.9-485.9h-34.5c0,183.8-421.1,242.9-421.1,485.9H334.7z"/>
-        <rect x="303.1" y="7967.7" class="st5" width="31.6" height="1104.3"/>
-        <path class="st4" d="M117.7,10220.9c0,214.4,609,394.9,609,683.2v138.6H542.4c0,0,0,106.3,0-73.9c0-328.8-504.4-479.6-504.4-727.8"
-          />
-        <path class="st1" d="M746.3,10970.7c0-32.5,9.1-81.9-29-97.6c-37.4-16.7-74.9,33.3-112.1,13.8c-36.4-20.5,3.3-69.3-29.9-91
+        <path class="st2" d="M572.5,13013.5c21.3-24.4-19.5-62.9-53.2-108.7c-5.7-7.8-5.7-20.4-5.7-20.4v-4.2"/>
+        <path class="st4" d="M37.7,9079.1c0-149.2,297-216.7,297-265h59.2c0,78.1-276.2,137.7-276.2,265H37.7z"/>
+        <path class="st4" d="M283,8178.6c0-403.4,534.8-597.1,534.8-830.7h-59.2c0,233.6-719.7,372.5-719.7,830.7H283z"/>
+        <path class="st4" d="M290.9,8681.6c0-403.4-7.9-269.5-7.9-503.1H38.9c2,172.2,1.9,145,7.9,365.1L290.9,8681.6z"/>
+        <path class="st5" d="M334.7,7833.7c0-231.2,423.9-271.1,423.9-485.9h-34.5c0,183.8-421.1,242.9-421.1,485.9H334.7z"/>
+        <rect x="303.1" y="7833.7" class="st5" width="31.6" height="980.4"/>
+        <path class="st4" d="M117.7,9963c0,214.4,609,394.9,609,683.2v138.6H542.4c0,0,0,106.3,0-73.9c0-328.8-504.4-479.6-504.4-727.8"/>
+        <path class="st1" d="M746.3,10712.8c0-32.5,9.1-81.9-29-97.6c-37.4-16.7-74.9,33.3-112.1,13.8c-36.4-20.5,3.3-69.3-29.9-91
           c-32.5-22.6-74.4,24.8-106.4-0.8"/>
         <g>
           <path class="st4" d="M57.4,3838.2c0,0-2.8-1142.1-2.8-1437.2H22.9l0,1437.2"/>
@@ -905,9 +964,9 @@ img.timeline-cabeca-mobile{
             c0,280.5-155.9,399.7-155.9,714.8"/>
           <path class="st5" d="M557.6,1787.8c0-315.1-309.8-402.3-309.8-714.8s0-1007,0-1007h109.8c0,0,0,694.4,0,1007
             s630.8,399.7,630.8,714.8"/>
+
           <path class="st5" d="M745,4431c0-267.6-669.2-419.8-669.2-676.1l163.4,83.2c0,203,563.5,325.3,563.5,592.8H745z"/>
           <path class="st5" d="M687.3,4574c0-84.5,57.7-94.6,57.7-143h57.7c0,78.1-57.7,82.5-57.7,143H687.3z"/>
-          <path class="st5" d="M966.9,6082.5c0,216.4-217.5,229-217.5,541.6l-143.2-530.6v-10.9"/>
           <g>
             <path class="st4" d="M779.5,4859.9c0,439.7-624.5,452.7-624.5,747.8H49.5c0-325.9,694.1-318.9,694.1-747.8"/>
           </g>
@@ -921,20 +980,19 @@ img.timeline-cabeca-mobile{
         <path class="st5" d="M802.7,4716.9c0-84.5-57.7-94.6-57.7-143h-57.7c0,78.1,57.7,82.5,57.7,143H802.7z"/>
         <path class="st5" d="M687.3,4859.9c0-84.5,57.7-94.6,57.7-143h57.7c0,78.1-57.7,82.5-57.7,143H687.3z"/>
         <path class="st4" d="M779.5,4859.9c0-84.5-34.5-94.6-34.5-143h-34.5c0,78.1,34.5,82.5,34.5,143H779.5z"/>
-        <path class="st4" d="M699.5,7053c0-84.5,59.2-94.6,59.2-143h59.2c0,78.1-59.2,82.5-59.2,143H699.5z"/>
-        <path class="st5" d="M793.1,7053c0-43.1-34.5-94.6-34.5-143h-34.5c0,39.9,34.5,82.5,34.5,143H793.1z"/>
-        <path class="st5" d="M724.1,7195.9c0-43.1,34.5-94.6,34.5-143h34.5c0,39.9-34.5,82.5-34.5,143H724.1z"/>
-        <path class="st4" d="M817.8,7195.9c0-84.5-59.2-94.6-59.2-143h-59.2c0,78.1,59.2,82.5,59.2,143H817.8z"/>
-        <path class="st4" d="M699.5,7338.9c0-84.5,59.2-94.6,59.2-143h59.2c0,78.1-59.2,82.5-59.2,143H699.5z"/>
-        <path class="st5" d="M793.1,7338.9c0-43.1-34.5-94.6-34.5-143h-34.5c0,39.9,34.5,82.5,34.5,143H793.1z"/>
-        <path class="st4" d="M393.9,9072c0-46.2-103-88.3-103-132.5l-244.1-138c0,159.7,287.9,246.2,287.9,270.5H393.9z"/>
-        <path class="st5" d="M724.1,7481.8c0-43.1,34.5-94.6,34.5-143h34.5c0,39.9-34.5,82.5-34.5,143H724.1z"/>
-        <path class="st4" d="M817.8,7481.8c0-84.5-59.2-94.6-59.2-143h-59.2c0,78.1,59.2,82.5,59.2,143H817.8z"/>
-        <path class="st4" d="M699.5,6767c0-84.5,49.9-94.6,49.9-143h52.3c0,78.1-43.1,82.5-43.1,143H699.5z"/>
-        <path class="st5" d="M793.1,6767c0-43.1-43.7-94.6-43.7-143l-143.2-530.6c0,464.4,152.4,613.1,152.4,673.6H793.1z"/>
-        <path class="st5" d="M724.1,6910c0-43.1,34.5-94.6,34.5-143h34.5c0,39.9-34.5,82.5-34.5,143H724.1z"/>
-        <path class="st4" d="M817.8,6910c0-84.5-59.2-94.6-59.2-143h-59.2c0,78.1,59.2,82.5,59.2,143H817.8z"/>
-        <g>
+        <path class="st4" d="M699.5,6919c0-84.5,59.2-94.6,59.2-143h59.2c0,78.1-59.2,82.5-59.2,143H699.5z"/>
+        <path class="st5" d="M793.1,6919c0-43.1-34.5-94.6-34.5-143h-34.5c0,39.9,34.5,82.5,34.5,143H793.1z"/>
+        <path class="st5" d="M724.1,7062c0-43.1,34.5-94.6,34.5-143h34.5c0,39.9-34.5,82.5-34.5,143H724.1z"/>
+        <path class="st4" d="M817.8,7062c0-84.5-59.2-94.6-59.2-143h-59.2c0,78.1,59.2,82.5,59.2,143H817.8z"/>
+        <path class="st4" d="M699.5,7204.9c0-84.5,59.2-94.6,59.2-143h59.2c0,78.1-59.2,82.5-59.2,143H699.5z"/>
+        <path class="st5" d="M793.1,7204.9c0-43.1-34.5-94.6-34.5-143h-34.5c0,39.9,34.5,82.5,34.5,143H793.1z"/>
+        <path class="st4" d="M393.9,8814.1c0-46.2-103-88.3-103-132.5l-244.1-138c0,159.7,287.9,246.2,287.9,270.5H393.9z"/>
+        <path class="st5" d="M724.1,7347.9c0-43.1,34.5-94.6,34.5-143h34.5c0,39.9-34.5,82.5-34.5,143H724.1z"/>
+        <path class="st4" d="M817.8,7347.9c0-84.5-59.2-94.6-59.2-143h-59.2c0,78.1,59.2,82.5,59.2,143H817.8z"/>
+        <path class="st4" d="M699.5,6633.1c0-84.5,49.9-94.6,49.9-143h52.3c0,78.1-43.1,82.5-43.1,143H699.5z"/>
+        <path class="st5" d="M724.1,6776c0-43.1,34.5-94.6,34.5-143h34.5c0,39.9-34.5,82.5-34.5,143H724.1z"/>
+        <path class="st4" d="M817.8,6776c0-84.5-59.2-94.6-59.2-143h-59.2c0,78.1,59.2,82.5,59.2,143H817.8z"/>
+        <g >
           <defs>
             <path id="SVGID_1_" d="M357.6,1073c0-312.6,0-1007,0-1007H247.8c0,0,0,694.4,0,1007c0,312.6,309.8,399.7,309.8,714.8v517.4
               l0.1,0.2h-0.1c0,295.1-470.4,415.3-481.8,809.1v640.7l163.4,83l0-723.9c0-393.8,749.2-514,749.2-809.1v-517.4
@@ -943,9 +1001,9 @@ img.timeline-cabeca-mobile{
           <clipPath id="SVGID_2_">
             <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
           </clipPath>
-          <g id="_x30_2_x5F_JQA_x5F_Photo.tif_00000127751736619968148890000000394460146928254640_" class="st9">
+          <g style="mix-blend-mode: hard-light;" id="_x30_2_x5F_JQA_x5F_Photo.tif_00000127751736619968148890000000394460146928254640_" class="st9">
             
-              <image style="overflow:visible;" width="1712" height="2236" id="_x30_2_x5F_JQA_x5F_Photo" xlink:href="img/3821C079.jpg"  transform="matrix(0.3887 0 0 0.3887 448.0806 1545.7098)">
+              <image style="overflow:visible;" width="1712" height="2236" id="_x30_2_x5F_JQA_x5F_Photo" xlink:href="img/63EC13CA.jpg"  transform="matrix(0.3887 0 0 0.3887 448.0806 1545.7098)">
             </image>
           </g>
           
@@ -961,19 +1019,17 @@ img.timeline-cabeca-mobile{
           </linearGradient>
           <polygon class="st11" points="500,2230.5 993.5,2230.5 993.5,2419.7 500,2419.7 		"/>
         </g>
+        <path class="st5" d="M966.9,5948.5L966.9,5948.5v-340.8c0-295.1-137-291.4-137-490.5c0-135-84.9-169.2-84.9-257.2h-57.7
+          c0,78.4,86.3,150.1,86.3,228.3c0,218.8-167.4,224.4-167.4,519.5v340.8l0,0v10.9c0,464.4,152.4,613.1,152.4,673.6h34.5
+          c0-43.1-43.7-94.6-43.7-143v0C749.4,6177.5,966.9,6164.9,966.9,5948.5z"/>
+        <rect x="49.5" y="5607.7" class="st4" width="105.4" height="340.8"/>
+        <path class="st4" d="M154.9,5948.5c0,293.8,646.8,229,646.8,541.6h-52.3c0-292.6-699.9-226.5-699.9-541.6H154.9z"/>
+        <path class="st4" d="M406.2,12590.6c0-298,0-386.5,0-694.4c0-253.3,320.5-352.3,320.5-704.8v-406.7H542.4c0,0,0,167.7,0,347.9
+          c0,450.1-521.3,338.7-521.3,752.9c0,251.9,0,331.8,0,617.5L406.2,12590.6z"/>
+        <path class="st5" d="M952.7,12164.1l0-190.1h30c0,0,0-1113.5,0,190.1H952.7z"/>
+        <rect x="730.4" y="10712.8" class="st5" width="31.6" height="301.1"/>
         <g>
-          <path class="st5" d="M966.9,5607.7c0-295.1-137-291.4-137-490.5c0-135-84.9-169.2-84.9-257.2h-57.7c0,78.4,86.3,150.1,86.3,228.3
-            c0,218.8-167.4,224.4-167.4,519.5H966.9z"/>
-        </g>
-        <rect x="49.5" y="5607.7" class="st4" width="105.4" height="474.8"/>
-        <rect x="606.2" y="5607.7" class="st5" width="360.7" height="474.8"/>
-        <path class="st4" d="M154.9,6082.5c0,293.8,646.8,229,646.8,541.6h-52.3c0-292.6-699.9-226.5-699.9-541.6H154.9z"/>
-        <path class="st4" d="M406.2,12987.5c0-298,0-386.5,0-694.4c0-253.3,320.5-352.3,320.5-704.8v-545.7H542.4c0,0,0,306.7,0,486.9
-          c0,450.1-521.3,338.7-521.3,752.9c0,251.9,0,331.8,0,617.5L406.2,12987.5z"/>
-        <path class="st5" d="M952.7,12561l0-190.1h30c0,0,0-1113.5,0,190.1H952.7z"/>
-        <rect x="730.4" y="10970.7" class="st5" width="31.6" height="440.1"/>
-        <g>
-          <path class="st5" d="M829,10290c6.2-3.6,19.2-11.1,20.3-14.8c0.9-3.7-5.9-16.2-9.6-22.8c-7.9-14.4-16.9-30.7-12.5-46.8
+          <path class="st5" d="M829,10032.1c6.2-3.6,19.2-11.1,20.3-14.8c0.9-3.7-5.9-16.2-9.6-22.8c-7.9-14.4-16.9-30.7-12.5-46.8
             c4.4-15.9,20.3-25.3,34.4-33.7c6.2-3.7,19.1-11.3,20.1-15c0.8-3.7-6.7-16.5-10.3-22.6c-8.3-14.1-17.7-30-13.9-46.2
             c3.8-16,19.1-26,32.7-34.9c6-3.9,18.5-12.1,19.4-15.9c0.6-3.8-7.4-15.5-11.7-21.9c-9.1-13.5-19.4-28.7-16.8-45
             c2.6-16.1,16.4-26.8,29.8-37.1c5.7-4.4,17.5-13.6,18.1-17.4c0.2-3.8-8.8-14.7-13.6-20.6c-10.3-12.5-21.9-26.7-21-43
@@ -998,12 +1054,12 @@ img.timeline-cabeca-mobile{
             c8.4,14.2,17.9,30.4,13.6,46.6c-4.2,16.3-20.4,25.9-34.7,34.3c-6.6,3.9-18.8,11.1-19.9,14.8c-1,3.7,6.2,16.8,9.7,23.1
             c7.9,14.4,16.9,30.7,12.4,46.7c-4.5,16.1-20.7,25.4-34.9,33.7"/>
         </g>
-        <path class="st4" d="M406.2,12987.5c0,120,188.2,130.4,188.2,291.8h-63.6c0-119.5-509.7-145.9-509.7-379.5L406.2,12987.5z"/>
-        <path class="st5" d="M496.2,13279.4h34.5c0-189.7,452-178.8,452-718.3h-30C952.7,13089.7,496.2,13065.3,496.2,13279.4z"/>
-        <path class="st2" d="M118.9,13973.2c0,41.5,120.7,48.2,120.7,105.2"/>
-        <path class="st2" d="M210.2,14186.3c-44.3-28.7,29.4-50.9,29.4-107.9"/>
+        <path class="st4" d="M406.2,12590.6c0,120,188.2,130.4,188.2,291.8h-63.6c0-119.5-509.7-145.9-509.7-379.5L406.2,12590.6z"/>
+        <path class="st5" d="M496.2,12882.5h34.5c0-189.7,452-178.8,452-718.3h-30C952.7,12692.7,496.2,12668.4,496.2,12882.5z"/>
+        <path class="st2" d="M118.9,13576.3c0,41.5,120.7,48.2,120.7,105.2"/>
+        <path class="st2" d="M210.2,13789.4c-44.3-28.7,29.4-50.9,29.4-107.9"/>
         <g>
-          <path class="st4" d="M474,15052.5c-1.9-4.3-12.1-14.7-18.1-21c-18.2-18.8-40.9-42.1-41.9-73.8c-0.9-29.9,18.5-52.6,35.7-72.7
+          <path class="st4" d="M474,14655.6c-1.9-4.3-12.1-14.7-18.1-21c-18.2-18.8-40.9-42.1-41.9-73.8c-0.9-29.9,18.5-52.6,35.7-72.7
             c4.8-5.6,12-14,15.7-19.8c-4.4-4.8-12.1-11.5-17.2-15.9c-19.4-16.8-43.4-37.8-47.3-68.5c-3.7-29.7,13.3-54.3,28.3-76
             c4-5.8,10.1-14.7,13.3-20.7c-5-4.3-13.4-10-19-13.8c-21-14.2-47.1-31.9-54.8-61.4c-7.5-28.8,5.9-55.4,17.7-78.9
             c3.1-6.2,7.8-15.6,10.2-21.9c-5.6-3.5-14.7-7.7-20.8-10.6c-22.8-10.8-51.1-24.1-63.3-51.8c-11.9-27.1-3.2-55.3,4.4-80.3
@@ -1021,149 +1077,173 @@ img.timeline-cabeca-mobile{
             c5.5,3.7,16.1,8.8,23,12c24,11.3,53.9,25.5,64.4,56c10.6,31-4.4,60.9-16.5,84.9c-3.3,6.5-8.3,16.6-10.4,22.7
             c4.9,4.5,14.6,11.1,20.9,15.4c21.8,14.8,49,33.2,54.9,64.6c6,32-12.9,59.5-28.1,81.5c-4.1,5.9-10.4,15-13.3,20.8
             c4.3,5.1,13.2,12.9,19,17.9c19.7,17.1,44.2,38.4,46.4,69.9c2.4,32.5-19.3,57.9-36.7,78.2c-4.5,5.3-11.5,13.5-15,18.8
-            c3.9,5.6,12.4,14.3,17.8,19.9c17.8,18.3,40,41.1,40,71.8h-80C473.2,15050.7,474,15052.5,474,15052.5z M479.5,14768
-            C479.5,14768,479.5,14768,479.5,14768C479.5,14768,479.5,14768,479.5,14768z M446.1,14687.8L446.1,14687.8
-            C446.1,14687.8,446.1,14687.8,446.1,14687.8z M444.4,14679.4C444.4,14679.4,444.4,14679.4,444.4,14679.4L444.4,14679.4z
-             M446.5,14592.4L446.5,14592.4L446.5,14592.4z M444.9,14586C444.9,14586,444.9,14586,444.9,14586
-            C444.9,14586,444.9,14586,444.9,14586z M295.9,14251.7C295.9,14251.7,295.9,14251.7,295.9,14251.7
-            C295.9,14251.7,295.9,14251.7,295.9,14251.7z M197.3,14071.2C197.3,14071.2,197.3,14071.2,197.3,14071.2
-            C197.3,14071.2,197.3,14071.2,197.3,14071.2z M154,13872.8C154,13872.8,154,13872.8,154,13872.8L154,13872.8z M142.2,13765.7
-            C142.2,13765.7,142.2,13765.7,142.2,13765.7C142.2,13765.7,142.2,13765.7,142.2,13765.7z M195.2,13675.8
-            C195.2,13675.8,195.2,13675.8,195.2,13675.8C195.2,13675.8,195.2,13675.8,195.2,13675.8z M231.4,13574
-            C231.4,13574,231.4,13574,231.4,13574C231.4,13574,231.4,13574,231.4,13574z M232.1,13573.2
-            C232.1,13573.2,232.1,13573.2,232.1,13573.2C232.1,13573.2,232.1,13573.2,232.1,13573.2z M316.4,13512
-            C316.4,13512,316.4,13512,316.4,13512C316.4,13512,316.4,13512,316.4,13512z"/>
+            c3.9,5.6,12.4,14.3,17.8,19.9c17.8,18.3,40,41.1,40,71.8h-80C473.2,14653.8,474,14655.6,474,14655.6z M479.5,14371.1
+            C479.5,14371.1,479.5,14371.1,479.5,14371.1C479.5,14371.1,479.5,14371.1,479.5,14371.1z M446.1,14290.9L446.1,14290.9
+            C446.1,14290.9,446.1,14290.9,446.1,14290.9z M444.4,14282.5C444.4,14282.5,444.4,14282.5,444.4,14282.5L444.4,14282.5z
+             M446.5,14195.5L446.5,14195.5L446.5,14195.5z M444.9,14189.1C444.9,14189.1,444.9,14189.1,444.9,14189.1
+            C444.9,14189.1,444.9,14189.1,444.9,14189.1z M295.9,13854.8C295.9,13854.8,295.9,13854.8,295.9,13854.8
+            C295.9,13854.8,295.9,13854.8,295.9,13854.8z M197.3,13674.3C197.3,13674.3,197.3,13674.3,197.3,13674.3
+            C197.3,13674.3,197.3,13674.3,197.3,13674.3z M154,13475.9C154,13475.9,154,13475.9,154,13475.9L154,13475.9z M142.2,13368.8
+            C142.2,13368.8,142.2,13368.8,142.2,13368.8C142.2,13368.8,142.2,13368.8,142.2,13368.8z M195.2,13278.8
+            C195.2,13278.8,195.2,13278.8,195.2,13278.8C195.2,13278.8,195.2,13278.8,195.2,13278.8z M231.4,13177.1
+            C231.4,13177.1,231.4,13177.1,231.4,13177.1C231.4,13177.1,231.4,13177.1,231.4,13177.1z M232.1,13176.3
+            C232.1,13176.3,232.1,13176.3,232.1,13176.3C232.1,13176.3,232.1,13176.3,232.1,13176.3z M316.4,13115.1
+            C316.4,13115.1,316.4,13115.1,316.4,13115.1C316.4,13115.1,316.4,13115.1,316.4,13115.1z"/>
         </g>
         <path class="st3" d="M40.1,3838.2c0,118.3,113.9,273.8,320.8,296.4s272.5,22.1,328.3,73.3"/>
         <g>
           
-            <radialGradient id="SVGID_5_" cx="519.6302" cy="1996.0015" r="313.1357" gradientTransform="matrix(1 0 0 3.000000e-02 0 6530.2642)" gradientUnits="userSpaceOnUse">
+            <radialGradient id="SVGID_5_" cx="519.6302" cy="1956.0486" r="313.1357" gradientTransform="matrix(1 0 0 3.000000e-02 0 6397.4995)" gradientUnits="userSpaceOnUse">
             <stop  offset="0.1588" style="stop-color:#000000"/>
             <stop  offset="0.8973" style="stop-color:#000000;stop-opacity:0"/>
           </radialGradient>
-          <rect x="76.9" y="6556" class="st12" width="885.4" height="68.4"/>
+          <rect x="76.9" y="6422" class="st12" width="885.4" height="68.4"/>
           
-            <radialGradient id="SVGID_6_" cx="519.6302" cy="1977.7317" r="313.1357" gradientTransform="matrix(1 0 0 3.000000e-02 0 6469.5527)" gradientUnits="userSpaceOnUse">
+            <radialGradient id="SVGID_6_" cx="519.6302" cy="1937.7787" r="313.1357" gradientTransform="matrix(1 0 0 3.000000e-02 0 6336.7886)" gradientUnits="userSpaceOnUse">
             <stop  offset="0.1588" style="stop-color:#000000"/>
             <stop  offset="0.8973" style="stop-color:#000000;stop-opacity:0"/>
           </radialGradient>
-          <rect x="76.9" y="6494.7" class="st13" width="885.4" height="68.4"/>
-          <rect x="67.7" y="6528.9" class="st14" width="912" height="61.3"/>
+          <rect x="76.9" y="6360.7" class="st13" width="885.4" height="68.4"/>
+          <rect x="67.7" y="6394.9" class="st14" width="912" height="61.3"/>
           <g>
-            <path d="M53.9,6590.1c294.4-0.6,624.7-0.6,919.1,0C678.6,6590.8,348.4,6590.8,53.9,6590.1L53.9,6590.1z"/>
+            <path d="M53.9,6456.2c294.4-0.6,624.7-0.6,919.1,0C678.6,6456.8,348.4,6456.8,53.9,6456.2L53.9,6456.2z"/>
           </g>
           <g>
-            <path d="M53.9,6528.9c294.4-0.6,624.7-0.6,919.1,0C678.6,6529.5,348.4,6529.5,53.9,6528.9L53.9,6528.9z"/>
+            <path d="M53.9,6394.9c294.4-0.6,624.7-0.6,919.1,0C678.6,6395.5,348.4,6395.5,53.9,6394.9L53.9,6394.9z"/>
           </g>
         </g>
         <g>
-          <text transform="matrix(1 0 0 1 267.5702 6573.1768)" class="st15 st16 st17">II FASE – DOMÍNIO AMERICANO</text>
+          <text transform="matrix(1 0 0 1 267.5702 6439.2139)" class="st15 st16 st17">II FASE – DOMÍNIO AMERICANO</text>
         </g>
-        <path class="st4" d="M385,13428.2c75.6-21.9,130.4-77.8,145.7-148.8h63.6c0,62.4-28.2,167.9-186,225.2L385,13428.2z"/>
-        <path class="st2" d="M210.2,14186.3c38.7,24.9,10.1,63.9,45.6,88.1c23.6,16.1,83.3-10,111.6,12.3c23.8,18.7,12.5,82.2,37.9,105.6
+        <path class="st4" d="M385,13031.3c75.6-21.9,130.4-77.8,145.7-148.8h63.6c0,62.4-28.2,167.9-186,225.2L385,13031.3z"/>
+        <path class="st2" d="M210.2,13789.4c38.7,24.9,10.1,63.9,45.6,88.1c23.6,16.1,83.3-10,111.6,12.3c23.8,18.7,12.5,82.2,37.9,105.6
           c22.8,20.9,85.5,4.3,108.4,29.3c21.1,23.1-0.8,83.8,19.6,110.5c19.1,25,83.7,19.9,101.3,48.3c16.7,26.8-16.3,82.3-1.6,112.2
           c14,28.3,78.3,35.8,90,67c11.1,29.5-32.1,77.5-23.5,109.8c8.2,30.4,69.8,50.1,75.5,83.1c5.3,31-46.1,70.2-43.4,103.5
-          c2.6,31.4,59.8,61.5,59.8,95"/>
+          c2.6,31.4,59.8,200.5,59.8,233.9"/>
         <g>
-          <path class="st4" d="M97.8,10374.7c-7.1-9.9-13.4-18.1-18.8-25.2c-31.3-41.1-41.2-57.5-41.2-128.5c0-50.7,21.7-78.3,37.6-98.4
+          <path class="st4" d="M97.8,10116.7c-7.1-9.9-13.4-18.1-18.8-25.2c-31.3-41.1-41.2-57.5-41.2-128.5c0-50.7,21.7-78.3,37.6-98.4
             c13.2-16.7,20.4-25.9,20.4-48.9s-7.3-32.2-20.4-48.9c-15.9-20.1-37.6-47.7-37.6-98.4c0-50.7,21.7-78.3,37.6-98.4
             c13.2-16.7,20.4-25.9,20.4-48.9s-7.3-32.2-20.4-48.9c-15.9-20.1-37.6-47.7-37.6-98.4c0-50.7,21.7-78.3,37.6-98.4
             c13.2-16.7,20.4-25.9,20.4-48.9s-7.3-32.2-20.4-48.9c-15.9-20.1-37.6-47.7-37.6-98.4h80c0,23,7.3,32.2,20.4,48.9
             c15.9,20.1,37.6,47.7,37.6,98.4s-21.7,78.3-37.6,98.4c-13.2,16.7-20.4,25.9-20.4,48.9c0,23,7.3,32.2,20.4,48.9
             c15.9,20.1,37.6,47.7,37.6,98.4s-21.7,78.3-37.6,98.4c-13.2,16.7-20.4,25.9-20.4,48.9c0,23,7.3,32.2,20.4,48.9
             c15.9,20.1,37.6,47.7,37.6,98.4c0,50.7-21.7,78.3-37.6,98.4c-13.2,16.7-20.4,25.9-20.4,48.9c0,25.8,1.2,39.9,4.3,48.7
-            c2.7,7.8,8.3,15.2,20.6,31.3c5.8,7.6,12.3,16.2,20.1,27L97.8,10374.7z"/>
+            c2.7,7.8,8.3,15.2,20.6,31.3c5.8,7.6,12.3,16.2,20.1,27L97.8,10116.7z"/>
+        </g>
+        <defs>
+          <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-12677.9" y="-26953.7" width="13581.9" height="38220.7">
+            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+          </filter>
+        </defs>
+        <mask maskUnits="userSpaceOnUse" x="-12677.9" y="-26953.7" width="13581.9" height="38220.7" id="SVGID_7_">
+          <g class="st18">
+            
+              <linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="668.1246" y1="10292.3809" x2="657.1063" y2="10047.0879" gradientTransform="matrix(0.9978 6.604671e-02 -5.226935e-02 0.7897 768.0626 3113.0793)">
+              <stop  offset="0.2524" style="stop-color:#000000"/>
+              <stop  offset="0.6535" style="stop-color:#FFFFFF"/>
+            </linearGradient>
+            <polygon class="st19" points="1584.4,11305.8 193.2,11213.7 210.9,11069.4 1602.1,11161.4 			"/>
+            <polygon class="st14" points="778.5,10733.5 453.1,10733.5 430.3,11128.2 778.5,11183.4 			"/>
+            
+              <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="-126.6367" y1="17444.0938" x2="-126.6367" y2="17337.123" gradientTransform="matrix(-1 0 0 -1 515.1782 28098.1055)">
+              <stop  offset="0" style="stop-color:#000000"/>
+              <stop  offset="1" style="stop-color:#FFFFFF"/>
+            </linearGradient>
+            <polygon class="st20" points="514,10654 769.7,10654 769.7,10761 514,10761 			"/>
+          </g>
+        </mask>
+        <g class="st21">
+          <defs>
+            <path id="XMLID_00000174600395408757521440000018155988157717832853_" d="M721.5,11267H524.8c8.1-30.5,17.6-81.2,17.6-108.7v-509
+              h184.3v542.2C726.7,11213,726.1,11239.4,721.5,11267z"/>
+          </defs>
+          <use xlink:href="#XMLID_00000174600395408757521440000018155988157717832853_"  style="overflow:visible;"/>
+          <clipPath id="XMLID_2_">
+            <use xlink:href="#XMLID_00000174600395408757521440000018155988157717832853_"  style="overflow:visible;"/>
+          </clipPath>
+          <g style="clip-path:url(#XMLID_2_);">
+            
+              <image style="overflow:visible;" width="768" height="508" xlink:href="img/63EC13CE.jpg"  transform="matrix(1.7457 0 0 1.7457 -12677.9248 -26953.6777)">
+            </image>
+          </g>
+          <g style="clip-path:url(#XMLID_2_);">
+            
+              <image style="overflow:visible;" width="488" height="596" xlink:href="img/63EC13C9.jpg"  transform="matrix(1 0 0 1 416.0124 10652.4961)">
+            </image>
+          </g>
         </g>
       </g>
-      <g id="Layer_2" class="st18">
-        <rect x="13106.3" y="13690.2" class="st19" width="507" height="604.6"/>
-        <g class="st20">
-          <rect x="13151" y="13997.6" class="st6" width="417" height="266.6"/>
-          <text transform="matrix(1 0 0 1 13150.9561 14019.293)"><tspan x="0" y="0" class="st22 st17">A</tspan><tspan x="22.4" y="0" class="st22 st17"> Guerra </tspan><tspan x="138.5" y="0" class="st22 st17">do Iraque</tspan><tspan x="0" y="45.6" class="st23 st24">Nos anos 1990, a principal preocupação do </tspan><tspan x="0" y="69.6" class="st23 st24">Ocidente como um todo foi encontrar uma </tspan><tspan x="0" y="93.6" class="st23 st24">função para a NATO depois do fim da Guerra </tspan><tspan x="0" y="117.6" class="st23 st24">Fria e o colapso do inimigo comum. No </tspan><tspan x="0" y="141.6" class="st23 st24">entanto, o 11 de Setembro acabou por </tspan><tspan x="0" y="165.6" class="st23 st24">significar um afastamento abrupto entre os </tspan><tspan x="0" y="189.6" class="st23 st24">dois lados do Atlântico, que só Joe Biden se </tspan><tspan x="0" y="213.6" class="st23 st24">preocupou verdadeiramente em reparar.</tspan><tspan x="358.1" y="213.6" class="st25 st26"> </tspan></text>
-        </g>
-        
-          <image style="display:inline;overflow:visible;" width="640" height="482" xlink:href="img/3821C07B.jpg"  transform="matrix(0.6516 0 0 0.6516 13150.957 13652.3369)">
-        </image>
-        <g class="st20">
-          <path class="st21" d="M13342.1,14297.3h-174.4c-9.6,0-17.4-7.8-17.4-17.4v-4.4c0-9.6,7.8-17.4,17.4-17.4h174.4
-            c9.6,0,17.4,7.8,17.4,17.4v4.4C13359.5,14289.5,13351.7,14297.3,13342.1,14297.3z"/>
-          <text transform="matrix(1 0 0 1 13207.6768 14283.8086)" class="st14 st40 st45">Ler mais...</text>
-        </g>
-        <rect x="13151" y="14461.1" style="display:inline;fill:none;" width="351.4" height="160"/>
-        <text transform="matrix(1 0 0 1 13150.958 14479.2148)" class="st20"><tspan x="0" y="0" class="st4 st40 st41">Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="30" class="st4 st40 st41">consectetuer adipiscing elit, </tspan><tspan x="0" y="60" class="st4 st40 st41">sed diam nonummy nibh </tspan><tspan x="0" y="90" class="st4 st40 st41">euismod tincidunt ut laoreet </tspan><tspan x="0" y="120" class="st4 st40 st41">dolore </tspan></text>
-        <rect x="13151" y="14587.5" style="display:inline;fill:none;" width="270.6" height="17.8"/>
-        <text transform="matrix(1 0 0 1 13150.9561 14599.0332)" class="st7 st44" style="display:inline;fill:#1D1D1B;">Lorem ipsum dolor sit </text>
+      <g id="Layer_2">
       </g>
       <g id="caixas">
-        <path class="st2" d="M572.5,13410.4c-21.3,24.4-134.4-83.8-185.8-51.3"/>
-        <path class="st2" d="M364.6,13542.3c-8.9,31.1-163.8-20.5-189.9,32.8"/>
-        <path class="st2" d="M239.6,13765.7c0,61.8-120.7,136.3-120.7,207.5"/>
+        <path class="st2" d="M572.5,13013.5c-21.3,24.4-134.4-83.8-185.8-51.3"/>
+        <path class="st2" d="M364.6,13145.4c-8.9,31.1-163.8-20.5-189.9,32.8"/>
+        <path class="st2" d="M239.6,13368.8c0,61.8-120.7,136.3-120.7,207.5"/>
         <g>
           <g>
             <rect x="387.6" y="676" class="st6" width="570.5" height="230.5"/>
-            <text transform="matrix(1 0 0 1 387.5928 697.7209)"><tspan x="0" y="0" class="st22 st17">Revolução Francesaaaaa</tspan><tspan x="0" y="45.6" class="st23 st24">Nos anos 1990, a principal preocupação do Ocidente como um </tspan><tspan x="0" y="69.6" class="st23 st24">todo foi encontrar uma função para a NATO depois do fim da </tspan><tspan x="0" y="93.6" class="st23 st24">Guerra Fria e o colapso do inimigo comum. No entanto, o 11 de </tspan><tspan x="0" y="117.6" class="st23 st24">Setembro acabou por significar um afastamento abrupto entre </tspan><tspan x="0" y="141.6" class="st23 st24">os dois lados do Atlântico, que só Joe Biden se preocupou </tspan><tspan x="0" y="165.6" class="st23 st24">verdadeiramente em reparar.</tspan><tspan x="258" y="165.6" class="st25 st26"> </tspan></text>
+            <text transform="matrix(1 0 0 1 387.5928 697.7209)"><tspan x="0" y="0" class="st22 st17">Revolução Francesaaaaa</tspan><tspan x="0" y="45.6" class="st23 st24">Nos anos 1990, a principal preocupação do Ocidente como um </tspan><tspan x="0" y="69.6" class="st23 st24">todo foi encontrar uma função para a NATO depois do fim da </tspan><tspan x="0" y="93.6" class="st23 st24">Guerra Fria e o colapso do inimigo comum. No entanto, o 11 de </tspan><tspan x="0" y="117.6" class="st23 st24">Setembro acabou por significar um afastamento abrupto entre </tspan><tspan x="0" y="141.6" class="st23 st24">os dois lados do Atlântico, que só Joe Biden se preocupou </tspan><tspan x="0" y="165.6" class="st23 st24">verdadeiramente em reparar.</tspan><tspan x="256.7" y="165.6" class="st23 st25"> </tspan></text>
           </g>
           <rect x="387.6" y="196.7" width="570.5" height="415.6"/>
         </g>
         <g>
           <g>
-            <rect x="94.3" y="11284.1" class="st6" width="417" height="176.1"/>
-            <text transform="matrix(1 0 0 1 342.3662 11305.7793)"><tspan x="0" y="0" class="st22 st17">Guerra Fria</tspan><tspan x="-199.5" y="45.6" class="st23 st24">Como descrito anteriormente, os Estados </tspan><tspan x="-221.1" y="69.6" class="st23 st24">Unidos prepararam a Guerra Fria através da </tspan><tspan x="-156.6" y="93.6" class="st23 st24">reconstrução europeia, e também da </tspan><tspan x="-114" y="117.6" class="st23 st24">institucionalização das relações </tspan><tspan x="31.8" y="141.6" class="st23 st24">transatlânticas.</tspan></text>
-          </g>
-          <rect x="38.6" y="10898.2" class="st21" width="473.8" height="356.8"/>
-        </g>
-        <g>
-          <g>
-            <rect x="436.2" y="12322.3" class="st6" width="389.4" height="266.6"/>
-            <text transform="matrix(1 0 0 1 436.1846 12343.9795)"><tspan x="0" y="0" class="st22 st17">A</tspan><tspan x="22.4" y="0" class="st22 st17"> Guerra </tspan><tspan x="138.5" y="0" class="st22 st17">do Iraque</tspan><tspan x="0" y="45.6" class="st25 st24">Nos anos 1990, a principal preocupação do </tspan><tspan x="0" y="69.6" class="st25 st24">Ocidente como um todo foi encontrar uma </tspan><tspan x="0" y="93.6" class="st25 st24">função para a NATO depois do fim da </tspan><tspan x="0" y="117.6" class="st25 st24">Guerra Fria e o colapso do inimigo comum. </tspan><tspan x="0" y="141.6" class="st25 st24">No entanto, o 11 de Setembro acabou por </tspan><tspan x="0" y="165.6" class="st25 st24">significar um afastamento abrupto entre os </tspan><tspan x="0" y="189.6" class="st25 st24">dois lados do Atlântico, que só Joe Biden se </tspan><tspan x="0" y="213.6" class="st25 st24">preocupou verdadeiramente em reparar. </tspan></text>
+            <rect x="94.3" y="10766.6" class="st6" width="417" height="220.3"/>
+            <text transform="matrix(1 0 0 1 237.5771 10788.2783)"><tspan x="0" y="0" class="st22 st17">Fim da Guerra Fria</tspan><tspan x="-73.5" y="45.6" class="st23 st24">No final dos anos 1980, um conjunto de </tspan><tspan x="-100.1" y="69.6" class="st23 st24">vontades deu origem ao fim inesperado da </tspan><tspan x="-72.4" y="93.6" class="st23 st24">Guerra Fria. A presidência Reagan veio </tspan><tspan x="-93.2" y="117.6" class="st23 st24">decidida a pressionar diplomaticamente a </tspan><tspan x="-132.9" y="141.6" class="st23 st24">União Soviética, o Secretário-Geral do Partido </tspan><tspan x="-112.3" y="165.6" class="st23 st24">Comunista, Mikhail Gorbachov, introduziu a </tspan><tspan x="47" y="189.6" class="st23 st24">perestroika e o glasnost...</tspan></text>
           </g>
         </g>
         <g>
           <g>
-            <polygon class="st6" points="954.8,14046.3 373.1,14044.1 373.1,13820.1 954.8,13822.3 			"/>
-            <text transform="matrix(1 0 0 1 373.0977 13841.8193)"><tspan x="0" y="0" class="st22 st17">Os Dias de Hoje</tspan><tspan x="0" y="45.6" class="st23 st24">A era Obama foi vista pela Europa como uma fase de </tspan><tspan x="0" y="69.6" class="st23 st24">reconciliação entre os Estados Unidos e o continente. Mas </tspan><tspan x="0" y="93.6" class="st23 st24">apesar de o tom diplomático se ter tornado amigável, Washington </tspan><tspan x="0" y="117.6" class="st23 st24">e as capitais europeias estiveram pouco sintonizadas num </tspan><tspan x="0" y="141.6" class="st23 st24">mundo em mudanças e com cada vez maiores exigências. </tspan><tspan x="0" y="165.6" class="st23 st24">Donald Trump endureceu o discurso e as decisões políticas Biden </tspan><tspan x="0" y="189.6" class="st23 st24">e a invasão russa da Ucrânia mudou esse cenário.</tspan></text>
+            <rect x="436.2" y="11925.3" class="st6" width="389.4" height="266.6"/>
+            <text transform="matrix(1 0 0 1 436.1846 11947.0693)"><tspan x="0" y="0" class="st22 st17">A</tspan><tspan x="22.4" y="0" class="st22 st17"> Guerra </tspan><tspan x="138.5" y="0" class="st22 st17">do Iraque</tspan><tspan x="0" y="45.6" class="st23 st24">Nos anos 1990, a principal preocupação do </tspan><tspan x="0" y="69.6" class="st23 st24">Ocidente como um todo foi encontrar uma </tspan><tspan x="0" y="93.6" class="st23 st24">função para a NATO depois do fim da </tspan><tspan x="0" y="117.6" class="st23 st24">Guerra Fria e o colapso do inimigo comum. </tspan><tspan x="0" y="141.6" class="st23 st24">No entanto, o 11 de Setembro acabou por </tspan><tspan x="0" y="165.6" class="st23 st24">significar um afastamento abrupto entre os </tspan><tspan x="0" y="189.6" class="st23 st24">dois lados do Atlântico, que só Joe Biden se </tspan><tspan x="0" y="213.6" class="st23 st24">preocupou verdadeiramente em reparar. </tspan></text>
           </g>
         </g>
         <g>
-          <circle class="st27" cx="301.7" cy="196.7" r="21.7"/>
+          <g>
+            <polygon class="st6" points="954.8,13636 373.1,13633.8 373.1,13409.8 954.8,13412.1 			"/>
+            <text transform="matrix(1 0 0 1 373.0977 13431.5498)"><tspan x="0" y="0" class="st22 st17">Os Dias de Hoje</tspan><tspan x="0" y="45.6" class="st23 st24">A era Obama foi vista pela Europa como uma fase de </tspan><tspan x="0" y="69.6" class="st23 st24">reconciliação entre os Estados Unidos e o continente. Mas apesar </tspan><tspan x="0" y="93.6" class="st23 st24">de o tom diplomático se ter tornado amigável, Washington e as </tspan><tspan x="0" y="117.6" class="st23 st24">capitais europeias estiveram pouco sintonizadas num mundo em </tspan><tspan x="0" y="141.6" class="st23 st24">mudanças e com cada vez maiores exigências. Donald Trump </tspan><tspan x="0" y="165.6" class="st23 st24">endureceu o discurso e as decisões políticas Biden e a invasão </tspan><tspan x="0" y="189.6" class="st23 st24">russa da Ucrânia mudou esse cenário.</tspan></text>
+          </g>
+        </g>
+        <g>
+          <circle class="st26" cx="301.7" cy="196.7" r="21.7"/>
           <polygon class="st14" points="301.7,184 304.5,192.8 313.7,192.8 306.3,198.2 309.1,206.9 301.7,201.5 294.2,206.9 297.1,198.2 
             289.6,192.8 298.8,192.8 		"/>
         </g>
         <g>
-          <circle class="st27" cx="770.2" cy="4411.6" r="21.7"/>
+          <circle class="st26" cx="770.2" cy="4411.6" r="21.7"/>
           <polygon class="st14" points="770.2,4399 773,4407.7 782.2,4407.7 774.8,4413.1 777.6,4421.9 770.2,4416.5 762.8,4421.9 
             765.6,4413.1 758.2,4407.7 767.4,4407.7 		"/>
         </g>
         <g>
-          <circle class="st27" cx="318.7" cy="7945" r="21.7"/>
-          <polygon class="st14" points="318.7,7932.3 321.5,7941 330.7,7941 323.3,7946.4 326.1,7955.2 318.7,7949.8 311.3,7955.2 
-            314.1,7946.4 306.7,7941 315.8,7941 		"/>
+          <circle class="st26" cx="318.7" cy="8239.6" r="21.7"/>
+          <polygon class="st14" points="318.7,8226.9 321.5,8235.6 330.7,8235.6 323.3,8241 326.1,8249.8 318.7,8244.4 311.3,8249.8 
+            314.1,8241 306.7,8235.6 315.8,8235.6 		"/>
         </g>
         <g>
-          <circle class="st27" cx="641.4" cy="10938.2" r="21.7"/>
-          <polygon class="st14" points="641.4,10925.6 644.2,10934.3 653.4,10934.3 646,10939.7 648.8,10948.5 641.4,10943.1 633.9,10948.5 
-            636.8,10939.7 629.4,10934.3 638.5,10934.3 		"/>
+          <circle class="st27" cx="542.4" cy="10744.8" r="21.7"/>
+          <polygon class="st14" points="542.4,10732.2 545.2,10740.9 554.4,10740.9 547,10746.3 549.8,10755.1 542.4,10749.7 535,10755.1 
+            537.8,10746.3 530.4,10740.9 539.5,10740.9 		"/>
         </g>
         <g>
-          <circle class="st28" cx="166.7" cy="13706" r="21.7"/>
-          <polygon class="st14" points="166.7,13693.4 169.5,13702.1 178.7,13702.1 171.3,13707.5 174.1,13716.3 166.7,13710.9 
-            159.2,13716.3 162.1,13707.5 154.6,13702.1 163.8,13702.1 		"/>
+          <circle class="st28" cx="307.7" cy="13195.5" r="21.7"/>
+          <polygon class="st14" points="307.7,13182.9 310.5,13191.6 319.7,13191.6 312.3,13197 315.1,13205.7 307.7,13200.3 300.3,13205.7 
+            303.1,13197 295.7,13191.6 304.9,13191.6 		"/>
         </g>
         <g>
-          <circle class="st27" cx="752.1" cy="6695.5" r="21.7"/>
-          <polygon class="st14" points="752.1,6682.9 755,6691.6 764.2,6691.6 756.7,6697 759.6,6705.8 752.1,6700.4 744.7,6705.8 
-            747.5,6697 740.1,6691.6 749.3,6691.6 		"/>
+          <circle class="st26" cx="752.1" cy="6561.6" r="21.7"/>
+          <polygon class="st14" points="752.1,6548.9 755,6557.7 764.2,6557.7 756.7,6563.1 759.6,6571.8 752.1,6566.4 744.7,6571.8 
+            747.5,6563.1 740.1,6557.7 749.3,6557.7 		"/>
         </g>
         <g>
           <g>
             <rect x="84.5" y="1720.4" class="st6" width="360.6" height="212.6"/>
-            <text transform="matrix(1 0 0 1 84.5347 1739.9835)"><tspan x="0" y="0" class="st22 st29">O mito do </tspan><tspan x="0" y="32.4" class="st22 st29">isolacionismo americano</tspan><tspan x="0" y="75.6" class="st25 st26">Desde a sua fundação, os Estados Unidos </tspan><tspan x="0" y="97.2" class="st25 st26">nunca foram uma nação isolacionista, ainda </tspan><tspan x="0" y="118.8" class="st25 st26">que se tenha criado o mito de uma espécie </tspan><tspan x="0" y="140.4" class="st25 st26">de um isolacionismo benigno que se </tspan><tspan x="0" y="162" class="st25 st26">destinava a preservar Washington da </tspan><tspan x="0" y="183.6" class="st25 st26">amoralidade da política externa europeia. </tspan></text>
+            <text transform="matrix(1 0 0 1 84.5347 1739.9835)"><tspan x="0" y="0" class="st22 st29">O mito do </tspan><tspan x="0" y="32.4" class="st22 st29">isolacionismo americano</tspan><tspan x="0" y="75.6" class="st23 st25">Desde a sua fundação, os Estados Unidos </tspan><tspan x="0" y="97.2" class="st23 st25">nunca foram uma nação isolacionista, ainda </tspan><tspan x="0" y="118.8" class="st23 st25">que se tenha criado o mito de uma espécie </tspan><tspan x="0" y="140.4" class="st23 st25">de um isolacionismo benigno que se </tspan><tspan x="0" y="162" class="st23 st25">destinava a preservar Washington da </tspan><tspan x="0" y="183.6" class="st23 st25">amoralidade da política externa europeia. </tspan></text>
           </g>
         </g>
         <g>
           <g>
-            <rect x="269.2" y="3520.2" class="st6" width="553" height="198.5"/>
-            <text transform="matrix(1 0 0 1 269.1851 3541.9016)"><tspan x="0" y="0" class="st22 st17">A</tspan><tspan x="22.4" y="0" class="st22 st17"> Guerraaaaa</tspan><tspan x="0" y="45.6" class="st23 st24">Nos anos 1990, a principal preocupação do Ocidente como </tspan><tspan x="0" y="69.6" class="st23 st24">um todo foi encontrar uma função para a NATO depois do fim </tspan><tspan x="0" y="93.6" class="st23 st24">da Guerra Fria e o colapso do inimigo comum. No entanto, o </tspan><tspan x="0" y="117.6" class="st23 st24">11 de Setembro acabou por significar um afastamento abrupto </tspan><tspan x="0" y="141.6" class="st23 st24">entre os dois lados do Atlântico, que só Joe Biden se </tspan><tspan x="0" y="165.6" class="st23 st24">preocupou verdadeiramente em reparar.</tspan><tspan x="358.1" y="165.6" class="st25 st26"> </tspan></text>
+            <rect x="269.2" y="3520.2" class="st6" width="553" height="211.2"/>
+            <text transform="matrix(1 0 0 1 269.1851 3541.9026)"><tspan x="0" y="0" class="st22 st17">Transição de poder entre a </tspan><tspan x="0" y="36" class="st22 st17">Grã-Bretanha e os Estados Unidos</tspan><tspan x="0" y="81.6" class="st23 st24">As transições de poder no sistema internacional – a mudança </tspan><tspan x="0" y="105.6" class="st23 st24">de hierarquia entre grandes potências – são períodos de </tspan><tspan x="0" y="129.6" class="st23 st24">grande imprevisibilidade nas relações entre os estados. As </tspan><tspan x="0" y="153.6" class="st23 st24">grandes potências que detém o poder querem mantê-lo, </tspan><tspan x="0" y="177.6" class="st23 st24">enquanto as que cresceram pretendem conquistá-lo.</tspan></text>
           </g>
           <rect x="269.2" y="3052.5" width="553" height="416.5"/>
         </g>
@@ -1175,274 +1255,348 @@ img.timeline-cabeca-mobile{
         </g>
         <g>
           <g>
-            <rect x="77.6" y="7221.5" class="st6" width="576.1" height="139.9"/>
-            <text transform="matrix(1 0 0 1 397.9751 7243.251)"><tspan x="0" y="0" class="st22 st17">II Guerra Mundial</tspan><tspan x="-253.6" y="45.6" class="st23 st24">Tal como a Grande Guerra, a II Guerra Mundial foi um dos </tspan><tspan x="-294.9" y="69.6" class="st23 st24">acontecimentos mais trágicos da humanidade. Ceifou milhões </tspan><tspan x="-311.7" y="93.6" class="st23 st24">de vidas e deixou a Europa totalmente destruída e traumatizada.</tspan></text>
+            <rect x="77.6" y="7087.6" class="st6" width="576.1" height="139.9"/>
+            <text transform="matrix(1 0 0 1 397.9751 7109.2881)"><tspan x="0" y="0" class="st22 st17">II Guerra Mundial</tspan><tspan x="-251.3" y="45.6" class="st23 st24">Tal como a Grande Guerra, a II Guerra Mundial foi um dos </tspan><tspan x="-319.3" y="69.6" class="st23 st24">acontecimentos mais trágicos da humanidade. Ceifou milhões de </tspan><tspan x="-282.2" y="93.6" class="st23 st24">vidas e deixou a Europa totalmente destruída e traumatizada.</tspan></text>
           </g>
         </g>
         <g>
           <g>
-            <rect x="364.7" y="8364.6" class="st6" width="553" height="171.8"/>
-            <text transform="matrix(1 0 0 1 364.7017 8386.3311)"><tspan x="0" y="0" class="st22 st17">Reconstrução europeia</tspan><tspan x="0" y="45.6" class="st23 st24">A reconstrução da Europa foi um dos momentos altos das </tspan><tspan x="0" y="69.6" class="st23 st24">relações transatlânticas. Apenas dois anos depois do fim da II </tspan><tspan x="0" y="93.6" class="st23 st24">Guerra Mundial, a nova administração americana percebeu </tspan><tspan x="0" y="117.6" class="st23 st24">que a cooperação com a União Soviética que Roosevelt </tspan><tspan x="0" y="141.6" class="st23 st24">tentou encetar não seria possível. </tspan></text>
+            <rect x="364.7" y="8228.6" class="st6" width="553" height="171.8"/>
+            <text transform="matrix(1 0 0 1 364.7017 8250.3682)"><tspan x="0" y="0" class="st22 st17">Reconstrução europeia</tspan><tspan x="0" y="45.6" class="st23 st24">A reconstrução da Europa foi um dos momentos altos das </tspan><tspan x="0" y="69.6" class="st23 st24">relações transatlânticas. Apenas dois anos depois do fim da II </tspan><tspan x="0" y="93.6" class="st23 st24">Guerra Mundial, a nova administração americana percebeu </tspan><tspan x="0" y="117.6" class="st23 st24">que a cooperação com a União Soviética que Roosevelt tentou </tspan><tspan x="0" y="141.6" class="st23 st24">encetar não seria possível. </tspan></text>
           </g>
         </g>
         <g>
           <g>
-            <rect x="200.4" y="10054.4" class="st6" width="553" height="146.8"/>
-            <text transform="matrix(1 0 0 1 200.3887 10076.1309)"><tspan x="0" y="0" class="st22 st17">Guerra Fria </tspan><tspan x="0" y="45.6" class="st23 st24">Como descrito anteriormente, os Estados Unidos prepararam </tspan><tspan x="0" y="69.6" class="st23 st24">a Guerra Fria através da reconstrução europeia, e também da </tspan><tspan x="0" y="93.6" class="st23 st24">institucionalização das relações transatlânticas.</tspan></text>
+            <rect x="200.4" y="9844.8" class="st6" width="553" height="146.8"/>
+            <text transform="matrix(1 0 0 1 200.3887 9866.5039)"><tspan x="0" y="0" class="st22 st17">Guerra Fria </tspan><tspan x="0" y="45.6" class="st23 st24">Como descrito anteriormente, os Estados Unidos prepararam </tspan><tspan x="0" y="69.6" class="st23 st24">a Guerra Fria através da reconstrução europeia, e também da </tspan><tspan x="0" y="93.6" class="st23 st24">institucionalização das relações transatlânticas.</tspan></text>
           </g>
-          <rect x="200.4" y="9607.2" class="st21" width="553" height="416.5"/>
         </g>
         <g>
-          <circle class="st30" cx="40" cy="1728.5" r="21.7"/>
+          <circle class="st27" cx="40" cy="1728.5" r="21.7"/>
           <polygon class="st14" points="40,1715.9 42.9,1724.6 52.1,1724.6 44.6,1730 47.5,1738.7 40,1733.3 32.6,1738.7 35.5,1730 
             28,1724.6 37.2,1724.6 		"/>
         </g>
         <g>
-          <circle class="st30" cx="40.4" cy="3052.5" r="21.7"/>
-          <polygon class="st14" points="40.4,3039.9 43.2,3048.6 52.4,3048.6 45,3054 47.8,3062.8 40.4,3057.4 33,3062.8 35.8,3054 
-            28.4,3048.6 37.6,3048.6 		"/>
+          <circle class="st26" cx="160" cy="3093.3" r="21.7"/>
+          <polygon class="st14" points="160,3080.7 162.9,3089.4 172.1,3089.4 164.6,3094.8 167.5,3103.6 160,3098.2 152.6,3103.6 
+            155.4,3094.8 148,3089.4 157.2,3089.4 		"/>
         </g>
         <g>
-          <circle class="st30" cx="106.8" cy="5680.7" r="21.7"/>
-          <polygon class="st14" points="106.8,5668 109.7,5676.7 118.9,5676.7 111.4,5682.1 114.3,5690.9 106.8,5685.5 99.4,5690.9 
-            102.2,5682.1 94.8,5676.7 104,5676.7 		"/>
+          <circle class="st27" cx="154.9" cy="5589.1" r="21.7"/>
+          <polygon class="st14" points="154.9,5576.4 157.8,5585.2 167,5585.2 159.5,5590.6 162.4,5599.3 154.9,5593.9 147.5,5599.3 
+            150.4,5590.6 142.9,5585.2 152.1,5585.2 		"/>
         </g>
         <g>
-          <circle class="st30" cx="79.4" cy="9608.8" r="21.7"/>
-          <polygon class="st14" points="79.4,9596.1 82.2,9604.9 91.4,9604.9 84,9610.3 86.8,9619 79.4,9613.6 71.9,9619 74.8,9610.3 
-            67.3,9604.9 76.5,9604.9 		"/>
+          <circle class="st27" cx="118.4" cy="9384.6" r="21.7"/>
+          <polygon class="st14" points="118.4,9372 121.2,9380.7 130.4,9380.7 122.9,9386.1 125.8,9394.9 118.4,9389.5 110.9,9394.9 
+            113.8,9386.1 106.3,9380.7 115.5,9380.7 		"/>
         </g>
         <defs>
-          <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-7552" y="-9028" width="8063.3" height="22018.5">
+          <filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="-7552" y="-9188.8" width="8096" height="21596.9">
             <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
           </filter>
         </defs>
-        <mask maskUnits="userSpaceOnUse" x="-7552" y="-9028" width="8063.3" height="22018.5" id="SVGID_7_">
-          <g class="st31">
-            
-              <linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="107.5212" y1="12466.9844" x2="97.2143" y2="12237.5303" gradientTransform="matrix(0.9978 6.604671e-02 -5.226935e-02 0.7897 768.0626 3113.0793)">
-              <stop  offset="0.2524" style="stop-color:#000000"/>
-              <stop  offset="0.6535" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <polygon class="st32" points="617.9,12977.1 -179,12924.3 -168.8,12771.1 628.1,12823.8 			"/>
-            <polygon class="st14" points="445.5,12152.5 -29.4,12152.5 -42.4,12855.4 445.5,12887 			"/>
-            
-              <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="257.5891" y1="15949.6797" x2="257.5891" y2="15704.5732" gradientTransform="matrix(-1 0 0 -1 515.1782 28098.1055)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <polygon class="st33" points="-141.7,12148.4 656.9,12148.4 656.9,12393.5 -141.7,12393.5 			"/>
-          </g>
-        </mask>
-        <g class="st34">
-          <defs>
-            <rect id="XMLID_00000180335153973862076130000002241424760035550101_" x="21" y="11647.7" width="385.1" height="1314.4"/>
-          </defs>
-          <use xlink:href="#XMLID_00000180335153973862076130000002241424760035550101_"  style="overflow:visible;"/>
-          <clipPath id="XMLID_2_">
-            <use xlink:href="#XMLID_00000180335153973862076130000002241424760035550101_"  style="overflow:visible;"/>
-          </clipPath>
-          <g style="clip-path:url(#XMLID_2_);">
-            
-              <image style="overflow:visible;" width="768" height="508" xlink:href="img/3821C07E.jpg"  transform="matrix(1 0 0 1 -7552 -9027.9902)">
-            </image>
-          </g>
-          <g style="clip-path:url(#XMLID_2_);">
-            
-              <image style="overflow:visible;" width="768" height="508" xlink:href="img/3821C07F.jpg"  transform="matrix(1.8616 0 0 1.8616 -918.4378 12044.7959)">
-            </image>
-          </g>
-        </g>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="-7526.2" y="-13163.2" width="8311.5" height="21990.1">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="-7526.2" y="-13163.2" width="8311.5" height="21990.1" id="SVGID_10_">
-          <g class="st35">
-            
-              <linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="-137.4402" y1="7297.3364" x2="-147.7471" y2="7067.8828" gradientTransform="matrix(0.9978 6.604671e-02 -5.226935e-02 0.7897 768.0626 3113.0793)">
-              <stop  offset="0.2524" style="stop-color:#000000"/>
-              <stop  offset="0.6535" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <polygon class="st36" points="643.7,8878.6 -153.2,8825.8 -143,8672.6 653.9,8725.3 			"/>
-            <polygon class="st14" points="471.3,8416.6 -3.6,8416.6 -16.6,8690.7 471.3,8722.3 			"/>
-            
-              <linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="238.6006" y1="19902.4961" x2="238.6006" y2="19657.3906" gradientTransform="matrix(-1 0 0 -1 515.1782 28098.1055)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <polygon class="st37" points="-122.7,8195.6 675.9,8195.6 675.9,8440.7 -122.7,8440.7 			"/>
-          </g>
-        </mask>
-        <g class="st38">
-          <defs>
-            <path id="XMLID_00000012456767347546979000000005326042565336620971_" d="M290.7,8826.8H46.8c-3.1-189.8-8.6-459.8-7.9-526.4
-              c6.5-90.4,25.4-153.6,56.4-200.9l215.8,53.8c-10.5,34.3-26.5,74-28.2,159.1L290.7,8826.8z"/>
-          </defs>
-          <use xlink:href="#XMLID_00000012456767347546979000000005326042565336620971_"  style="overflow:visible;"/>
-          <clipPath id="XMLID_3_">
-            <use xlink:href="#XMLID_00000012456767347546979000000005326042565336620971_"  style="overflow:visible;"/>
-          </clipPath>
-          <g class="st39">
-            
-              <image style="overflow:visible;" width="768" height="508" xlink:href="img/3821C07A.jpg"  transform="matrix(1 0 0 1 -7526.2124 -13163.2305)">
-            </image>
-          </g>
-          <g id="fbolY5_00000050624682934829713940000012044406071511268779_" class="st39">
+        <mask maskUnits="userSpaceOnUse" x="-7552" y="-9188.8" width="8096" height="21596.9" id="SVGID_10_">
+          <g class="st30">
             <g>
               
-                <image style="overflow:visible;" width="620" height="372" id="fbolY5" xlink:href="img/3821C075.jpg"  transform="matrix(1.691 0 0 1.691 -263.1209 8192.2256)">
+                <linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="77.8567" y1="11827.4844" x2="64.7209" y2="11535.0527" gradientTransform="matrix(0.9978 6.604671e-02 -5.226935e-02 0.7897 768.0626 3113.0793)">
+                <stop  offset="0.2524" style="stop-color:#000000"/>
+                <stop  offset="0.6535" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <polygon class="st31" points="621.1,12470.1 -175.8,12417.3 -163.9,12214.2 633,12267 				"/>
+              <polygon class="st14" points="445.5,11894.4 -29.4,11894.4 -42.4,12257.9 445.5,12289.6 				"/>
+              
+                <linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="257.5891" y1="16212.666" x2="257.5891" y2="16032.4033" gradientTransform="matrix(-1 0 0 -1 515.1782 28098.1055)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <polygon class="st32" points="-141.7,11885.4 656.9,11885.4 656.9,12065.7 -141.7,12065.7 				"/>
+            </g>
+          </g>
+        </mask>
+        <g class="st33">
+          <defs>
+            <rect id="XMLID_00000023973787717566896640000011036715902308046257_" x="21" y="11889.4" width="385.1" height="515"/>
+          </defs>
+          <use xlink:href="#XMLID_00000023973787717566896640000011036715902308046257_"  style="overflow:visible;"/>
+          <clipPath id="XMLID_3_">
+            <use xlink:href="#XMLID_00000023973787717566896640000011036715902308046257_"  style="overflow:visible;"/>
+          </clipPath>
+          <g style="clip-path:url(#XMLID_3_);">
+            
+              <image style="overflow:visible;" width="768" height="508" xlink:href="img/63EC13CB.jpg"  transform="matrix(1 0 0 1 -7552 -9188.8115)">
+            </image>
+          </g>
+          <g transform="matrix(1 0 0 1 1.525879e-05 0)" style="clip-path:url(#XMLID_3_);">
+            
+              <image style="overflow:visible;" width="2317" height="1591" xlink:href="img/63EC13C8.jpg"  transform="matrix(0.326 0 0 0.326 -211.398 11889.3838)">
+            </image>
+          </g>
+        </g>
+        <defs>
+          <filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="-7526.2" y="-13193.2" width="8311.5" height="21850.6">
+            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+          </filter>
+        </defs>
+        <mask maskUnits="userSpaceOnUse" x="-7526.2" y="-13193.2" width="8311.5" height="21850.6" id="SVGID_13_">
+          <g class="st34">
+            
+              <linearGradient id="SVGID_14_" gradientUnits="userSpaceOnUse" x1="-158.6994" y1="6890.5127" x2="-168.3837" y2="6674.9194" gradientTransform="matrix(0.9978 6.604671e-02 -5.226935e-02 0.7897 768.0626 3113.0793)">
+              <stop  offset="0.2524" style="stop-color:#000000"/>
+              <stop  offset="0.6535" style="stop-color:#FFFFFF"/>
+            </linearGradient>
+            <polygon class="st35" points="643.7,8555.9 -153.2,8503.1 -143,8360.9 653.9,8413.7 			"/>
+            <polygon class="st14" points="471.3,8154.5 -3.6,8154.5 -16.6,8404 471.3,8435.7 			"/>
+            
+              <linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="238.6006" y1="20072.1777" x2="238.6006" y2="19927.6543" gradientTransform="matrix(-1 0 0 -1 515.1782 28098.1055)">
+              <stop  offset="0" style="stop-color:#000000"/>
+              <stop  offset="1" style="stop-color:#FFFFFF"/>
+            </linearGradient>
+            <polygon class="st36" points="-122.7,8025.9 675.9,8025.9 675.9,8170.5 -122.7,8170.5 			"/>
+          </g>
+        </mask>
+        <g class="st37">
+          <defs>
+            <path id="XMLID_00000096042375273969640100000016285973674867468475_" d="M290.7,8568.9H46.8c-3.1-189.8-8.6-335.8-7.9-402.4
+              c6.5-90.4,25.4-153.6,56.4-200.9l215.8,53.8c-10.5,34.3-26.5,74-28.2,159.1L290.7,8568.9z"/>
+          </defs>
+          <use xlink:href="#XMLID_00000096042375273969640100000016285973674867468475_"  style="overflow:visible;"/>
+          <clipPath id="XMLID_4_">
+            <use xlink:href="#XMLID_00000096042375273969640100000016285973674867468475_"  style="overflow:visible;"/>
+          </clipPath>
+          <g class="st38">
+            
+              <image style="overflow:visible;" width="768" height="508" xlink:href="img/63EC13D6.jpg"  transform="matrix(1 0 0 1 -7526.2124 -13193.2305)">
+            </image>
+          </g>
+          <g id="fbolY5_00000086680960132165274480000010960928016836669826_" class="st38">
+            <g>
+              
+                <image style="overflow:visible;" width="620" height="372" id="fbolY5_00000135660452603291576940000009735485250769874616_" xlink:href="img/63EC13D9.jpg"  transform="matrix(1.691 0 0 1.691 -263.1209 8028.2627)">
               </image>
             </g>
           </g>
         </g>
         <g>
-          <circle class="st30" cx="406.2" cy="12332.9" r="21.7"/>
-          <polygon class="st14" points="406.2,12320.3 409,12329 418.2,12329 410.8,12334.4 413.6,12343.2 406.2,12337.8 398.8,12343.2 
-            401.6,12334.4 394.2,12329 403.3,12329 		"/>
+          <circle class="st27" cx="406.2" cy="11936" r="21.7"/>
+          <polygon class="st14" points="406.2,11923.4 409,11932.1 418.2,11932.1 410.8,11937.5 413.6,11946.3 406.2,11940.9 398.8,11946.3 
+            401.6,11937.5 394.2,11932.1 403.3,11932.1 		"/>
         </g>
         <g>
-          <rect x="436.2" y="12706.7" class="st6" width="274.2" height="148.1"/>
-          <text transform="matrix(1 0 0 1 436.1848 12724.8145)"><tspan x="0" y="0" class="st4 st40 st41">“Either you are with us, </tspan><tspan x="0" y="30" class="st4 st40 st41">or you are with the </tspan><tspan x="0" y="60" class="st4 st40 st41">terrorists”</tspan><tspan x="122.2" y="60" class="st4 st40 st42">.</tspan><tspan x="0" y="87.2" class="st43 st7 st44">President Bush Addresses the Nation, </tspan><tspan x="0" y="106.4" class="st43 st7 st44">20 de Setembro de 2021</tspan></text>
+          <rect x="436.2" y="12309.8" class="st6" width="274.2" height="148.1"/>
+          <text transform="matrix(1 0 0 1 436.1848 12327.9033)"><tspan x="0" y="0" class="st4 st39 st40">“Either you are with us, </tspan><tspan x="0" y="30" class="st4 st39 st40">or you are with the </tspan><tspan x="0" y="60" class="st4 st39 st40">terrorists”</tspan><tspan x="122.2" y="60" class="st4 st39 st41">.</tspan><tspan x="0" y="87.2" class="st42 st7 st43">President Bush Addresses the Nation, </tspan><tspan x="0" y="106.4" class="st42 st7 st43">20 de Setembro de 2021</tspan></text>
         </g>
         <g id="WktS08_00000031182910644639130550000015741381534888620713_">
           
-            <image style="overflow:visible;" width="1200" height="814" id="WktS08_00000147920722074774119240000009694149448489519000_" xlink:href="img/3821C076.jpg"  transform="matrix(0.4829 0 0 0.4829 57.8955 4369.0459)">
+            <image style="overflow:visible;" width="1200" height="814" id="WktS08_00000147920722074774119240000009694149448489519000_" xlink:href="img/63EC13DA.jpg"  transform="matrix(0.4829 0 0 0.4829 57.8955 4369.0459)">
           </image>
         </g>
         <rect x="57.8" y="4771.8" class="st6" width="582" height="39.7"/>
         <text transform="matrix(1 0 0 1 57.7681 4782.665)"><tspan x="0" y="0" class="st7 st8">A primeira sessão da conferência de paz no Palácio de Versalhes </tspan><tspan x="424.9" y="0" class="st15 st7 st8">| Manchester Guardian, </tspan><tspan x="0" y="23" class="st15 st7 st8">História da Guerra</tspan></text>
-        <rect x="71.9" y="7158.6" class="st6" width="582" height="16.7"/>
-        <text transform="matrix(1 0 0 1 183.7427 7169.4609)"><tspan x="0" y="0" class="st7 st8">Desembarque de provisões na praia Omaha </tspan><tspan x="290.5" y="0" class="st15 st7 st8">| meados de Junho de 1944</tspan></text>
+        <rect x="71.9" y="7024.7" class="st6" width="582" height="16.7"/>
+        <text transform="matrix(1 0 0 1 183.7436 7035.5186)"><tspan x="0" y="0" class="st7 st8">Desembarque de provisões na praia Omaha </tspan><tspan x="290.5" y="0" class="st15 st7 st8">| meados de Junho de 1944</tspan></text>
         
-          <image style="overflow:visible;" width="1200" height="525" xlink:href="img/3821C077.jpg"  transform="matrix(0.3869 0 0 0.3869 371.4781 13592.4297)">
+          <image style="overflow:visible;" width="1200" height="525" xlink:href="img/63EC13D8.jpg"  transform="matrix(0.3869 0 0 0.3869 371.4781 13182.1602)">
         </image>
         <g>
           <rect x="85.1" y="2045.2" class="st6" width="282.3" height="148.1"/>
-          <text transform="matrix(1 0 0 1 85.1467 2063.2366)"><tspan x="0" y="0" class="st4 st40 st41">“America does not go </tspan><tspan x="0" y="30" class="st4 st40 st41">abroad to search for </tspan><tspan x="0" y="60" class="st4 st40 st41">monsters to destroy”</tspan><tspan x="249.7" y="60" class="st4 st40 st42">.</tspan><tspan x="0" y="87.2" class="st43 st7 st44">John Quincy Adams, 4 de Julho de 1821</tspan></text>
+          <text transform="matrix(1 0 0 1 85.1467 2063.2366)"><tspan x="0" y="0" class="st4 st39 st40">“America does not go </tspan><tspan x="0" y="30" class="st4 st39 st40">abroad to search for </tspan><tspan x="0" y="60" class="st4 st39 st40">monsters to destroy”</tspan><tspan x="249.7" y="60" class="st4 st39 st41">.</tspan><tspan x="0" y="87.2" class="st42 st7 st43">John Quincy Adams, 4 de Julho de 1821</tspan></text>
         </g>
         <g>
-          <rect x="370.5" y="14144.8" class="st6" width="570.2" height="129.5"/>
-          <text transform="matrix(1 0 0 1 370.5382 14162.8369)"><tspan x="0" y="0" class="st4 st40 st41">“it’s obsolete. When NATO was formed many </tspan><tspan x="0" y="30" class="st4 st40 st41">decades ago we were a different country”</tspan><tspan x="489.7" y="30" class="st4 st40 st42">.</tspan><tspan x="0" y="57.2" class="st43 st7 st44">Donald Trump, NY Times 26 de Março de 2016</tspan></text>
+          <polygon class="st6" points="780.7,4074.3 520.6,4074.3 301,3926.2 609.9,3926.2 		"/>
+          <text transform="matrix(1 0 0 1 327.757 3944.2639)"><tspan x="0" y="0" class="st4 st39 st40">“Sr. Gorbachev, </tspan><tspan x="44.5" y="30" class="st4 st39 st40">derrube este muro!”</tspan><tspan x="281.4" y="30" class="st4 st39 st41">.</tspan><tspan x="84.8" y="57.2" class="st42 st7 st43">Discurso do Presidente dos EUA </tspan><tspan x="113.3" y="76.4" class="st42 st7 st43">Ronald Reagan nas Portas de </tspan><tspan x="141.8" y="95.6" class="st42 st7 st43">Brandemburgo, 12 de Junho de 1987</tspan></text>
         </g>
         <g>
-          <polygon class="st6" points="841.4,14433.9 571.4,14433.9 527.3,14380.6 797.3,14380.6 		"/>
-          <text transform="matrix(1 0 0 1 536.8687 14392.1797)"><tspan x="0" y="0" class="st43 st7 st44">Emmanuel Macron, The Economist, </tspan><tspan x="15.9" y="19.2" class="st43 st7 st44">7 de Novembro de 2019</tspan></text>
+          <rect x="370.5" y="13734.5" class="st6" width="570.2" height="129.5"/>
+          <text transform="matrix(1 0 0 1 370.5382 13752.5674)"><tspan x="0" y="0" class="st4 st39 st40">“it’s obsolete. When NATO was formed many </tspan><tspan x="0" y="30" class="st4 st39 st40">decades ago we were a different country”</tspan><tspan x="489.7" y="30" class="st4 st39 st41">.</tspan><tspan x="0" y="57.2" class="st42 st7 st43">Donald Trump, NY Times 26 de Março de 2016</tspan></text>
+        </g>
+        <g>
+          <polygon class="st6" points="841.4,14037 571.4,14037 527.3,13983.7 797.3,13983.7 		"/>
+          <text transform="matrix(1 0 0 1 536.8689 13995.2686)"><tspan x="0" y="0" class="st42 st7 st43">Emmanuel Macron, The Economist, </tspan><tspan x="15.9" y="19.2" class="st42 st7 st43">7 de Novembro de 2019</tspan></text>
         </g>
         
-          <image style="overflow:visible;" width="2804" height="2150" xlink:href="img/3821C089.jpg"  transform="matrix(0.2157 0 0 0.2157 48.8453 6685.1821)">
+          <image style="overflow:visible;" width="2804" height="2150" xlink:href="img/711EDC8D.jpg"  transform="matrix(0.2157 0 0 0.2157 48.8453 6551.2192)">
         </image>
-        <text transform="matrix(1 0 0 1 497.349 14368.2002)"><tspan x="0" y="0" class="st4 st40 st41">“NATO is becoming brain-dead”</tspan><tspan x="381" y="0" class="st4 st40 st42">.</tspan></text>
-        <text transform="matrix(1 0 0 1 229.0894 10332.7656)" class="st43 st7 st44">discurso de JFK em Berlim Leste,</text>
-        <text transform="matrix(1 0 0 1 244.6358 10353.3818)" class="st43 st7 st44">26 de Junho de 1963</text>
-        <text transform="matrix(1 0 0 1 199.7091 10307.6895)"><tspan x="0" y="0" class="st4 st40 st41">“Ich bin ein Berliner”</tspan><tspan x="243.9" y="0" class="st4 st40 st42">.</tspan></text>
+        <text transform="matrix(1 0 0 1 497.349 13971.2891)"><tspan x="0" y="0" class="st4 st39 st40">“NATO is becoming brain-dead”</tspan><tspan x="381" y="0" class="st4 st39 st41">.</tspan></text>
+        <text transform="matrix(1 0 0 1 359.5919 10161.1357)" class="st42 st7 st43">Discurso de JFK em Berlim Leste,</text>
+        <text transform="matrix(1 0 0 1 375.1383 10181.751)" class="st42 st7 st43">26 de Junho de 1963</text>
+        <text transform="matrix(1 0 0 1 330.2116 10136.0596)"><tspan x="0" y="0" class="st4 st39 st40">“Ich bin ein Berliner”</tspan><tspan x="243.9" y="0" class="st4 st39 st41">.</tspan></text>
+        
+          <image style="overflow:visible;" width="1410" height="928" xlink:href="img/711EDC83.jpg"  transform="matrix(0.4107 0 0 0.4107 200.2865 9384.623)">
+        </image>
+        <rect x="200.3" y="9775.4" class="st6" width="582" height="39.7"/>
+        <text transform="matrix(1 0 0 1 200.2866 9786.2109)"><tspan x="0" y="0" class="st7 st8">O Muro que separou Berlim em duas partes antes da reunificação alemã. </tspan><tspan x="475.9" y="0" class="st15 st7 st8">| foto: Aad van </tspan><tspan x="0" y="23" class="st15 st7 st8">der Drift nas portas de Brandenburg a 28 de Dezembro de 1989</tspan></text>
+        <defs>
+          <filter id="Adobe_OpacityMaskFilter_3_" filterUnits="userSpaceOnUse" x="-2169.6" y="-9202.2" width="768" height="508">
+            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+          </filter>
+        </defs>
+        <mask maskUnits="userSpaceOnUse" x="-2169.6" y="-9202.2" width="768" height="508" id="SVGID_16_">
+          <g class="st44">
+            <g>
+              
+                <linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="4886.8779" y1="3950.6123" x2="4879.77" y2="3792.3833" gradientTransform="matrix(0.9978 6.604671e-02 -5.226935e-02 0.7897 768.0626 3113.0793)">
+                <stop  offset="0.2524" style="stop-color:#000000"/>
+                <stop  offset="0.6535" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <polygon class="st45" points="5567.9,6559.5 5304.9,6542.1 5308.8,6426.1 5571.8,6443.5 				"/>
+              <polygon class="st14" points="5509.9,5983.5 5353.2,5983.5 5348.9,6435.9 5509.9,6446.4 				"/>
+              
+                <linearGradient id="SVGID_18_" gradientUnits="userSpaceOnUse" x1="-4932.7437" y1="22117.5645" x2="-4932.7437" y2="22058.0781" gradientTransform="matrix(-1 0 0 -1 515.1782 28098.1055)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <polygon class="st46" points="5316.1,5980.5 5579.7,5980.5 5579.7,6040 5316.1,6040 				"/>
+            </g>
+          </g>
+        </mask>
+        <g class="st47">
+          <g>
+            
+              <image style="overflow:visible;" width="768" height="508" xlink:href="img/711EDC85.jpg"  transform="matrix(1 0 0 1 -2169.6367 -9202.2363)">
+            </image>
+          </g>
+        </g>
+        <defs>
+          <filter id="Adobe_OpacityMaskFilter_4_" filterUnits="userSpaceOnUse" x="-2143.8" y="-13193.2" width="768" height="508">
+            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+          </filter>
+        </defs>
+        <mask maskUnits="userSpaceOnUse" x="-2143.8" y="-13193.2" width="768" height="508" id="SVGID_19_">
+          <g class="st48">
+            
+              <linearGradient id="SVGID_20_" gradientUnits="userSpaceOnUse" x1="4711.1099" y1="1270.0634" x2="4706.6343" y2="1170.4301" gradientTransform="matrix(0.9978 6.604671e-02 -5.226935e-02 0.7897 768.0626 3113.0793)">
+              <stop  offset="0.2524" style="stop-color:#000000"/>
+              <stop  offset="0.6535" style="stop-color:#FFFFFF"/>
+            </linearGradient>
+            <polygon class="st49" points="5584.7,4432.7 5216.4,4408.4 5221.1,4342.6 5589.4,4367 			"/>
+            <polygon class="st14" points="5505,4281.4 5285.5,4281.4 5279.5,4375.3 5505,4389.9 			"/>
+            
+              <linearGradient id="SVGID_21_" gradientUnits="userSpaceOnUse" x1="-4899.814" y1="23876.1309" x2="-4899.814" y2="23809.3418" gradientTransform="matrix(-1 0 0 -1 515.1782 28098.1055)">
+              <stop  offset="0" style="stop-color:#000000"/>
+              <stop  offset="1" style="stop-color:#FFFFFF"/>
+            </linearGradient>
+            <polygon class="st50" points="5230.5,4222 5599.5,4222 5599.5,4288.8 5230.5,4288.8 			"/>
+          </g>
+        </mask>
+        <g class="st51">
+          <g>
+            
+              <image style="overflow:visible;" width="768" height="508" xlink:href="img/711EDC87.jpg"  transform="matrix(1 0 0 1 -2143.8491 -13193.2305)">
+            </image>
+          </g>
+        </g>
       </g>
       <g id="btn">
         <g id="botao-11">
-          <path class="st21" d="M561.1,14103.7h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
-            c10.8,0,19.6,8.8,19.6,19.6l0,0C580.7,14094.9,571.9,14103.7,561.1,14103.7z"/>
-          <text transform="matrix(1 0 0 1 433.8701 14090.2334)" class="st14 st16 st45">Ler mais...</text>
+          <path class="st52" d="M561.1,13693.4h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
+            c10.8,0,19.6,8.8,19.6,19.6l0,0C580.7,13684.6,571.9,13693.4,561.1,13693.4z"/>
+          <text transform="matrix(1 0 0 1 433.8701 13679.9639)" class="st14 st16 st53">Ler mais...</text>
         </g>
         <g id="botao-10">
-          <path class="st21" d="M625.1,12622h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170c10.8,0,19.6,8.8,19.6,19.6
-            l0,0C644.7,12613.1,635.9,12622,625.1,12622z"/>
-          <text transform="matrix(1 0 0 1 497.896 12608.4961)" class="st14 st16 st45">Ler mais...</text>
+          <path class="st52" d="M625.1,12225.1h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
+            c10.8,0,19.6,8.8,19.6,19.6l0,0C644.7,12216.2,635.9,12225.1,625.1,12225.1z"/>
+          <text transform="matrix(1 0 0 1 497.896 12211.585)" class="st14 st16 st53">Ler mais...</text>
         </g>
         <g id="botao-9">
-          <path class="st21" d="M491.8,11512.9h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
-            c10.8,0,19.6,8.8,19.6,19.6l0,0C511.4,11504.1,502.6,11512.9,491.8,11512.9z"/>
-          <g id="Ler_mais..._00000109026795671618112590000014453336127233528964_">
-            <text transform="matrix(1 0 0 1 364.5732 11499.4629)" class="st14 st16 st45">Ler mais...</text>
+          <path class="st52" d="M491.8,11039.6h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
+            c10.8,0,19.6,8.8,19.6,19.6l0,0C511.4,11030.8,502.6,11039.6,491.8,11039.6z"/>
+          <g id="Ler_mais..._00000080927435453500720720000009494120198550491312_">
+            <text transform="matrix(1 0 0 1 364.5732 11026.1416)" class="st14 st16 st53">Ler mais...</text>
           </g>
         </g>
         <g id="botao-8">
-          <path class="st21" d="M389.3,10242.6h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
-            c10.8,0,19.6,8.8,19.6,19.6l0,0C408.9,10233.8,400.1,10242.6,389.3,10242.6z"/>
-          <text transform="matrix(1 0 0 1 262.1001 10229.1465)" class="st14 st16 st45">Ler mais...</text>
+          <path class="st52" d="M389.3,10033h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170c10.8,0,19.6,8.8,19.6,19.6
+            l0,0C408.9,10024.2,400.1,10033,389.3,10033z"/>
+          <text transform="matrix(1 0 0 1 262.1001 10019.5186)" class="st14 st16 st53">Ler mais...</text>
         </g>
         <g id="botao-7">
-          <path class="st21" d="M553.6,8599.7h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
-            c10.8,0,19.6,8.8,19.6,19.6l0,0C573.2,8590.9,564.4,8599.7,553.6,8599.7z"/>
-          <text transform="matrix(1 0 0 1 426.4126 8586.2334)" class="st14 st16 st45">Ler mais...</text>
+          <path class="st52" d="M553.6,8463.7h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
+            c10.8,0,19.6,8.8,19.6,19.6l0,0C573.2,8454.9,564.4,8463.7,553.6,8463.7z"/>
+          <text transform="matrix(1 0 0 1 426.4126 8450.2705)" class="st14 st16 st53">Ler mais...</text>
         </g>
         <g id="botao-6">
-          <path class="st21" d="M464.8,7409.3h170c10.8,0,19.6-8.8,19.6-19.6l0,0c0-10.8-8.8-19.6-19.6-19.6h-170
-            c-10.8,0-19.6,8.8-19.6,19.6l0,0C445.2,7400.5,454.1,7409.3,464.8,7409.3z"/>
-          <text transform="matrix(1 0 0 1 507.6206 7395.8354)" class="st14 st16 st45">Ler mais...</text>
+          <path class="st52" d="M464.8,7275.3h170c10.8,0,19.6-8.8,19.6-19.6l0,0c0-10.8-8.8-19.6-19.6-19.6h-170
+            c-10.8,0-19.6,8.8-19.6,19.6l0,0C445.2,7266.5,454.1,7275.3,464.8,7275.3z"/>
+          <text transform="matrix(1 0 0 1 507.6206 7261.8726)" class="st14 st16 st53">Ler mais...</text>
         </g>
         <g id="botao-5">
-          <path class="st21" d="M556.5,5963.8h-170c-10.8,0-19.6-8.8-19.6-19.6v0c0-10.8,8.8-19.6,19.6-19.6h170c10.8,0,19.6,8.8,19.6,19.6
-            v0C576.1,5955,567.3,5963.8,556.5,5963.8z"/>
-          <text transform="matrix(1 0 0 1 429.3213 5950.3071)" class="st14 st16 st45">Ler mais...</text>
+          <path class="st52" d="M556.5,5884.1h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
+            c10.8,0,19.6,8.8,19.6,19.6l0,0C576.1,5875.3,567.3,5884.1,556.5,5884.1z"/>
+          <text transform="matrix(1 0 0 1 429.3213 5870.6548)" class="st14 st16 st53">Ler mais...</text>
         </g>
         <g id="botao-4">
-          <path class="st21" d="M246.4,5071.6h-170c-10.8,0-19.6-8.8-19.6-19.6v0c0-10.8,8.8-19.6,19.6-19.6h170c10.8,0,19.6,8.8,19.6,19.6
+          <path class="st52" d="M246.4,5071.6h-170c-10.8,0-19.6-8.8-19.6-19.6v0c0-10.8,8.8-19.6,19.6-19.6h170c10.8,0,19.6,8.8,19.6,19.6
             v0C266,5062.7,257.1,5071.6,246.4,5071.6z"/>
-          <text transform="matrix(1 0 0 1 119.147 5058.0825)" class="st14 st16 st45">Ler mais...</text>
+          <text transform="matrix(1 0 0 1 119.147 5058.0825)" class="st14 st16 st53">Ler mais...</text>
         </g>
         <g id="botao-3">
-          <path class="st21" d="M458.6,3773.1h-170c-10.8,0-19.6-8.8-19.6-19.6v0c0-10.8,8.8-19.6,19.6-19.6h170c10.8,0,19.6,8.8,19.6,19.6
-            v0C478.2,3764.3,469.4,3773.1,458.6,3773.1z"/>
-          <text transform="matrix(1 0 0 1 331.416 3759.6311)" class="st14 st16 st45">Ler mais...</text>
+          <path class="st52" d="M458.6,3791.7h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
+            c10.8,0,19.6,8.8,19.6,19.6l0,0C478.2,3782.9,469.4,3791.7,458.6,3791.7z"/>
+          <text transform="matrix(1 0 0 1 331.416 3778.262)" class="st14 st16 st53">Ler mais...</text>
         </g>
         <g id="botao-1">
-          <path class="st21" d="M576.5,939.7h-170c-10.8,0-19.6-8.8-19.6-19.6v0c0-10.8,8.8-19.6,19.6-19.6h170c10.8,0,19.6,8.8,19.6,19.6v0
+          <path class="st52" d="M576.5,939.7h-170c-10.8,0-19.6-8.8-19.6-19.6v0c0-10.8,8.8-19.6,19.6-19.6h170c10.8,0,19.6,8.8,19.6,19.6v0
             C596.1,930.8,587.3,939.7,576.5,939.7z"/>
-          <text transform="matrix(1 0 0 1 449.3042 926.1906)" class="st14 st16 st45">Ler mais...</text>
+          <text transform="matrix(1 0 0 1 449.3042 926.1906)" class="st14 st16 st53">Ler mais...</text>
         </g>
         <g id="botao-2">
-          <path class="st21" d="M273.5,1980.2h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
+          <path class="st52" d="M273.5,1980.2h-170c-10.8,0-19.6-8.8-19.6-19.6l0,0c0-10.8,8.8-19.6,19.6-19.6h170
             c10.8,0,19.6,8.8,19.6,19.6l0,0C293.1,1971.4,284.2,1980.2,273.5,1980.2z"/>
-          <text transform="matrix(1 0 0 1 146.2461 1966.7404)" class="st14 st16 st45">Ler mais...</text>
+          <text transform="matrix(1 0 0 1 146.2461 1966.7404)" class="st14 st16 st53">Ler mais...</text>
         </g>
+
+      </g>
+      <g id="ai2html-settings">
         <g>
           <g>
             <g>
-              <rect x="184.4" y="5656.6" class="st6" width="391.8" height="248.5"/>
-              <text transform="matrix(1 0 0 1 364.7095 5678.2729)"><tspan x="0" y="0" class="st22 st17">Isolacionismo</tspan><tspan x="3.9" y="36" class="st22 st17">entre Guerras</tspan><tspan x="-135.6" y="81.6" class="st23 st24">Os planos de Wilson, nomeadamente a </tspan><tspan x="-166.2" y="105.6" class="st23 st24">entrada dos Estados Unidos na Sociedade </tspan><tspan x="-168.9" y="129.6" class="st23 st24">das Nações foi vetada pelo Senado. Se por </tspan><tspan x="-176.8" y="153.6" class="st23 st24">um lado, o presidente não estava disposto a </tspan><tspan x="-169.5" y="177.6" class="st23 st24">fazer qualquer concessão relativamente ao </tspan><tspan x="-156.4" y="201.6" class="st23 st24">seu plano para convencer os senadores a </tspan><tspan x="53.7" y="225.6" class="st23 st24">aderir, por outro...</tspan></text>
+              <rect x="184.4" y="5576.9" class="st6" width="391.8" height="248.5"/>
+              <text transform="matrix(1 0 0 1 364.7095 5598.6206)"><tspan x="0" y="0" class="st22 st17">Isolacionismo</tspan><tspan x="3.9" y="36" class="st22 st17">entre Guerras</tspan><tspan x="-134.3" y="81.6" class="st23 st24">Os planos de Wilson, nomeadamente a </tspan><tspan x="-164.5" y="105.6" class="st23 st24">entrada dos Estados Unidos na Sociedade </tspan><tspan x="-167.2" y="129.6" class="st23 st24">das Nações foi vetada pelo Senado. Se por </tspan><tspan x="-175.1" y="153.6" class="st23 st24">um lado, o presidente não estava disposto a </tspan><tspan x="-167.6" y="177.6" class="st23 st24">fazer qualquer concessão relativamente ao </tspan><tspan x="-154.8" y="201.6" class="st23 st24">seu plano para convencer os senadores a </tspan><tspan x="54" y="225.6" class="st23 st24">aderir, por outro...</tspan></text>
             </g>
           </g>
-
+          
         </g>
         <g>
           <defs>
-            <path id="SVGID_13_" d="M829.9,5117.2c0-135-84.9-169.2-84.9-257.2h-57.7c0,78.4,86.3,150.1,86.3,228.3
-              c0,194.1-167.4,224.4-167.4,519.5v474.8v10.9l143.2,530.6c0-312.6,217.5-350.9,217.5-541.6v-474.8
-              C966.9,5312.6,829.9,5344.1,829.9,5117.2z"/>
+            <path id="SVGID_22_" d="M966.9,5948.5L966.9,5948.5v-340.8c0-295.1-137-291.4-137-490.5c0-135-84.9-169.2-84.9-257.2h-57.7
+              c0,78.4,86.3,150.1,86.3,228.3c0,218.8-167.4,224.4-167.4,519.5v340.8l0,0v10.9c0,464.4,152.4,613.1,152.4,673.6h34.5
+              c0-43.1-43.7-94.6-43.7-143v0C749.4,6177.5,966.9,6164.9,966.9,5948.5z"/>
           </defs>
-          <clipPath id="SVGID_14_">
-            <use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+          <clipPath id="SVGID_23_">
+            <use xlink:href="#SVGID_22_"  style="overflow:visible;"/>
           </clipPath>
-          <g id="K7sivn_00000004508742551653826740000012575709628362327448_" class="st46">
-            
-              <image style="overflow:visible;" width="1280" height="1664" id="K7sivn" xlink:href="img/1CE0D182.jpg"  transform="matrix(0.3665 0 0 0.3665 561.7746 5589.9546)">
-            </image>
+          <g class="st54" style="mix-blend-mode: hard-light;">
+            <g id="K7sivn_00000004508742551653826740000012575709628362327448_">
+              
+                <image style="overflow:visible;" width="1280" height="1664" id="K7sivn" xlink:href="img/711EDC84.jpg"  transform="matrix(0.3665 0 0 0.3665 561.7746 5458.1973)">
+              </image>
+            </g>
           </g>
-          
-            <linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="772.1025" y1="-2448.1504" x2="772.1025" y2="-2582.2847" gradientTransform="matrix(-1 0 0 -1 1540.8191 3137.1067)">
+          <g class="st54">
+            <linearGradient id="SVGID_24_" gradientUnits="userSpaceOnUse" x1="772.1025" y1="-2319.7593" x2="772.1025" y2="-2453.8933" gradientTransform="matrix(-1 0 0 -1 1540.8191 3137.1067)">
             <stop  offset="0" style="stop-color:#00AEEF"/>
             <stop  offset="1" style="stop-color:#00AEEF;stop-opacity:0"/>
           </linearGradient>
-          <polygon class="st47" points="545.7,5719.4 991.8,5719.4 991.8,5585.3 545.7,5585.3 		"/>
+          <polygon class="st55" points="545.7,5591 991.8,5591 991.8,5456.9 545.7,5456.9 			"/>
           
-            <linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="772.1025" y1="6081.5112" x2="772.1025" y2="5892.3027" gradientTransform="matrix(-1 0 0 1 1540.8191 131.3544)">
+            <linearGradient id="SVGID_25_" gradientUnits="userSpaceOnUse" x1="772.1025" y1="5949.7534" x2="772.1025" y2="5760.5454" gradientTransform="matrix(-1 0 0 1 1540.8191 131.3544)">
             <stop  offset="0" style="stop-color:#00AEEF"/>
             <stop  offset="1" style="stop-color:#00AEEF;stop-opacity:0"/>
           </linearGradient>
-          <polygon class="st48" points="545.7,6023.7 991.8,6023.7 991.8,6212.9 545.7,6212.9 		"/>
+          <polygon class="st56" points="545.7,5891.9 991.8,5891.9 991.8,6081.1 545.7,6081.1 			"/>
         </g>
-      </g>
-      <g id="ai2html-settings">
-        <path class="st4" d="M454.7,11786.2l30.5-40.5l17.4-30.5l159.2,125.2c0,0-10.7,20.5-25.7,42.9c-15,22.3-21.5,31.5-21.5,31.5
-          l-72.1-27.1L454.7,11786.2z"/>
+        </g>
+        <path class="st4" d="M454.7,11389.3l30.5-40.5l17.4-30.5l159.2,125.2c0,0-10.7,20.5-25.7,42.9c-15,22.3-21.5,31.5-21.5,31.5
+          l-72.1-27.1L454.7,11389.3z"/>
         <g>
           
-            <radialGradient id="SVGID_17_" cx="519.6302" cy="50.2429" r="313.1357" gradientTransform="matrix(1 0 0 3.000000e-02 0 64.4759)" gradientUnits="userSpaceOnUse">
+            <radialGradient id="SVGID_26_" cx="519.6302" cy="50.2429" r="313.1357" gradientTransform="matrix(1 0 0 3.000000e-02 0 64.4759)" gradientUnits="userSpaceOnUse">
             <stop  offset="0.1588" style="stop-color:#000000"/>
             <stop  offset="0.8973" style="stop-color:#000000;stop-opacity:0"/>
           </radialGradient>
-          <rect x="76.9" y="31.8" class="st49" width="885.4" height="68.4"/>
+          <rect x="76.9" y="31.8" class="st57" width="885.4" height="68.4"/>
           <rect x="67.7" y="36.6" class="st14" width="912" height="29.4"/>
           <g>
             <path d="M53.9,66c294.4-0.6,624.7-0.6,919.1,0C678.6,66.6,348.4,66.6,53.9,66L53.9,66z"/>
@@ -1452,12 +1606,660 @@ img.timeline-cabeca-mobile{
           <text transform="matrix(1 0 0 1 290.8051 49.0153)" class="st15 st16 st17">I FASE – DOMÍNIO EUROPEU</text>
         </g>
         <g>
-          <text transform="matrix(0 1 -1 0 336.5263 80.3793)" class="st50 st16 st51">EUROPA</text>
+          <text transform="matrix(0 1 -1 0 336.5263 80.3793)" class="st58 st16 st59">EUROPA</text>
         </g>
-        <text transform="matrix(0 1 -1 0 180.8486 80.6192)" class="st52 st16 st51">EUA</text>
-        <path class="st0" d="M968.6,12371c0-426.7-471.7-535.4-489.6-664.1"/>
+        <text transform="matrix(0 1 -1 0 180.8486 80.6192)" class="st60 st16 st59">EUA</text>
+        <path class="st0" d="M968.6,11974.1c0-426.7-471.7-535.4-489.6-664.1"/>
       </g>
       </svg>
+      
+      
+ 
+<svg id="mob" class="infog-mobile" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 320 7746.2" style="enable-background:new 0 0 320 7746.2;" xml:space="preserve">
+<style type="text/css">
+	#mob .st0{fill:none;stroke:#00AEEF;stroke-width:10.8399;stroke-miterlimit:10;}
+	#mob .st1{fill:none;stroke:#00AEEF;stroke-width:10.3822;stroke-miterlimit:10;}
+	#mob .st2{fill:none;stroke:#00AEEF;stroke-width:10.8;stroke-miterlimit:10;}
+	#mob .st3{fill:none;stroke:#00AEEF;stroke-width:11.9033;stroke-miterlimit:10;}
+	#mob .st4{fill:none;stroke:#2E3192;stroke-width:11.6632;stroke-miterlimit:10;}
+	#mob .st5{fill:#2E3192;}
+	#mob .st6{fill:#00AEEF;}
+	#mob .st7{fill:none;}
+	#mob .st8{font-family: "Archivo",sans-serif; font-weight: 200;}
+	#mob .st9{font-size:13px;}
+	#mob .st10{opacity:0.7;clip-path:url(#SVGID_2_mob);}
+	#mob .st11{clip-path:url(#SVGID_2_mob);fill:url(#SVGID_3_mob);}
+	#mob .st12{clip-path:url(#SVGID_2_mob);fill:url(#SVGID_4_mob);}
+	#mob .st13{filter:url(#Adobe_OpacityMaskFilter_mob);}
+	#mob .st14{fill:url(#SVGID_6_mob);}
+	#mob .st15{fill:#FFFFFF;}
+	#mob .st16{fill:url(#SVGID_7_mob);}
+	#mob .st17{mask:url(#SVGID_5_mob);mix-blend-mode: hard-light;}
+	#mob .st18{opacity:0.3;fill:url(#SVGID_8_mob);}
+	#mob .st19{opacity:0.3;fill:url(#SVGID_9_mob);}
+	#mob .st20{fill:#6B6B6B;}
+	#mob .st21{font-family: "Archivo",sans-serif; font-weight: 700;}
+	#mob .st22{font-size:16px;}
+	#mob .st23{font-family: "Archivo",sans-serif; font-weight: 800;}
+	#mob .st24{font-size:18px;}
+	#mob .st25{font-family: "Archivo",sans-serif; font-weight: 300;}
+	#mob .st26{font-size:14px;}
+	#mob .st27{fill:#0072BC;}
+	#mob .st28{fill:#E52525;}
+	#mob .st29{fill:#ED1C24;}
+	#mob .st30{font-size:10.291px;}
+	#mob .st31{filter:url(#Adobe_OpacityMaskFilter_1_mob);}
+	#mob .st32{fill:url(#SVGID_11_mob);}
+	#mob .st33{fill:url(#SVGID_12_mob);}
+	#mob .st34{mask:url(#SVGID_10_mob);mix-blend-mode: hard-light;}
+	#mob .st35{filter:url(#Adobe_OpacityMaskFilter_2_mob);}
+	#mob .st36{fill:url(#SVGID_14_mob);}
+	#mob .st37{fill:url(#SVGID_15_mob);}
+	#mob .st38{mask:url(#SVGID_13_mob);mix-blend-mode: hard-light;}
+	#mob .st39{clip-path:url(#XMLID_4__mob);}
+	#mob .st40{font-family: "Archivo",sans-serif; font-weight: 700;font-style: italic;}
+	#mob .st41{font-size:19.7245px;}
+	#mob .st42{fill:#575756;}
+	#mob .st43{font-size:12.6237px;}
+	#mob .st44{font-size:18.1465px;}
+	#mob .st45{stroke:#FFFFFF;stroke-width:0.5934;}
+	#mob .st46{font-size:15px;}
+	#mob .st47{clip-path:url(#SVGID_17_mob);}
+	#mob .st48{fill:url(#SVGID_18_mob);}
+	#mob .st49{fill:url(#SVGID_19_mob);}
+	#mob .st50{fill:#70D1F6;}
+	#mob .st51{fill:#ABACD3;}
+	#mob .st52{opacity:0.3;fill:url(#SVGID_20_mob);}
+</style>
+<g id="Layer_1">
+	<path class="st0" d="M209.1,5829.4c-6.2-44.1,91.7-24.9,91.7-85.3v-16.3"/>
+	<path class="st1" d="M205.6,5429c-10.7-9.1,4.4-24.8-5.3-34.1"/>
+	<path class="st2" d="M298.2,5249.2c0,13.2-19.3,4.8-23.4,15.8c-4.3,10.8,9.7,22,4.6,32.8c-3.6,12-17.9,1.6-21.9,12.6
+		c-4.3,10.8,9.7,22,4.6,32.8c-5.4,10.6-19.1-1.2-24.8,8.5c-5.9,9.4,7.4,21.8,0.6,31.1c-7,9-19.9-3.9-27.2,4.2
+		c-7.5,7.9,4.9,21.4-3.5,29.1"/>
+	<path class="st3" d="M77,6929.4c0-24-31.5-46.7-22.3-65.4"/>
+	<path class="st3" d="M117.4,6855.2c10.6-3.2-7.3-53.8,10.1-65.3"/>
+	<path class="st4" d="M231.2,2465.3c20.2,18.6,13.5,55.3,13.5,76.5"/>
+	<path class="st3" d="M191.2,6807.5c7.3-8.4-6.7-21.6-18.2-37.3c-2-2.7-2-7-2-7v-1.4"/>
+	<path class="st5" d="M7.7,4625.6c0-51.2,101.9-74.3,101.9-90.9h20.3c0,26.8-94.7,47.2-94.7,90.9H7.7z"/>
+	<path class="st5" d="M91.9,4316.7c0-138.4,183.5-204.8,183.5-285H255c0,80.1-246.9,127.8-246.9,285H91.9z"/>
+	<path class="st5" d="M94.6,4489.3c0-138.4-2.7-92.4-2.7-172.6H8.1c0.7,59.1,0.7,49.7,2.7,125.2L94.6,4489.3z"/>
+	<path class="st6" d="M109.6,4198.4c0-79.3,145.4-93,145.4-166.7h-11.8c0,63-144.4,83.3-144.4,166.7H109.6z"/>
+	<rect x="98.7" y="4198.4" class="st6" width="10.9" height="336.3"/>
+	<path class="st5" d="M35.2,5232.1c0,73.5,258.9,135.5,258.9,234.4v47.5h-63.2c0,0,0,36.5,0-25.3c0-112.8-223-164.5-223-249.6"/>
+	<path class="st1" d="M300.8,5489.3c0-11.1,3.1-28.1-9.9-33.5c-12.8-5.7-25.7,11.4-38.5,4.7c-12.5-7,1.1-23.8-10.2-31.2
+		c-11.1-7.7-25.5,8.5-36.5-0.3"/>
+	<g>
+		<path class="st5" d="M14.5,2338.4c0,0-1-619.6-1-720.9H2.6l0,720.9"/>
+		<path class="st6" d="M20.8,2309.9v-618.4c3.9-135.1,151.4-176.3,151.4-277.6L320,1414c0,101.2-243.2,142.5-243.2,277.6l0,646.9"/>
+		<path class="st5" d="M13.5,884.7c0-114.6,49.3-143.4,49.3-245.2c0-107.2,0-581.7,0-581.7h-6.7c0,0,0,474.5,0,581.7
+			c0,96.2-53.5,137.1-53.5,245.2"/>
+		<path class="st6" d="M172.2,884.7c0-108.1-92.4-138-92.4-245.2s0-581.7,0-581.7h37.7c0,0,0,474.5,0,581.7S320,776.6,320,884.7"/>
+		<path class="st6" d="M250.3,2541.8c0-91.8-229.6-144-229.6-231.9l56,28.5c0,69.6,193.3,111.6,193.3,203.4H250.3z"/>
+		<path class="st6" d="M230.6,2787c0-29,19.8-32.5,19.8-49h19.8c0,26.8-19.8,28.3-19.8,49H230.6z"/>
+		<g>
+			<path class="st5" d="M262.2,2885.1c0,150.8-214.2,155.3-214.2,256.5H11.8c0-111.8,238.1-109.4,238.1-256.5"/>
+		</g>
+	</g>
+	<rect x="127.7" y="251.1" class="st7" width="187.5" height="34.2"/>
+	<text transform="matrix(1 0 0 1 127.6995 260.4886)"><tspan x="0" y="0" class="st8 st9">Lorem ipsum dolor sit amet, </tspan><tspan x="0" y="15" class="st8 st9">consectetuer adipiscing</tspan></text>
+	<polygon class="st6" points="320,1414 172.2,1414 172.2,884.7 240.5,808.3 320,884.7 	"/>
+	<rect x="2.6" y="884.7" class="st5" width="10.9" height="732.9"/>
+	<path class="st5" d="M262.2,2787c0-29-11.8-32.5-11.8-49h-11.5c0,26.8,11.5,28.3,11.5,49H262.2z"/>
+	<path class="st5" d="M238.5,2836c0-29,11.8-32.5,11.8-49h11.8c0,26.8-11.8,28.3-11.8,49H238.5z"/>
+	<path class="st6" d="M270.1,2836c0-29-19.8-32.5-19.8-49h-19.8c0,26.8,19.8,28.3,19.8,49H270.1z"/>
+	<path class="st6" d="M230.6,2688.9c0-29,19.8-32.5,19.8-49h19.8c0,26.8-19.8,28.3-19.8,49H230.6z"/>
+	<path class="st5" d="M262.2,2688.9c0-29-11.8-32.5-11.8-49h-11.5c0,26.8,11.5,28.3,11.5,49H262.2z"/>
+	<path class="st5" d="M238.5,2737.9c0-29,11.8-32.5,11.8-49h11.8c0,26.8-11.8,28.3-11.8,49H238.5z"/>
+	<path class="st6" d="M270.1,2737.9c0-29-19.8-32.5-19.8-49h-19.8c0,26.8,19.8,28.3,19.8,49H270.1z"/>
+	<path class="st6" d="M230.6,2590.8c0-29,19.8-32.5,19.8-49h19.8c0,26.8-19.8,28.3-19.8,49H230.6z"/>
+	<path class="st5" d="M262.2,2590.8c0-29-11.8-32.5-11.8-49h-11.5c0,26.8,11.5,28.3,11.5,49H262.2z"/>
+	<path class="st5" d="M238.5,2639.9c0-29,11.8-32.5,11.8-49h11.8c0,26.8-11.8,28.3-11.8,49H238.5z"/>
+	<path class="st6" d="M270.1,2639.9c0-29-19.8-32.5-19.8-49h-19.8c0,26.8,19.8,28.3,19.8,49H270.1z"/>
+	<path class="st6" d="M230.6,2885.1c0-29,19.8-32.5,19.8-49h19.8c0,26.8-19.8,28.3-19.8,49H230.6z"/>
+	<path class="st5" d="M262.2,2885.1c0-29-11.8-32.5-11.8-49h-11.8c0,26.8,11.8,28.3,11.8,49H262.2z"/>
+	<path class="st5" d="M234.7,3884.6c0-29,20.3-32.5,20.3-49h20.3c0,26.8-20.3,28.3-20.3,49H234.7z"/>
+	<path class="st6" d="M266.9,3884.6c0-14.8-11.8-32.5-11.8-49h-11.8c0,13.7,11.8,28.3,11.8,49H266.9z"/>
+	<path class="st6" d="M243.2,3933.7c0-14.8,11.8-32.5,11.8-49h11.8c0,13.7-11.8,28.3-11.8,49H243.2z"/>
+	<path class="st5" d="M275.3,3933.7c0-29-20.3-32.5-20.3-49h-20.3c0,26.8,20.3,28.3,20.3,49H275.3z"/>
+	<path class="st5" d="M234.7,3982.7c0-29,20.3-32.5,20.3-49h20.3c0,26.8-20.3,28.3-20.3,49H234.7z"/>
+	<path class="st6" d="M266.9,3982.7c0-14.8-11.8-32.5-11.8-49h-11.8c0,13.7,11.8,28.3,11.8,49H266.9z"/>
+	<path class="st5" d="M129.9,4534.7c0-15.9-35.3-30.3-35.3-45.4L10.9,4442c0,54.8,98.7,84.4,98.7,92.8H129.9z"/>
+	<path class="st6" d="M243.2,4031.8c0-14.8,11.8-32.5,11.8-49h11.8c0,13.7-11.8,28.3-11.8,49H243.2z"/>
+	<path class="st5" d="M275.3,4031.8c0-29-20.3-32.5-20.3-49h-20.3c0,26.8,20.3,28.3,20.3,49H275.3z"/>
+	<path class="st5" d="M234.7,3688.5c0-29,17.1-32.5,17.1-49h17.9c0,26.8-14.8,28.3-14.8,49H234.7z"/>
+	<path class="st6" d="M243.2,3835.6c0-14.8,11.8-32.5,11.8-49h11.8c0,13.7-11.8,28.3-11.8,49H243.2z"/>
+	<path class="st5" d="M275.3,3835.6c0-29-20.3-32.5-20.3-49h-20.3c0,26.8,20.3,28.3,20.3,49H275.3z"/>
+	<path class="st5" d="M234.7,3786.6c0-29,20.3-32.5,20.3-49h20.3c0,26.8-20.3,28.3-20.3,49H234.7z"/>
+	<path class="st6" d="M266.9,3786.6c0-14.8-11.8-32.5-11.8-49h-11.8c0,13.7,11.8,28.3,11.8,49H266.9z"/>
+	<path class="st6" d="M243.2,3737.5c0-14.8,11.8-32.5,11.8-49h11.8c0,13.7-11.8,28.3-11.8,49H243.2z"/>
+	<path class="st5" d="M275.3,3737.5c0-29-20.3-32.5-20.3-49h-20.3c0,26.8,20.3,28.3,20.3,49H275.3z"/>
+	<g>
+		<defs>
+			<path id="SVGID_1_mob" d="M117.5,639.5c0-107.2,0-581.7,0-581.7H79.8c0,0,0,474.5,0,581.7c0,107.2,92.4,137.1,92.4,245.2v700.1
+				c0,101.2-147.5,142.5-151.4,277.6v219.8l56,28.5l0-248.3c0-135.1,243.2-176.3,243.2-277.6v-700
+				C320,776.6,117.5,746.7,117.5,639.5z"/>
+		</defs>
+		<clipPath id="SVGID_2_mob">
+			<use xlink:href="#SVGID_1_mob"  style="overflow:visible;"/>
+		</clipPath>
+		<g id="_x30_2_x5F_JQA_x5F_Photo.tif_00000059285447074158025040000016371899727256459711_" class="st10">
+			
+				<image style="overflow:visible;" width="1712" height="2236" id="_x30_2_x5F_JQA_x5F_Photo" xlink:href="img/27998F2E.jpg"  transform="matrix(0.212 0 0 0.212 115.0276 866.6591)">
+			</image>
+		</g>
+		
+			<linearGradient id="SVGID_3_mob" gradientUnits="userSpaceOnUse" x1="-9436.5508" y1="2358.6472" x2="-9436.5508" y2="2285.499" gradientTransform="matrix(-1 0 0 -1 -9172.5146 3222.7405)">
+			<stop  offset="0" style="stop-color:#00AEEF"/>
+			<stop  offset="1" style="stop-color:#00AEEF;stop-opacity:0"/>
+		</linearGradient>
+		<polygon class="st11" points="115.6,937.2 412.4,937.2 412.4,864.1 115.6,864.1 		"/>
+		
+			<linearGradient id="SVGID_4_mob" gradientUnits="userSpaceOnUse" x1="-9450.4082" y1="1211.9131" x2="-9450.4082" y2="1108.7311" gradientTransform="matrix(-1 0 0 1 -9172.5146 131.3544)">
+			<stop  offset="0" style="stop-color:#00AEEF"/>
+			<stop  offset="1" style="stop-color:#00AEEF;stop-opacity:0"/>
+		</linearGradient>
+		<polygon class="st12" points="143.3,1240.1 412.4,1240.1 412.4,1343.3 143.3,1343.3 		"/>
+	</g>
+	<path class="st6" d="M318.9,3453.7L318.9,3453.7v-312.1c0-101.2-39.4-100-39.4-168.3c0-46.3-29.1-58-29.1-88.2h-19.8
+		c0,26.9,29.6,51.5,29.6,78.3c0,75.1-57.4,77-57.4,178.2v312.1l0,0v3.8c0,159.3,52.3,210.3,52.3,231.1h11.8c0-14.8-15-32.5-15-49
+		l0,0C251.9,3532.2,318.9,3527.9,318.9,3453.7z"/>
+	<rect x="11.8" y="3141.6" class="st5" width="36.2" height="312.1"/>
+	<path class="st5" d="M47.9,3453.7c0,100.8,221.9,78.6,221.9,185.8h-17.9c0-100.4-240.1-77.7-240.1-185.8H47.9z"/>
+	<path class="st5" d="M134.1,6662.4c0-102.2,0-526.3,0-631.9c0-86.9,159.9-120.9,159.9-241.8V5514h-63.2c0,0,0,192.8,0,254.6
+		C230.8,5923,2,5884.8,2,6026.8c0,86.4,0,507.6,0,605.6L134.1,6662.4z"/>
+	<path class="st6" d="M305.6,6516.1l0-458.9h10.3c0,0,0,11.8,0,458.9H305.6z"/>
+	<rect x="295.4" y="5489.3" class="st6" width="10.9" height="238.6"/>
+	<path class="st5" d="M134.1,6662.4c0,41.2,64.6,44.7,64.6,100.1h-21.8c0-41-174.8-50.1-174.8-130.2L134.1,6662.4z"/>
+	<path class="st6" d="M165,6762.5h11.8c0-65.1,139.1-61.4,139.1-246.4h-10.3C305.6,6697.5,165,6689.1,165,6762.5z"/>
+	<path class="st3" d="M25.3,6998.3c-4.3,13.8,36.3,20.4,30.5,39.3"/>
+	<path class="st3" d="M34.7,7072.6c-9.7-12.6,15.3-15.9,21.1-34.9"/>
+	<path class="st5" d="M126.8,6813.6c0.1-0.1,0.2-0.1,0.2-0.1c-1.8,0.8-7.9,0.7-11.6,0.7c-9.7-0.1-21.8-0.3-30.4,7.8
+		c-8.7,8.1-9.1,20.3-9.5,30c-0.1,3.6-0.4,9.6-1.3,11.5c-1.6,1.4-7.2,3.3-10.6,4.4c-9.4,3.2-21.2,7.2-26.4,18.3
+		c-5.2,10.9-0.7,22.4,2.8,31.7c1.3,3.5,3.6,9.2,3.4,11.4c-0.8,1.8-4.8,5.7-7.3,8.1c-7.3,7.2-16.3,16.1-16.1,28.7
+		c0.2,11.6,3.1,17.4,8,24.5c1.9,2.7,5.4,7.7,5.6,9.8c-0.7,1.9-4.3,6.5-6.5,9.3c-6.6,8.6-14.9,19.3-13.8,31c1,10.5,9.7,16.1,17.3,21
+		c2.8,1.8,8,5.1,9,7c-0.3,2-2.6,7.1-4,10.2c-4.3,9.3-9.6,20.8-5.8,31.1c3.3,8.9,12.8,12.6,20.4,15.7c2,0.8,5,2,6.9,3
+		c-1.1,2.2-3.2,5.4-4.5,7.5c-5.2,8-11,17.2-9.7,26.6c1.3,9.6,9.7,15.1,16.3,19.5c1.8,1.2,4.4,2.9,6,4.3c-1.4,2-4,5-5.7,7
+		c-6.4,7.4-13.7,15.8-14.1,25.7c-0.4,10.1,6.7,16.9,12.4,22.4c1.5,1.5,3.8,3.7,5.1,5.3c-1.7,1.9-4.7,4.6-6.7,6.4
+		c-7.3,6.7-15.7,14.3-17.5,24.3c-1.8,10.4,4.3,18.2,9.1,24.5c1.3,1.7,3.2,4.2,4.2,5.9c-1.9,1.8-5.2,4.4-7.4,6.1
+		c-7.9,6.1-16.9,13-19.6,23c-2.9,10.6,2.4,19.2,6.8,26.1c1.4,2.3,3.8,6.1,4.1,7.6c-1.6,1.9-5,4.9-7.1,6.8
+		c-7.5,6.7-16.8,15-18.6,26.2c-1.8,11.4,5.1,19.1,10.7,25.4c1.5,1.7,3.8,4.3,4.9,6c-1.4,2.1-4.3,5.4-6.2,7.6
+		c-6.6,7.5-14.7,16.9-14.8,27.8c-0.1,11.1,8,17.6,14.5,22.8c1.7,1.4,4.4,3.6,5.8,5.1c-1.2,2.2-3.7,5.8-5.4,8.2
+		c-5.7,8-12.7,18-11.6,28.4c1.1,10.8,10,16.3,17.2,20.7c1.9,1.1,4.7,2.9,6.2,4.2c-1,2.3-3.4,6.2-4.9,8.7c-5,8.2-11.2,18.3-9.3,28.2
+		c2,10.7,11,17.5,18.5,21.3c1.9,1,4.9,2.5,6.6,3.7c-0.8,2.4-2.9,6.4-4.2,9c-4.3,8.5-9.7,19.1-7.1,28.9c0,0,26.5-10.5,26.5-10.5
+		c0.3-1.6,2.7-6.5,4.2-9.4c4.4-8.7,9.9-19.6,7.6-29.8c-2.2-9.6-10.6-13.9-17.9-17.7c-2-1-5.1-2.6-6.9-3.9c0.4-1.6,3.2-6.3,4.9-9.1
+		c5.1-8.4,11.4-18.8,9.8-29.1c-1.5-9.8-9.5-14.7-16.5-19c-2-1.2-4.9-3-6.6-4.4c1.2-2.1,3.4-5.2,4.9-7.3c5.6-7.9,12.5-17.7,12-28.1
+		c-0.5-10.1-7.8-15.9-14.2-21c-1.7-1.4-4.3-3.5-5.8-5c1.5-2,4-4.9,5.7-6.8c6.3-7.2,14.1-16.2,15-26.7c0.8-10.3-5.3-17.2-10.8-23.3
+		c-1.4-1.6-3.6-4.1-4.8-5.8c1.7-1.8,4.6-4.4,6.4-6c7.1-6.3,14-14.6,18.7-24.7c3.1-10.2-2.1-18.6-6.3-25.4c-1.3-2.1-3.3-5.2-4.1-7.3
+		c1.8-1.7,5-4.1,7.1-5.7c8-6.2,18-13.9,20.6-24.8c2.4-10.6-3.7-18.5-8.7-24.9c-1.5-1.9-3.7-4.8-4.7-6.6c1.6-1.8,4.7-4.6,6.7-6.5
+		c7.5-6.8,16.7-15.3,18-26.2c1.2-10.7-6.2-17.8-12.2-23.5c-1.7-1.6-4.4-4.2-5.6-5.9c1.3-2,4.1-5.2,5.9-7.2
+		c6.6-7.6,14.8-17,14.3-27.7c-0.5-10.6-9.2-16.3-16.3-20.9c-2-1.3-5.2-3.4-6.6-4.8c1-2.1,3.2-5.6,4.7-7.8c5.4-8.3,12-18.7,9.5-28.9
+		c-2.5-10-12.5-14-20.6-17.2c-2.5-1-6.5-2.6-8.1-3.7c0.3-2.4,2.9-8.2,4.4-11.4c3.9-8.4,8.3-18,6.2-27c-2.4-9.7-11.1-15.3-18-19.8
+		c-2.4-1.5-6.2-4-7.6-5.5c1-2.4,4.9-7.6,7.2-10.5c5.7-7.4,12.2-15.8,12.9-25c0.8-10-4.6-17.7-9.3-24.4c-1.6-2.2-3.7-5.9-5.1-7.8
+		c1.3-2.2,5.2-6,7.6-8.4c6-6,12.9-12.7,14.8-21.9c2-9.6-1.5-18.9-4.7-27.1c-1.1-2.9-2.9-7.6-3.3-10c2.1-1.3,7-3,10.1-4.1
+		c8.3-2.8,17.7-6.1,23.6-13.9c6-8,6.4-18,6.8-26.9c0.1-3.3,0.3-8.7,1.1-11c2.3-0.6,7.8-0.5,11.1-0.5c9,0.1,15.6,0.7,26.3-4.4
+		L126.8,6813.6z"/>
+	<path class="st4" d="M8.5,2338.4c0,40.6,39.1,93.9,110,101.7s93.5,7.6,112.6,25.2"/>
+	<path class="st5" d="M126.8,6813.6c25.9-7.5,44.7-26.7,50-51.1h21.8c0,21.4-9.7,57.6-63.8,77.2L126.8,6813.6z"/>
+	<path class="st3" d="M162.8,7723.2c-7.7-8.4-30.5-5.3-36.9-13.7c-6.8-8.9,3.9-28-1.7-37c-5.9-9.5-28.9-10.4-33.4-19.9
+		c-4.8-10,9.6-26.9,6-36.7c-3.8-10.7-26-16.8-28.6-27.1c-2.8-10.9,14.6-24.3,13-34.7c-1.7-11-22.5-20.9-23-31.4
+		c-0.5-11.1,19.4-21,20-31.4c0.6-11-17.3-25-16.2-34.7c1.1-10.4,23.6-16.2,25.8-25.7c2.3-10.2-15.2-25.5-12-34.7
+		c3.8-10.7,26-16.8,28.6-27.1c2.8-10.9-14.6-24.3-13-34.7c1.7-11,22.5-20.9,23-31.4c0.5-11.1-19.4-21-20-31.4
+		c-0.6-11,17.3-25,16.2-34.7c-1.1-10.4-23.6-16.2-25.8-25.7c-2.3-10.2,15.2-25.5,12-34.7c-3.5-10-27.3-12.2-31.4-21
+		c-4.6-9.8,9.9-27.2,5.1-35.4c-5.7-9.8-30.1-8.9-35.3-16.3c-7.8-11.2,8.3-19.4-0.4-31.1"/>
+	<g>
+		<path class="st5" d="M28.3,5284.8c-2.5-3.4-4.6-6.2-6.5-8.7c-10.7-14.1-14.1-19.7-14.1-44.1c0-17.4,7.4-26.8,12.9-33.8
+			c4.5-5.7,7-8.9,7-16.8s-2.5-11-7-16.8c-5.4-6.9-12.9-16.4-12.9-33.8c0-17.4,7.4-26.8,12.9-33.8c4.5-5.7,7-8.9,7-16.8
+			c0-7.9-2.5-11-7-16.8c-5.4-6.9-12.9-16.4-12.9-33.8c0-17.4,7.4-26.8,12.9-33.8c4.5-5.7,7-8.9,7-16.8s-2.5-11-7-16.8
+			c-5.4-6.9-12.9-16.4-12.9-33.8h27.4c0,7.9,2.5,11,7,16.8c5.4,6.9,12.9,16.4,12.9,33.8s-7.4,26.8-12.9,33.8c-4.5,5.7-7,8.9-7,16.8
+			s2.5,11,7,16.8c5.4,6.9,12.9,16.4,12.9,33.8c0,17.4-7.4,26.8-12.9,33.8c-4.5,5.7-7,8.9-7,16.8s2.5,11,7,16.8
+			c5.4,6.9,12.9,16.4,12.9,33.8c0,17.4-7.4,26.8-12.9,33.8c-4.5,5.7-7,8.9-7,16.8c0,8.9,0.4,13.7,1.5,16.7c0.9,2.7,2.8,5.2,7.1,10.8
+			c2,2.6,4.2,5.6,6.9,9.2L28.3,5284.8z"/>
+	</g>
+	<path class="st5" d="M55.1,4777.2c0.6-28.5-18.6-30.3-19.9-50.5c1.3-20.2,20.6-22.2,19.9-50.5c0.7-28.4-18.6-30.4-19.9-50.5H7.7
+		c-0.6,28.4,18.6,30.3,19.9,50.5c-1.3,20.2-20.6,22.1-19.9,50.5l0,0c0,0,0,0,0,0c-1.3,29.1,21.9,31.6,19.6,54.5
+		c-4.9,17.2-20.1,21-19.6,46.6c-0.7,28.4,18.6,30.3,19.9,50.5c-1.4,20.2-20.5,22.1-19.9,50.5c-0.7,28.3,18.6,30.4,19.9,50.5h27.4
+		c0.6-28.5-18.6-30.3-19.9-50.5c1.3-20.2,20.6-22.1,19.9-50.5l0,0c0.6-28.4-18.6-30.3-19.9-50.5
+		C36.5,4807.6,55.7,4805.6,55.1,4777.2z"/>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter_mob" filterUnits="userSpaceOnUse" x="153.7" y="5487.4" width="242.7" height="317.7">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="153.7" y="5487.4" width="242.7" height="317.7" id="SVGID_5_mob">
+		<g class="st13">
+			
+				<linearGradient id="SVGID_6_mob" gradientUnits="userSpaceOnUse" x1="-339.2118" y1="3077.4534" x2="-358.4015" y2="2650.2488" gradientTransform="matrix(0.9978 6.604671e-02 -5.226935e-02 0.7897 758.6044 3475.875)">
+				<stop  offset="0.2524" style="stop-color:#000000"/>
+				<stop  offset="0.6535" style="stop-color:#FFFFFF"/>
+			</linearGradient>
+			<polygon class="st14" points="331.2,5885.6 186.6,5881.4 190.5,5543 335.1,5547.3 			"/>
+			<polygon class="st15" points="804.2,10692.1 478.8,10692.1 456,11086.7 804.2,11142 			"/>
+			
+				<linearGradient id="SVGID_7_mob" gradientUnits="userSpaceOnUse" x1="-10440.7197" y1="22661.6738" x2="-10440.7197" y2="22635.625" gradientTransform="matrix(-1 0 0 -1 -10198.1553 28183.7383)">
+				<stop  offset="0" style="stop-color:#000000"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</linearGradient>
+			<polygon class="st16" points="114.7,5522.1 370.4,5522.1 370.4,5548.1 114.7,5548.1 			"/>
+		</g>
+	</mask>
+	<g class="st17">
+		<defs>
+			<path id="XMLID_00000135679139430104985210000006394580349444946586_" d="M293.4,5801.7h-66.6c4.3-14.4,4-33,4-42.4v-271.9h63.2
+				l0,217.1C294.3,5704.2,294.5,5792.8,293.4,5801.7z"/>
+		</defs>
+		<use xlink:href="#XMLID_00000135679139430104985210000006394580349444946586_"  style="overflow:visible;"/>
+		<clipPath id="XMLID_2_mob">
+			<use xlink:href="#XMLID_00000135679139430104985210000006394580349444946586_"  style="overflow:visible;"/>
+		</clipPath>
+		<g transform="matrix(1 0 0 1 0 0)" style="clip-path:url(#XMLID_2_mob);">
+			
+				<image style="overflow:visible;" width="488" height="596" xlink:href="img/27998F32.jpg"  transform="matrix(0.4974 0 0 0.4974 153.7342 5508.647)">
+			</image>
+		</g>
+	</g>
+	<g>
+		
+			<radialGradient id="SVGID_8_mob" cx="161.0473" cy="783.6278" r="107.4165" gradientTransform="matrix(1 0 0 3.000000e-02 0 2400.7773)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0.1588" style="stop-color:#000000"/>
+			<stop  offset="0.8973" style="stop-color:#000000;stop-opacity:0"/>
+		</radialGradient>
+		<rect x="9.2" y="2412.6" class="st18" width="303.7" height="23.5"/>
+		
+			<radialGradient id="SVGID_9_mob" cx="161.0473" cy="775.8001" r="107.4165" gradientTransform="matrix(1 0 0 3.000000e-02 0 2374.7659)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0.1588" style="stop-color:#000000"/>
+			<stop  offset="0.8973" style="stop-color:#000000;stop-opacity:0"/>
+		</radialGradient>
+		<rect x="9.2" y="2386.3" class="st19" width="303.7" height="23.5"/>
+		<rect x="6" y="2398" class="st15" width="312.8" height="26.2"/>
+		<g>
+			<polygon points="1.3,2424.3 158.9,2424.1 316.6,2424.3 158.9,2424.5 			"/>
+		</g>
+		<g>
+			<polygon points="1.3,2398 158.9,2397.9 316.6,2398 158.9,2398.2 			"/>
+		</g>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 30.4491 2417.4658)" class="st20 st21 st22">II FASE – DOMÍNIO AMERICANO</text>
+	</g>
+	<path class="st2" d="M104.2,4534.7c0,7.7-7.9,16.9-6.2,23.8c1.7,7.3,21.2,8.2,24.5,14.7c3.3,6.5-7.9,21.9-3.3,27.8
+		c4.5,5.7,23-0.3,28.4,5c5.2,5.1-1.3,23,4.6,27.7c5.7,4.6,22.8-4.6,28.9-0.2c6,4.4,1.5,22.8,7.7,27.1c6.1,4.3,22.8-5.8,28.9-1.5
+		c6.2,4.3,1.5,22.7,7.4,27.2c6.1,4.6,23.4-4.3,28.9,0.5c5.8,5-1.6,22.5,3.2,27.9c5.1,5.6,24.1,1.2,27.8,7.4c3.9,6.4-9.5,19.9-7.4,27
+		c2,6.8,20.7,11.6,20.7,19.3c0,7.9-18,16.8-18,26.6c0,8.3,18,17.2,18,26.6c0,8.5-18,17.4-18,26.6c0,8.6,18,17.5,18,26.5
+		c0,8.7-18,17.6-18,26.6c0,8.8,18,17.7,18,26.6c0,8.9-18,17.7-18,26.6c0,8.9,18,17.8,18,26.6c0,9-18,17.9-18,26.6
+		c0,9.1,18,18,18,26.6c0,9.2-18,18.1-18,26.6c0,9.5,18,18.4,18,26.6c0,10.1-18,19-18,26.6c0,16.7,18,13.3,18,26.6"/>
+	<path class="st2" d="M298.2,5140.3c0,9.5-18,18.6-18,27.2c0,9.7,18,18.9,18,27.2c0,10.3-18,19.5-18,27.2c0,17.1,18,13.6,18,27.2"/>
+</g>
+<g id="Layer_2">
+</g>
+<g id="caixas">
+	<path class="st3" d="M191.2,6807.5c-7.3,8.4-46.1-28.7-63.7-17.6"/>
+	<path class="st3" d="M119.9,6852.7c-3.1,10.7-56.2-7-65.1,11.2"/>
+	<path class="st3" d="M77,6929.4c0,21.2-44.4,45.2-51.7,69"/>
+	<g>
+		<g>
+			<rect x="127.7" y="305.1" class="st7" width="179.9" height="282.1"/>
+			<text transform="matrix(1 0 0 1 127.7432 318.1518)"><tspan x="0" y="0" class="st23 st24">Revolução </tspan><tspan x="0" y="21.6" class="st23 st24">Francesaaaaa</tspan><tspan x="0" y="45.8" class="st25 st26">Nos anos 1990, a principal </tspan><tspan x="0" y="62.6" class="st25 st26">preocupação do Ocidente </tspan><tspan x="0" y="79.4" class="st25 st26">como um todo foi encontrar </tspan><tspan x="0" y="96.2" class="st25 st26">uma função para a NATO </tspan><tspan x="0" y="113" class="st25 st26">depois do fim da Guerra Fria </tspan><tspan x="0" y="129.8" class="st25 st26">e o colapso do inimigo </tspan><tspan x="0" y="146.6" class="st25 st26">comum. No entanto, o 11 de </tspan><tspan x="0" y="163.4" class="st25 st26">Setembro acabou por </tspan><tspan x="0" y="180.2" class="st25 st26">significar um afastamento </tspan><tspan x="0" y="197" class="st25 st26">abrupto entre os dois lados </tspan><tspan x="0" y="213.8" class="st25 st26">do Atlântico, que só Joe </tspan><tspan x="0" y="230.6" class="st25 st26">Biden se preocupou </tspan><tspan x="0" y="247.4" class="st25 st26">verdadeiramente em reparar. </tspan></text>
+		</g>
+		<rect x="127.7" y="102.6" width="191.8" height="142.6"/>
+	</g>
+	<g>
+		<g>
+			<rect x="14.5" y="5493.7" class="st7" width="205.7" height="248.8"/>
+			<text transform="matrix(1 0 0 1 55.9243 5506.75)"><tspan x="0" y="0" class="st23 st24">Fim da Guerra Fria</tspan><tspan x="-3.2" y="33.6" class="st25 st26">No final dos anos 1980, um </tspan><tspan x="-41.4" y="50.4" class="st25 st26">conjunto de vontades deu origem </tspan><tspan x="-11" y="67.2" class="st25 st26">ao fim inesperado da Guerra </tspan><tspan x="-31.6" y="84" class="st25 st26">Fria. A presidência Reagan veio </tspan><tspan x="32.3" y="100.8" class="st25 st26">decidida a pressionar </tspan><tspan x="2.5" y="117.6" class="st25 st26">diplomaticamente a União </tspan><tspan x="-32.9" y="134.4" class="st25 st26">Soviética, o Secretário-Geral do </tspan><tspan x="-2.3" y="151.2" class="st25 st26">Partido Comunista, Mikhail </tspan><tspan x="15.8" y="168" class="st25 st26">Gorbachov, introduziu a </tspan><tspan x="5.5" y="184.8" class="st25 st26">perestroika e o glasnost...</tspan></text>
+		</g>
+	</g>
+	<g>
+		<g>
+			<rect x="144.4" y="6027.7" class="st7" width="144.8" height="363.2"/>
+			<text transform="matrix(1 0 0 1 144.4121 6040.7173)"><tspan x="0" y="0" class="st23 st24">A Guerra </tspan><tspan x="0" y="21.6" class="st23 st24">do Iraque</tspan><tspan x="0" y="55.2" class="st25 st26">Nos anos 1990, a </tspan><tspan x="0" y="72" class="st25 st26">principal preocupação </tspan><tspan x="0" y="88.8" class="st25 st26">do Ocidente como um </tspan><tspan x="0" y="105.6" class="st25 st26">todo foi encontrar uma </tspan><tspan x="0" y="122.4" class="st25 st26">função para a NATO </tspan><tspan x="0" y="139.2" class="st25 st26">depois do fim da </tspan><tspan x="0" y="156" class="st25 st26">Guerra Fria e o colapso </tspan><tspan x="0" y="172.8" class="st25 st26">do inimigo comum. No </tspan><tspan x="0" y="189.6" class="st25 st26">entanto, o 11 de </tspan><tspan x="0" y="206.4" class="st25 st26">Setembro acabou por </tspan><tspan x="0" y="223.2" class="st25 st26">significar um </tspan><tspan x="0" y="240" class="st25 st26">afastamento abrupto </tspan><tspan x="0" y="256.8" class="st25 st26">entre os dois lados do </tspan><tspan x="0" y="273.6" class="st25 st26">Atlântico, que só Joe </tspan><tspan x="0" y="290.4" class="st25 st26">Biden se preocupou </tspan><tspan x="0" y="307.2" class="st25 st26">verdadeiramente em </tspan><tspan x="0" y="324" class="st25 st26">reparar. </tspan></text>
+		</g>
+	</g>
+	<g>
+		<g>
+			<polygon class="st7" points="315.9,7243.2 122.8,7242.4 122.8,6943.4 315.9,6944.2 			"/>
+			<text transform="matrix(1 0 0 1 122.771 6956.4805)"><tspan x="0" y="0" class="st23 st24">Os Dias de Hoje</tspan><tspan x="0" y="33.6" class="st25 st26">A era Obama foi vista pela </tspan><tspan x="0" y="50.4" class="st25 st26">Europa como uma fase de </tspan><tspan x="0" y="67.2" class="st25 st26">reconciliação entre os Estados </tspan><tspan x="0" y="84" class="st25 st26">Unidos e o continente. Mas </tspan><tspan x="0" y="100.8" class="st25 st26">apesar de o tom diplomático se </tspan><tspan x="0" y="117.6" class="st25 st26">ter tornado amigável, </tspan><tspan x="0" y="134.4" class="st25 st26">Washington e as capitais </tspan><tspan x="0" y="151.2" class="st25 st26">europeias estiveram pouco </tspan><tspan x="0" y="168" class="st25 st26">sintonizadas num mundo em </tspan><tspan x="0" y="184.8" class="st25 st26">mudanças e com cada vez </tspan><tspan x="0" y="201.6" class="st25 st26">maiores exigências. Donald </tspan><tspan x="0" y="218.4" class="st25 st26">Trump endureceu o discurso e </tspan><tspan x="0" y="235.2" class="st25 st26">as decisões políticas Biden e a </tspan><tspan x="0" y="252" class="st25 st26">invasão russa da Ucrânia </tspan><tspan x="0" y="268.8" class="st25 st26">mudou esse cenário.</tspan></text>
+		</g>
+	</g>
+	<g>
+		<circle class="st27" cx="98.3" cy="102.6" r="7.4"/>
+		<polygon class="st15" points="98.3,98.3 99.2,101.3 102.4,101.3 99.8,103.1 100.8,106.1 98.3,104.3 95.7,106.1 96.7,103.1 
+			94.1,101.3 97.3,101.3 		"/>
+	</g>
+	<g>
+		<circle class="st27" cx="259" cy="2535.1" r="7.4"/>
+		<polygon class="st15" points="259,2530.8 260,2533.8 263.1,2533.8 260.6,2535.6 261.5,2538.6 259,2536.8 256.4,2538.6 
+			257.4,2535.6 254.9,2533.8 258,2533.8 		"/>
+	</g>
+	<g>
+		<circle class="st27" cx="104.1" cy="4243.2" r="7.4"/>
+		<polygon class="st15" points="104.1,4238.8 105.1,4241.8 108.2,4241.8 105.7,4243.7 106.7,4246.7 104.1,4244.8 101.6,4246.7 
+			102.5,4243.7 100,4241.8 103.1,4241.8 		"/>
+	</g>
+	<g>
+		<circle class="st28" cx="230.8" cy="5500.3" r="7.4"/>
+		<polygon class="st15" points="230.8,5495.9 231.8,5498.9 235,5498.9 232.4,5500.8 233.4,5503.8 230.8,5501.9 228.3,5503.8 
+			229.3,5500.8 226.7,5498.9 229.9,5498.9 		"/>
+	</g>
+	<g>
+		<circle class="st29" cx="100.3" cy="6869.9" r="7.4"/>
+		<polygon class="st15" points="100.3,6865.6 101.3,6868.6 104.5,6868.6 101.9,6870.4 102.9,6873.4 100.3,6871.6 97.8,6873.4 
+			98.8,6870.4 96.2,6868.6 99.4,6868.6 		"/>
+	</g>
+	<g>
+		<circle class="st27" cx="242.8" cy="3636.3" r="7.4"/>
+		<polygon class="st15" points="242.8,3632 243.8,3635 246.9,3635 244.4,3636.8 245.3,3639.8 242.8,3638 240.2,3639.8 241.2,3636.8 
+			238.7,3635 241.8,3635 		"/>
+	</g>
+	<g>
+		<g>
+			<rect x="23.8" y="872.8" class="st7" width="141" height="330.5"/>
+			<text transform="matrix(1 0 0 1 23.7837 885.8065)"><tspan x="0" y="0" class="st23 st24">O mito do </tspan><tspan x="0" y="21.6" class="st23 st24">isolacionismo </tspan><tspan x="0" y="43.2" class="st23 st24">americano</tspan><tspan x="0" y="76.8" class="st25 st26">Desde a sua </tspan><tspan x="0" y="93.6" class="st25 st26">fundação, os Estados </tspan><tspan x="0" y="110.4" class="st25 st26">Unidos nunca foram </tspan><tspan x="0" y="127.2" class="st25 st26">uma nação </tspan><tspan x="0" y="144" class="st25 st26">isolacionista, ainda </tspan><tspan x="0" y="160.8" class="st25 st26">que se tenha criado o </tspan><tspan x="0" y="177.6" class="st25 st26">mito de uma espécie </tspan><tspan x="0" y="194.4" class="st25 st26">de um isolacionismo </tspan><tspan x="0" y="211.2" class="st25 st26">benigno que se </tspan><tspan x="0" y="228" class="st25 st26">destinava a preservar </tspan><tspan x="0" y="244.8" class="st25 st26">Washington da </tspan><tspan x="0" y="261.6" class="st25 st26">amoralidade da </tspan><tspan x="0" y="278.4" class="st25 st26">política externa </tspan><tspan x="0" y="295.2" class="st25 st26">europeia. </tspan></text>
+		</g>
+	</g>
+	<g>
+		<g>
+			<rect x="87.1" y="1862.1" class="st7" width="189.7" height="272.7"/>
+			<text transform="matrix(1 0 0 1 87.1255 1875.0828)"><tspan x="0" y="0" class="st23 st24">Transição de poder </tspan><tspan x="0" y="21.6" class="st23 st24">entre a Grã-Bretanha </tspan><tspan x="0" y="43.2" class="st23 st24">e os Estados Unidos</tspan><tspan x="0" y="76.8" class="st25 st26">As transições de poder no </tspan><tspan x="0" y="93.6" class="st25 st26">sistema internacional – a </tspan><tspan x="0" y="110.4" class="st25 st26">mudança de hierarquia entre </tspan><tspan x="0" y="127.2" class="st25 st26">grandes potências – são </tspan><tspan x="0" y="144" class="st25 st26">períodos de grande </tspan><tspan x="0" y="160.8" class="st25 st26">imprevisibilidade nas relações </tspan><tspan x="0" y="177.6" class="st25 st26">entre os estados. As grandes </tspan><tspan x="0" y="194.4" class="st25 st26">potências que detém o poder </tspan><tspan x="0" y="211.2" class="st25 st26">querem mantê-lo, enquanto as </tspan><tspan x="0" y="228" class="st25 st26">que cresceram pretendem </tspan><tspan x="0" y="244.8" class="st25 st26">conquistá-lo.</tspan></text>
+		</g>
+		<rect x="87.1" y="1670.3" width="232.9" height="174.2"/>
+	</g>
+	<g>
+		<g>
+			<rect x="14.5" y="2732.8" class="st7" width="184.1" height="203.5"/>
+			<text transform="matrix(1 0 0 1 14.4878 2745.8135)"><tspan x="0" y="0" class="st23 st24">I Guerra Mundial </tspan><tspan x="0" y="33.6" class="st25 st26">Os Estados Unidos só </tspan><tspan x="0" y="50.4" class="st25 st26">entraram na Grande Guerra </tspan><tspan x="0" y="67.2" class="st25 st26">em meados 1917, já o conflito </tspan><tspan x="0" y="84" class="st25 st26">decorria há cerca de três </tspan><tspan x="0" y="100.8" class="st25 st26">anos, mas foram </tspan><tspan x="0" y="117.6" class="st25 st26">instrumentais para a derrota </tspan><tspan x="0" y="134.4" class="st25 st26">da Alemanha de Weimar, </tspan><tspan x="0" y="151.2" class="st25 st26">num momento em que os </tspan><tspan x="0" y="168" class="st25 st26">Aliados já se encontravam </tspan><tspan x="0" y="184.8" class="st25 st26">muito enfraquecidos. </tspan></text>
+		</g>
+	</g>
+	<g>
+		<g>
+			<rect x="21.4" y="3851.8" class="st7" width="197.6" height="157.9"/>
+			<text transform="matrix(1 0 0 1 65.5791 3864.8125)"><tspan x="0" y="0" class="st23 st24">II Guerra Mundial</tspan><tspan x="-35.8" y="33.6" class="st25 st26">Tal como a Grande Guerra, a II </tspan><tspan x="-9.3" y="50.4" class="st25 st26">Guerra Mundial foi um dos </tspan><tspan x="-32" y="67.2" class="st25 st26">acontecimentos mais trágicos </tspan><tspan x="-42.2" y="84" class="st25 st26">da humanidade. Ceifou milhões </tspan><tspan x="-12.3" y="100.8" class="st25 st26">de vidas e deixou a Europa </tspan><tspan x="15.3" y="117.6" class="st25 st26">totalmente destruída e </tspan><tspan x="68.1" y="134.4" class="st25 st26">traumatizada.</tspan></text>
+		</g>
+	</g>
+	<g>
+		<g>
+			<rect x="119.9" y="4236.4" class="st7" width="189.7" height="244.7"/>
+			<text transform="matrix(1 0 0 1 119.8906 4249.4497)"><tspan x="0" y="0" class="st23 st24">Reconstrução </tspan><tspan x="0" y="21.6" class="st23 st24">europeia</tspan><tspan x="0" y="55.2" class="st25 st26">A reconstrução da Europa foi </tspan><tspan x="0" y="72" class="st25 st26">um dos momentos altos das </tspan><tspan x="0" y="88.8" class="st25 st26">relações transatlânticas. </tspan><tspan x="0" y="105.6" class="st25 st26">Apenas dois anos depois do </tspan><tspan x="0" y="122.4" class="st25 st26">fim da II Guerra Mundial, a </tspan><tspan x="0" y="139.2" class="st25 st26">nova administração </tspan><tspan x="0" y="156" class="st25 st26">americana percebeu que a </tspan><tspan x="0" y="172.8" class="st25 st26">cooperação com a União </tspan><tspan x="0" y="189.6" class="st25 st26">Soviética que Roosevelt </tspan><tspan x="0" y="206.4" class="st25 st26">tentou encetar não seria </tspan><tspan x="0" y="223.2" class="st25 st26">possível. </tspan></text>
+		</g>
+	</g>
+	<g>
+		<g>
+			<rect x="63.5" y="4970.8" class="st7" width="189.7" height="237.5"/>
+			<text transform="matrix(1 0 0 1 63.5259 4983.8643)"><tspan x="0" y="0" class="st23 st24">Guerra Fria</tspan><tspan x="101.4" y="0" class="st23 st30"> </tspan><tspan x="0" y="33.6" class="st25 st26">Como descrito anteriormente, </tspan><tspan x="0" y="50.4" class="st25 st26">os Estados Unidos </tspan><tspan x="0" y="67.2" class="st25 st26">prepararam a Guerra Fria </tspan><tspan x="0" y="84" class="st25 st26">através da reconstrução </tspan><tspan x="0" y="100.8" class="st25 st26">europeia, e também da </tspan><tspan x="0" y="117.6" class="st25 st26">institucionalização das </tspan><tspan x="0" y="134.4" class="st25 st26">relações transatlânticas.</tspan></text>
+		</g>
+	</g>
+	<g>
+		<circle class="st28" cx="8.5" cy="878.5" r="7.4"/>
+		<polygon class="st15" points="8.5,874.2 9.5,877.2 12.6,877.2 10.1,879.1 11.1,882.1 8.5,880.2 6,882.1 6.9,879.1 4.4,877.2 
+			7.5,877.2 		"/>
+	</g>
+	<g>
+		<circle class="st27" cx="49.7" cy="1684.3" r="7.4"/>
+		<polygon class="st15" points="49.7,1680 50.7,1683 53.8,1683 51.3,1684.8 52.2,1687.8 49.7,1686 47.1,1687.8 48.1,1684.8 
+			45.6,1683 48.7,1683 		"/>
+	</g>
+	<g>
+		<circle class="st28" cx="47.9" cy="3135.2" r="7.4"/>
+		<polygon class="st15" points="47.9,3130.9 48.9,3133.9 52.1,3133.9 49.5,3135.7 50.5,3138.7 47.9,3136.8 45.4,3138.7 46.4,3135.7 
+			43.8,3133.9 47,3133.9 		"/>
+	</g>
+	<g>
+		<circle class="st28" cx="35.4" cy="4757.1" r="7.4"/>
+		<polygon class="st15" points="35.4,4752.7 36.4,4755.7 39.5,4755.7 37,4757.6 37.9,4760.6 35.4,4758.7 32.8,4760.6 33.8,4757.6 
+			31.3,4755.7 34.4,4755.7 		"/>
+	</g>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter_1_mob" filterUnits="userSpaceOnUse" x="-7526.3" y="-9159.4" width="7989.3" height="15763">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="-7526.3" y="-9159.4" width="7989.3" height="15763" id="SVGID_10_mob">
+		<g class="st31">
+			<g>
+				
+					<linearGradient id="SVGID_11_mob" gradientUnits="userSpaceOnUse" x1="-469.7889" y1="3993.4292" x2="-476.8965" y2="3835.2002" gradientTransform="matrix(0.9978 6.604671e-02 -5.226935e-02 0.7897 758.6044 3475.875)">
+					<stop  offset="0.2524" style="stop-color:#000000"/>
+					<stop  offset="0.6535" style="stop-color:#FFFFFF"/>
+				</linearGradient>
+				<polygon class="st32" points="211.2,6602.3 -51.7,6584.9 -47.8,6468.9 215.1,6486.4 				"/>
+				<polygon class="st15" points="153.3,6026.3 -3.4,6026.3 -7.7,6478.7 153.3,6489.2 				"/>
+				
+					<linearGradient id="SVGID_12_mob" gradientUnits="userSpaceOnUse" x1="-10289.4102" y1="22160.3809" x2="-10289.4102" y2="22100.8945" gradientTransform="matrix(-1 0 0 -1 -10198.1553 28183.7383)">
+					<stop  offset="0" style="stop-color:#000000"/>
+					<stop  offset="1" style="stop-color:#FFFFFF"/>
+				</linearGradient>
+				<polygon class="st33" points="-40.5,6023.4 223,6023.4 223,6082.8 -40.5,6082.8 				"/>
+			</g>
+		</g>
+	</mask>
+	<g class="st34">
+		<defs>
+			<rect id="XMLID_00000049921549918179412810000005610202121060152455_" x="2" y="6014.7" width="132.1" height="588.9"/>
+		</defs>
+		<use xlink:href="#XMLID_00000049921549918179412810000005610202121060152455_"  style="overflow:visible;"/>
+		<clipPath id="XMLID_3_mob">
+			<use xlink:href="#XMLID_00000049921549918179412810000005610202121060152455_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#XMLID_3_mob);">
+			
+				<image style="overflow:visible;" width="768" height="508" xlink:href="img/27998F35.jpg"  transform="matrix(1 0 0 1 -7526.3032 -9159.4199)">
+			</image>
+		</g>
+		<g style="clip-path:url(#XMLID_3_mob);">
+			
+				<image style="overflow:visible;" width="2317" height="1591" xlink:href="img/27998F36.jpg"  transform="matrix(0.4522 0 0 0.4522 -584.8584 5853.5649)">
+			</image>
+		</g>
+	</g>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter_2_mob" filterUnits="userSpaceOnUse" x="-7500.5" y="-13150.4" width="7764.7" height="17631.4">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="-7500.5" y="-13150.4" width="7764.7" height="17631.4" id="SVGID_13_mob">
+		<g class="st35">
+			
+				<linearGradient id="SVGID_14_mob" gradientUnits="userSpaceOnUse" x1="-645.5568" y1="1312.8801" x2="-650.0323" y2="1213.2468" gradientTransform="matrix(0.9978 6.604671e-02 -5.226935e-02 0.7897 758.6044 3475.875)">
+				<stop  offset="0.2524" style="stop-color:#000000"/>
+				<stop  offset="0.6535" style="stop-color:#FFFFFF"/>
+			</linearGradient>
+			<polygon class="st36" points="228,4475.6 -140.3,4451.2 -135.6,4385.4 232.7,4409.8 			"/>
+			<polygon class="st15" points="148.3,4324.2 -71.2,4324.2 -77.2,4418.1 148.3,4432.8 			"/>
+			
+				<linearGradient id="SVGID_15_mob" gradientUnits="userSpaceOnUse" x1="-10256.4805" y1="23918.9492" x2="-10256.4805" y2="23852.1602" gradientTransform="matrix(-1 0 0 -1 -10198.1553 28183.7383)">
+				<stop  offset="0" style="stop-color:#000000"/>
+				<stop  offset="1" style="stop-color:#FFFFFF"/>
+			</linearGradient>
+			<polygon class="st37" points="-126.2,4264.8 242.9,4264.8 242.9,4331.6 -126.2,4331.6 			"/>
+		</g>
+	</mask>
+	<g class="st38">
+		<defs>
+			<path id="XMLID_00000109721179387566455580000018220040460562679966_" d="M94.5,4450.6H10.9c-1.1-65.1-3-115.2-2.7-138
+				c2.2-31,8.7-52.7,19.4-68.9l74,18.5c-3.6,11.8-9.1,25.4-9.7,54.6L94.5,4450.6z"/>
+		</defs>
+		<use xlink:href="#XMLID_00000109721179387566455580000018220040460562679966_"  style="overflow:visible;"/>
+		<clipPath id="XMLID_4__mob">
+			<use xlink:href="#XMLID_00000109721179387566455580000018220040460562679966_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st39">
+			
+				<image style="overflow:visible;" width="768" height="508" xlink:href="img/27998F34.jpg"  transform="matrix(1 0 0 1 -7500.5156 -13150.4131)">
+			</image>
+		</g>
+		<g id="fbolY5_00000176001202043791434080000010125087805308890024_" class="st39">
+			<g>
+				
+					<image style="overflow:visible;" width="620" height="372" id="fbolY5_00000101825905168577684170000009409696508817639855_" xlink:href="img/27998F33.jpg"  transform="matrix(0.5801 0 0 0.5801 -95.4744 4265.1675)">
+				</image>
+			</g>
+		</g>
+	</g>
+	<g>
+		<circle class="st28" cx="134.1" cy="6031.3" r="7.4"/>
+		<polygon class="st15" points="134.1,6027 135.1,6030 138.2,6030 135.7,6031.9 136.7,6034.9 134.1,6033 131.6,6034.9 132.5,6031.9 
+			130,6030 133.1,6030 		"/>
+	</g>
+	<g>
+		<polygon class="st7" points="269.1,6636 144.4,6636 144.4,6478.5 303.4,6478.5 		"/>
+		<text transform="matrix(1 0 0 1 144.4121 6492.7832)"><tspan x="0" y="0" class="st5 st40 st41">“Either you are </tspan><tspan x="0" y="23.7" class="st5 st40 st41">with us, or you </tspan><tspan x="0" y="47.3" class="st5 st40 st41">are with the </tspan><tspan x="0" y="71" class="st5 st40 st41">terrorists”.</tspan><tspan x="0" y="92.5" class="st42 st8 st43">President Bush </tspan><tspan x="0" y="107.6" class="st42 st8 st43">Addresses the Nation, </tspan><tspan x="0" y="122.8" class="st42 st8 st43">20 de Setembro de </tspan><tspan x="0" y="137.9" class="st42 st8 st43">2021</tspan></text>
+	</g>
+	<g id="WktS08_00000150081347071004883770000009881713008931178925_">
+		
+			<image style="overflow:visible;" width="1200" height="814" id="WktS08_00000133498310707929369780000014133057146882356365_" xlink:href="img/27998F3D.jpg"  transform="matrix(0.1775 0 0 0.1775 14.6455 2503.8479)">
+		</image>
+	</g>
+	<rect x="14.6" y="2651.7" class="st7" width="182.9" height="59.4"/>
+	<text transform="matrix(1 0 0 1 14.6021 2661.0596)"><tspan x="0" y="0" class="st8 st9">A primeira sessão da </tspan><tspan x="0" y="15" class="st8 st9">conferência de paz no Palácio </tspan><tspan x="0" y="30" class="st8 st9">de Versalhes </tspan><tspan x="76.1" y="30" class="st20 st8 st9">| Manchester </tspan><tspan x="0" y="45" class="st20 st8 st9">Guardian, História da Guerra</tspan></text>
+	<rect x="19.5" y="3791" class="st7" width="199.6" height="44.4"/>
+	<text transform="matrix(1 0 0 1 46.4004 3800.3516)"><tspan x="0" y="0" class="st8 st9">Desembarque de provisões na </tspan><tspan x="-11.4" y="15" class="st8 st9">praia Omaha </tspan><tspan x="64.9" y="15" class="st20 st8 st9">| meados de Junho </tspan><tspan x="127.6" y="30" class="st20 st8 st9">de 1944</tspan></text>
+	
+		<image style="overflow:visible;" width="1200" height="525" xlink:href="img/27998F3E.jpg"  transform="matrix(0.1327 0 0 0.1327 122.2153 6865.3491)">
+	</image>
+	<g>
+		<rect x="24" y="1305" class="st7" width="133.8" height="158.6"/>
+		<text transform="matrix(1 0 0 1 23.9935 1318.0277)"><tspan x="0" y="0" class="st5 st40 st24">“America does </tspan><tspan x="0" y="21.6" class="st5 st40 st24">not go abroad </tspan><tspan x="0" y="43.2" class="st5 st40 st24">to search for </tspan><tspan x="0" y="64.8" class="st5 st40 st24">monsters to </tspan><tspan x="0" y="86.4" class="st5 st40 st24">destroy”.</tspan><tspan x="0" y="109.5" class="st42 st8 st26">John Quincy Adams, </tspan><tspan x="0" y="126.3" class="st42 st8 st26">4 de Julho de 1821</tspan></text>
+	</g>
+	
+		<image style="overflow:visible;" width="2804" height="2150" xlink:href="img/27998F3C.jpg"  transform="matrix(7.400297e-02 0 0 7.400297e-02 11.5409 3628.5378)">
+	</image>
+	
+		<image style="overflow:visible;" width="1410" height="928" xlink:href="img/B931B1F1.jpg"  transform="matrix(0.1409 0 0 0.1409 63.4906 4738.3828)">
+	</image>
+	<rect x="63.5" y="4872.5" class="st7" width="199.6" height="74.4"/>
+	<text transform="matrix(1 0 0 1 63.4907 4881.9302)"><tspan x="0" y="0" class="st8 st9">O Muro que separou Berlim em </tspan><tspan x="0" y="15" class="st8 st9">duas partes antes da reunificação </tspan><tspan x="0" y="30" class="st8 st9">alemã. </tspan><tspan x="41.2" y="30" class="st20 st8 st9">| foto: Aad van der Drift nas </tspan><tspan x="0" y="45" class="st20 st8 st9">portas de Brandenburg a 28 de </tspan><tspan x="0" y="60" class="st20 st8 st9">Dezembro de 1989</tspan></text>
+	<rect x="87.1" y="2235.5" class="st7" width="224" height="159.4"/>
+	<text transform="matrix(1 0 0 1 87.0703 2249.7126)"><tspan x="0" y="0" class="st5 st40 st41">“Sr. Gorbachev, </tspan><tspan x="0" y="23.7" class="st5 st40 st41">derrube este muro!”</tspan><tspan x="186.9" y="23.7" class="st5 st40 st44">.</tspan><tspan x="0" y="45.1" class="st42 st8 st43">Discurso do Presidente dos EUA Ronald </tspan><tspan x="0" y="60.3" class="st42 st8 st43">Reagan nas Portas de Brandemburgo, </tspan><tspan x="0" y="75.4" class="st42 st8 st43">12 de Junho de 1987</tspan></text>
+	<polygon class="st7" points="310.2,5354 172.4,5354 29.1,5230.8 166.9,5230.8 	"/>
+	<text transform="matrix(1 0 0 1 45.7159 5245.0288)"><tspan x="0" y="0" class="st5 st40 st41">“Ich bin ein </tspan><tspan x="27.5" y="23.7" class="st5 st40 st41">Berliner”.</tspan><tspan x="52.5" y="45.1" class="st42 st8 st43">Discurso de JFK em </tspan><tspan x="70.1" y="60.3" class="st42 st8 st43">Berlim Leste,26 de </tspan><tspan x="87.7" y="75.4" class="st42 st8 st43">Junho de 1963</tspan></text>
+	<rect x="122.2" y="7522.4" class="st7" width="187.7" height="132.5"/>
+	<text transform="matrix(1 0 0 1 122.2151 7536.6416)"><tspan x="0" y="0" class="st5 st40 st41">“NATO is becoming </tspan><tspan x="0" y="23.7" class="st5 st40 st41">brain-dead”.</tspan><tspan x="0" y="45.1" class="st42 st8 st43">Emmanuel Macron, The </tspan><tspan x="0" y="60.3" class="st42 st8 st43">Economist, 7 de Novembro </tspan><tspan x="0" y="81.7" class="st42 st8 st43">de 2019</tspan></text>
+	<rect x="122.2" y="7308.3" class="st7" width="175.4" height="198.1"/>
+	<text transform="matrix(1 0 0 1 122.2151 7322.5854)"><tspan x="0" y="0" class="st5 st40 st41">“it’s obsolete. </tspan><tspan x="0" y="23.7" class="st5 st40 st41">When NATO was </tspan><tspan x="0" y="47.3" class="st5 st40 st41">formed many </tspan><tspan x="0" y="71" class="st5 st40 st41">decades ago we </tspan><tspan x="0" y="94.7" class="st5 st40 st41">were a different </tspan><tspan x="0" y="118.3" class="st5 st40 st41">country”.</tspan><tspan x="0" y="139.8" class="st42 st8 st43">Donald Trump, NY Times 26 </tspan><tspan x="0" y="161.3" class="st42 st8 st43">de Março de 2016</tspan></text>
+</g>
+<g id="btn-m">
+	<g id="botaom-11">
+		<path class="st45" d="M206.5,7269h-72.7c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h72.7c6.4,0,11.6,5.2,11.6,11.6
+			l0,0C218.2,7263.7,212.9,7269,206.5,7269z"/>
+		<text transform="matrix(1 0 0 1 132.9872 7261.8403)" class="st15 st21 st46">Ler mais...</text>
+	</g>
+	<g id="botaom-10">
+		<path class="st45" d="M228.5,6405.9h-72.7c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h72.7c6.4,0,11.6,5.2,11.6,11.6
+			l0,0C240.1,6400.7,234.9,6405.9,228.5,6405.9z"/>
+		<text transform="matrix(1 0 0 1 154.9508 6398.7837)" class="st15 st21 st46">Ler mais...</text>
+	</g>
+	<g id="botaom-9">
+		<path class="st45" d="M208.6,5734.9h-72.7c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h72.7c6.4,0,11.6,5.2,11.6,11.6
+			l0,0C220.2,5729.7,215,5734.9,208.6,5734.9z"/>
+		<text transform="matrix(1 0 0 1 135.0387 5727.812)" class="st15 st21 st46">Ler mais...</text>
+	</g>
+	<g id="botaom-8">
+		<path class="st45" d="M147.6,5161.7H74.9c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h72.7c6.4,0,11.6,5.2,11.6,11.6
+			l0,0C159.2,5156.4,154,5161.7,147.6,5161.7z"/>
+		<text transform="matrix(1 0 0 1 74.0645 5154.5439)" class="st15 st21 st46">Ler mais...</text>
+	</g>
+	<g id="botaom-7">
+		<path class="st45" d="M204,4514.6h-72.7c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6H204c6.4,0,11.6,5.2,11.6,11.6
+			l0,0C215.6,4509.4,210.4,4514.6,204,4514.6z"/>
+		<text transform="matrix(1 0 0 1 130.4294 4507.4717)" class="st15 st21 st46">Ler mais...</text>
+	</g>
+	<g id="botaom-6">
+		<path class="st45" d="M207.3,4051.5h-72.7c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h72.7c6.4,0,11.6,5.2,11.6,11.6
+			l0,0C219,4046.3,213.7,4051.5,207.3,4051.5z"/>
+		<text transform="matrix(1 0 0 1 133.8064 4044.3916)" class="st15 st21 st46">Ler mais...</text>
+	</g>
+  <g id="botaom-5">
+    <path class="st45" d="M180.8,3495.1h-72.7c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h72.7
+      c6.4,0,11.6,5.2,11.6,11.6l0,0C192.4,3489.8,187.2,3495.1,180.8,3495.1z"/>
+    <text transform="matrix(1 0 0 1 107.2494 3487.95)" class="st15 st21 st46">Ler mais...</text>
+  </g>
+	<g id="botaom-4">
+		<path class="st45" d="M98.6,2975.9H25.9c-6.4,0-11.6-5.2-11.6-11.6v0c0-6.4,5.2-11.6,11.6-11.6h72.7c6.4,0,11.6,5.2,11.6,11.6v0
+			C110.2,2970.6,105,2975.9,98.6,2975.9z"/>
+		<text transform="matrix(1 0 0 1 25.0266 2968.7441)" class="st15 st21 st46">Ler mais...</text>
+	</g>
+	<g id="botaom-3">
+		<path class="st45" d="M171.4,2170H98.7c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h72.7c6.4,0,11.6,5.2,11.6,11.6
+			l0,0C183,2164.7,177.8,2170,171.4,2170z"/>
+		<text transform="matrix(1 0 0 1 97.8422 2162.8376)" class="st15 st21 st46">Ler mais...</text>
+	</g>
+	<g id="botaom-1">
+		<path class="st45" d="M206.9,610h-72.7c-6.4,0-11.6-5.2-11.6-11.6v0c0-6.4,5.2-11.6,11.6-11.6h72.7c6.4,0,11.6,5.2,11.6,11.6v0
+			C218.5,604.8,213.3,610,206.9,610z"/>
+		<text transform="matrix(1 0 0 1 133.3737 602.8893)" class="st15 st21 st46">Ler mais...</text>
+	</g>
+	<g id="botaom-2">
+		<path class="st45" d="M107.9,1223.5H35.2c-6.4,0-11.6-5.2-11.6-11.6l0,0c0-6.4,5.2-11.6,11.6-11.6h72.7c6.4,0,11.6,5.2,11.6,11.6
+			l0,0C119.5,1218.3,114.3,1223.5,107.9,1223.5z"/>
+		<text transform="matrix(1 0 0 1 34.3223 1216.3794)" class="st15 st21 st46">Ler mais...</text>
+	</g>
+
+</g>
+<g id="ai2html-settings">
+  <g>
+		<g>
+			<g>
+				<rect x="58" y="3131" class="st7" width="134.4" height="322.6"/>
+				<text transform="matrix(1 0 0 1 65.5459 3144.0505)"><tspan x="0" y="0" class="st23 st24">Isolacionismo</tspan><tspan x="2.3" y="21.6" class="st23 st24">entre Guerras</tspan><tspan x="-3.5" y="55.2" class="st25 st26">Os planos de Wilson, </tspan><tspan x="18.1" y="72" class="st25 st26">nomeadamente a </tspan><tspan x="-1" y="88.8" class="st25 st26">entrada dos Estados </tspan><tspan x="-5.5" y="105.6" class="st25 st26">Unidos na Sociedade </tspan><tspan x="35.3" y="122.4" class="st25 st26">das Nações foi </tspan><tspan x="-0.2" y="139.2" class="st25 st26">vetada pelo Senado. </tspan><tspan x="19.1" y="156" class="st25 st26">Se por um lado, o </tspan><tspan x="34.6" y="172.8" class="st25 st26">presidente não </tspan><tspan x="18.7" y="189.6" class="st25 st26">estava disposto a </tspan><tspan x="38.4" y="206.4" class="st25 st26">fazer qualquer </tspan><tspan x="58.9" y="223.2" class="st25 st26">concessão </tspan><tspan x="-1.8" y="240" class="st25 st26">relativamente ao seu </tspan><tspan x="-6.7" y="256.8" class="st25 st26">plano para convencer </tspan><tspan x="32.6" y="273.6" class="st25 st26">os senadores a </tspan><tspan x="16.7" y="290.4" class="st25 st26">aderir, por outro...</tspan></text>
+			</g>
+		</g>
+		
+	</g>
+	<g>
+		<defs>
+			<path id="SVGID_16_mob" d="M318.9,3453.7L318.9,3453.7v-312.1c0-101.2-39.4-100-39.4-168.3c0-46.3-29.1-58-29.1-88.2h-19.8
+				c0,26.9,29.6,51.5,29.6,78.3c0,75.1-57.4,77-57.4,178.2v312.1l0,0v3.8c0,159.3,52.3,210.3,52.3,231.1h11.8c0-14.8-15-32.5-15-49
+				l0,0C251.9,3532.2,318.9,3527.9,318.9,3453.7z"/>
+		</defs>
+		<clipPath id="SVGID_17_mob">
+			<use xlink:href="#SVGID_16_mob"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st47">
+			<g id="K7sivn_00000011019475289608646220000009212738154601647285_">
+				
+					<image style="overflow:visible;" width="1280" height="1664" id="K7sivn_00000083063135490036717810000000751113551617302189_" xlink:href="img/B931B1F7.jpg"  transform="matrix(0.1999 0 0 0.1999 166.1535 3111.2512)">
+				</image>
+			</g>
+			
+				<linearGradient id="SVGID_18_mob" gradientUnits="userSpaceOnUse" x1="-9457.5518" y1="112.2152" x2="-9457.5518" y2="39.067" gradientTransform="matrix(-1 0 0 -1 -9172.5146 3222.7405)">
+				<stop  offset="0" style="stop-color:#00AEEF"/>
+				<stop  offset="1" style="stop-color:#00AEEF;stop-opacity:0"/>
+			</linearGradient>
+			<polygon class="st48" points="169.4,3183.7 400.6,3183.7 400.6,3110.5 169.4,3110.5 			"/>
+			
+				<linearGradient id="SVGID_19_mob" gradientUnits="userSpaceOnUse" x1="-9457.5518" y1="3319.5925" x2="-9457.5518" y2="3216.4104" gradientTransform="matrix(-1 0 0 1 -9172.5146 131.3544)">
+				<stop  offset="0" style="stop-color:#00AEEF"/>
+				<stop  offset="1" style="stop-color:#00AEEF;stop-opacity:0"/>
+			</linearGradient>
+			<polygon class="st49" points="169.4,3347.8 400.6,3347.8 400.6,3450.9 169.4,3450.9 			"/>
+		</g>
+	</g>
+	<g>
+		<text transform="matrix(0 1 -1 0 67.2839 62.7081)" class="st50 st21 st46">EUROPA</text>
+	</g>
+	<text transform="matrix(0 1 -1 0 43.859 62.7904)" class="st51 st21 st46">EUA</text>
+	<path class="st0" d="M311,6057.2c0-146.4-95.8-183.7-102-227.8"/>
+	<g>
+		<g>
+			
+				<radialGradient id="SVGID_20_mob" cx="164.027" cy="77.8405" r="107.4165" gradientTransform="matrix(1 0 0 3.000000e-02 0 55.4345)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0.1588" style="stop-color:#000000"/>
+				<stop  offset="0.8973" style="stop-color:#000000;stop-opacity:0"/>
+			</radialGradient>
+			<rect x="12.2" y="46" class="st52" width="303.7" height="23.5"/>
+			<rect x="9" y="47.7" class="st15" width="312.8" height="10.1"/>
+			<g>
+				<polygon points="4.3,57.8 161.9,57.6 319.6,57.8 161.9,57.9 				"/>
+			</g>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 45.821 51.9492)" class="st20 st21 st22">I FASE – DOMÍNIO EUROPEU</text>
+		</g>
+	</g>
+</g>
+</svg>
+
       
 
     </div>
@@ -1532,32 +2334,21 @@ img.timeline-cabeca-mobile{
 
   <div id="popup-3" class="popup">
     <span class="p-close">&#10006;</span>
-    <p class="p-titulo">O mito do isolacionismo americano</p>
+    <p class="p-titulo">Transição de poder entre a Grã-Bretanha e os Estados Unidos</p>
     
-    <div class="destaque">
-      <p class="p-destaque">“America does not go abroad to search for monsters to destroy<br>
-        <span class="p-nome">John Quincy Adams</span>
-      </p>
-      <img src="img/jones.png">
-    </div>
-
     <p class="p-texto">
-      Desde a sua fundação, os Estados Unidos nunca foram uma nação isolacionista, ainda que se tenha criado o mito de uma espécie de um isolacionismo benigno que se destinava a preservar Washington da amoralidade da política externa europeia. Ficou famosa da expressão de George Washington que, no seu Farewell Address, aconselhou o seu sucessor a evitar “entangling aliances” que arrastassem os Estados Unidos para as guerras dos impérios europeus, as grandes potências mundiais do século XVIII e XIX.   
-    </p>
-
-
-
+      As transições de poder no sistema internacional – a mudança de hierarquia entre grandes potências – são períodos de grande imprevisibilidade nas relações entre os estados. As grandes potências que detém o poder querem mantê-lo, enquanto as que cresceram pretendem conquistá-lo. É assim pelo menos desde a guerra que opôs Atenas a Esparta no século V a.C. A maioria das transições de poder – de que a I e a II Guerra Mundial são bons exemplos – tendem a ser conflituosas. Cada vez é menos provável que os conflitos entre grandes potências sejam diretos (as armas são cada vez mais potentes e por isso dissuasoras), mas o que é muito raro haver entendimento entre potência em declínio e potência em ascensão. </p>
 
     <p class="p-texto">      
-      Mas uma coisa era o isolamento relativamente à Europa. Outra completamente diferente, era o Hemisfério Sul que os Estados Unidos muito cedo na sua história se encarregaram de tutelar. Em 1823, o Presidente James Monroe enunciou a Doutrina com o seu nome: declarava que os EUA eram contra o colonialismo e que a Europa não poderia voltar a adquirir território no Hemisfério Sul. Em troca não haveria intromissão americana nos territórios já ocupados nem nos assuntos internos europeus. Foi esta doutrina que justificou a Guerra Hispano-Americana de 1898, e uma série de intervenções norte-americanas na América Central ao longo do século XIX e início do século XX. 
-      </p>
+      Para que isso aconteça, tem de haver um processo de acomodação. Tal como no fim de uma guerra sem vencedores, a potência em declínio e a potência em ascensão negoceiam os termos de transição para que não haja insatisfação ou ressentimento nem de um lado nem de outro. Foi o que aconteceu entre a Grã-Bretanha e os Estados Unidos entre 1890 e 1914. As relações entre Washington e Londres melhoraram substancialmente desde o fim da Guerra Civil Americana, e ambos os estados investiram numa amizade internacional, que teve períodos conturbados, mas que se manteve relativamente estável. Britânicos e americanos, com passado comum e afinidades culturais evidentes, foram encontrando formas de sanarem diferendos de forma pacífica.</p>
 
       <img src="img/img-1.jpg">
       <p class="p-legenda">A América estará ao lado da Ucrânia pelo tempo que for preciso</p>
 
     <p class="p-texto">   
-      Se excluirmos o período entre a I e a II Guerra Mundial, nunca houve tão grande afastamento entre os EUA e a Europa. Washington sabia que não tinha poder suficiente para disputar conflitos com potências europeias, e estas não estavam particularmente preocupadas com o que se passava do outro lado do Atlântico Norte, exceto no que respeitava à sua possessões.  
-      </p>
+      Nos anos 1890, a ascensão quer dos Estados Unidos, quer da Alemanha tornou-se evidente. Numa decisão política muito rara em potências a Grã-Bretanha, em declínio, percebeu que não teria capacidade de enfrentar dois rivais simultaneamente em contexto de transição de poder e fez a escolha de tentar criar uma transição pacífica com a antiga colónia. A decisão foi bem-sucedida. Depois quase duas décadas de negociação – que culminaram na retirada de todas as tropas britânicas da América do Norte e do Hemisfério Sul em 1906 – criou-se não só uma das pouquíssimas transições pacíficas da história, como uma “relação especial” que se mantém até hoje.
+      <br><br>
+      Este momento histórico é muitas vezes ignorado – a assinatura de tratados e os relatos do que se discute nas mesas negociais são temas desinteressantes – mas é um dos mais importantes momentos das relações transatlânticas. O Reino Unido tem sido um dos mais fiéis aliados de Washington e tem feito, muitas vezes, o papel de ponte entre os EUA e os países que compõem a UE. Recentemente, celebrou-se o AUKUS, um pacto de segurança entre a Austrália, o Reino Unidos e os Estados Unidos, mostrando que Londres também poderá ter um papel central na ligação entre o Atlântico e o Pacífico. </p>
   
   </div>
 
@@ -1613,15 +2404,11 @@ img.timeline-cabeca-mobile{
     </div>
 
     <p class="p-texto">      
-      O presidente morreu em 1924 e não chegou a ver a profunda crise em que caíram os estados dos dois lados do Atlântico. A queda abrupta da bolsa em 1929 nos Estados Unidos lançou país no período da Grande Depressão. A falência europeia do pós-guerra criou a base para o crescimento de partidos antidemocráticos em vários países europeus, notavelmente Benito Mussolini em Itália e Adolf Hitler na Alemanha. O Fascismo e o Nacional Socialismo tiveram um enorme sucesso entre os cidadãos comuns uma vez que, como o populismo hoje, prometiam soluções fáceis para problemas complexos, apontavam bodes expiatórios que redimiam italianos e alemães de culpa pela sua própria desgraça e prometiam a recuperação da grandiosidade dos seus países – especialmente a Alemanha – humilhada pela derrota na Grande Guerra e pela duríssima Paz de Versailles que foi obrigada a aceitar. Daí à tentativa de conquista da Europa foi um pequeno passo.    
-      </p>
-
-
+      O presidente morreu em 1924 e não chegou a ver a profunda crise em que caíram os estados dos dois lados do Atlântico. A queda abrupta da bolsa em 1929 nos Estados Unidos lançou país no período da Grande Depressão. A falência europeia do pós-guerra criou a base para o crescimento de partidos antidemocráticos em vários países europeus, notavelmente Benito Mussolini em Itália e Adolf Hitler na Alemanha. O Fascismo e o Nacional Socialismo tiveram um enorme sucesso entre os cidadãos comuns uma vez que, como o populismo hoje, prometiam soluções fáceis para problemas complexos, apontavam bodes expiatórios que redimiam italianos e alemães de culpa pela sua própria desgraça e prometiam a recuperação da grandiosidade dos seus países – especialmente a Alemanha – humilhada pela derrota na Grande Guerra e pela duríssima Paz de Versailles que foi obrigada a aceitar. Daí à tentativa de conquista da Europa foi um pequeno passo.</p>
 
 
     <p class="p-texto">   
-      Depois de um encontro tão profundo na I Guerra Mundial, <span class="destaque-txt">Estados Unidos e Europa estavam de costas voltadas num momento determinante das suas histórias.</span> Seria preciso esperar pelo ataque à base naval americana de Pearl Harbour pelo exército japonês, envolvido na frente do Pacífico da II Guerra Mundial ao lado do Eixo, para que os destinos da Europa e dos Estados Unidos se voltassem a encontrar. Mas desta feita, a Europa tinha assinado o seu declínio com a sua grande guerra civil, como lhe chamam alguns autores, e os Estados Unidos – e a União Soviética – eram as duas potências restantes que iriam dominar o mundo na segunda metade do século XX.  
-      </p>
+      Depois de um encontro tão profundo na I Guerra Mundial, <span class="destaque-txt">Estados Unidos e Europa estavam de costas voltadas num momento determinante das suas histórias.</span> Seria preciso esperar pelo ataque à base naval americana de Pearl Harbour pelo exército japonês, envolvido na frente do Pacífico da II Guerra Mundial ao lado do Eixo, para que os destinos da Europa e dos Estados Unidos se voltassem a encontrar. Mas desta feita, a Europa tinha assinado o seu declínio com a sua grande guerra civil, como lhe chamam alguns autores, e os Estados Unidos – e a União Soviética – eram as duas potências restantes que iriam dominar o mundo na segunda metade do século XX.</p>
 
       <div class="img-tt">
         <img src="img/0_05_W-Insight-1-HT-May12-2000x1125.jpg">
@@ -1638,12 +2425,8 @@ img.timeline-cabeca-mobile{
       Tal como a Grande Guerra, a II Guerra Mundial foi um dos acontecimentos mais trágicos da humanidade. Ceifou milhões de vidas e deixou a Europa totalmente destruída e traumatizada. Também significou a queda dos países europeus como potências internacionais. O ciclo a que a Grã-Bretanha tinha dado início ao transferir competências e responsabilidades para os Estados Unidos fechou-se definitivamente. Washington e Moscovo passaram a dominar as relações internacionais, o que transformaria o restante século XX.
     </p>
 
-
-
-
     <p class="p-texto">      
-      A princípio, os Estados Unidos apenas interferiram na guerra através de fornecimento de armamento aos Aliados, incluindo a União Soviética. No entanto, com o ataque japonês a Pearl Harbour, Washington viu-se na contingência de se defender, acabando por entrar na guerra no final de 1941. Esta mudança, bem como a vitória da União Soviética contra a Alemanha Nazi na frente leste, foram fundamentais para o desfecho do conflito. 
-      </p>
+      A princípio, os Estados Unidos apenas interferiram na guerra através de fornecimento de armamento aos Aliados, incluindo a União Soviética. No entanto, com o ataque japonês a Pearl Harbour, Washington viu-se na contingência de se defender, acabando por entrar na guerra no final de 1941. Esta mudança, bem como a vitória da União Soviética contra a Alemanha Nazi na frente leste, foram fundamentais para o desfecho do conflito.</p>
 
       <div class="img-tt">
         <div class="img-lado">
@@ -1710,27 +2493,21 @@ img.timeline-cabeca-mobile{
       <p class="p-legenda">“Ich bin ein Berliner” (discurso de JFK em Berlim Leste a 26 de Junho de 1963)</p>
     </div>
 
-
     <p class="p-texto">
       Como descrito anteriormente, os Estados Unidos prepararam a Guerra Fria através da reconstrução europeia, e também da institucionalização das relações transatlânticas. Estados Unidos e Europa Ocidental tinham um inimigo comum e a longa duração do conflito (1947-1991) proporcionou um convívio internacional que <span class="destaque-txt">solidificou as relações transatlânticas</span>.
     </p>
 
-    <p class="p-texto">Mais, a NATO começou por ser uma aliança de segurança, mas, com o tempo, passou a ser considerada por muitos dos seus membros e pela academia uma aliança de democracias, que encerrava em si não só preocupações (graves) de segurança, mas também uma composição de estados com valores comuns. Esta ideia ocidental de alianças permanentes com base em interesses e valores comuns – que já vinha do domínio britânico do século XVIII e XIX – consolidou-se de forma significativa. Ainda hoje, a figura da aliança permanente é vista por muitos como um dos maiores patrimónios do Ocidente. 
-      </p>
+    <p class="p-texto">Mais, a NATO começou por ser uma aliança de segurança, mas, com o tempo, passou a ser considerada por muitos dos seus membros e pela academia uma aliança de democracias, que encerrava em si não só preocupações (graves) de segurança, mas também uma composição de estados com valores comuns. Esta ideia ocidental de alianças permanentes com base em interesses e valores comuns – que já vinha do domínio britânico do século XVIII e XIX – consolidou-se de forma significativa. Ainda hoje, a figura da aliança permanente é vista por muitos como um dos maiores patrimónios do Ocidente.</p>
 
- 
       <div class="img-esq-2">
         <img src="img/08_0599_1989_Berlin_Mauer.jpg">
         <p class="p-legenda">O Muro de Berlim era o elemento físico mais emblemático da divisão do mundo na Guerra Fria</p>
       </div>
       
-
       <p class="p-texto">
       No entanto, a assimetria da Aliança Atlântica foi um problema permanente durante todo o conflito bipolar. Os membros europeus ressentiram-se muitas vezes do poder esmagador dos Estados Unidos – que acabava por ditar o rumo e as mais importantes decisões da NATO – e Washington cedo começou a queixar-se da falta de empenhamento (financeiro e militar) europeu na sua própria segurança – crítica que subsiste hoje com muito maior veemência, devido ao facto os conflitos internacionais já não terem a Europa como palco principal. Neste contexto, a NATO passou por algumas crises entre aliados. Por exemplo, em 1966, a França removeu as suas forças militares do comando militar da Aliança Atlântica. Só regressaram 43 anos depois, já finda a Guerra Fria.
       <br><br>
-      A verdade é que a presença militar norte-americana na Europa, bem como o chapéu de chuva nuclear providenciado pelos EUA durante a Guerra Fria foram elementos essenciais para evitar uma intervenção soviética no continente. 
-
-      </p>
+      A verdade é que a presença militar norte-americana na Europa, bem como o chapéu de chuva nuclear providenciado pelos EUA durante a Guerra Fria foram elementos essenciais para evitar uma intervenção soviética no continente. </p>
 
       <div class="img-tt">
         <img src="img/08_Foto picture-alliancedpa_17465533_1004.webp">
@@ -1741,19 +2518,29 @@ img.timeline-cabeca-mobile{
 
   <div id="popup-9" class="popup">
     <span class="p-close">&#10006;</span>
-    <p class="p-titulo">Isolacionismo entre Guerras</p>
+    <p class="p-titulo">Fim da Guerra Fria</p>
     
-    <p class="p-texto">  Os planos de Wilson, nomeadamente a entrada dos Estados Unidos na Sociedade das Nações foi vetada pelo Senado. Se por um lado, o presidente não estava disposto a fazer qualquer concessão relativamente ao seu plano para convencer os senadores a aderir, por outro, estes – bem como a opinião pública norte-americana – ainda estavam demasiado influenciados pelo mito do isolacionismo virtuoso para se envolverem de forma definitiva na política europeia. Essa era a exigência do plano Wilsoniano. 
+    <iframe width="690" height="388" src="https://www.youtube.com/embed/IguMXrgfrg8?si=ELEa4S1LOTOwswrj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <p class="p-texto">No final dos anos 1980, um conjunto de vontades deu origem ao fim inesperado da Guerra Fria. A presidência Reagan veio decidida a pressionar diplomaticamente a União Soviética, o Secretário-Geral do Partido Comunista, Mikhail Gorbachov, introduziu a <i>perestroika</i> e o <i>glasnost</i> (abertura política e reestruturação económica) convencido que a União Soviética só sobreviveria com grandes reformas e os sindicatos e grupos políticos na Polónia, Hungria e Checoslováquia começaram a revoltar-se contra os governos comunistas satélite de Moscovo. Os alemães da RDA derrubaram o Muro de Berlim. Gorbachov decidiu não reprimir as manifestações em nome do “comunismo com rosto humano”. Estavam criadas as condições para o colapso soviético, que veio a acontecer em 1991 (ainda que nenhum dos protagonistas esperasse este resultado). 
     </p>
 
+    <div class="img-dir-3">
+      <img src="img/09_photograph-Medium-Range-Ballistic-Missile-San-Cristobal-October-25-1962.webp">
+      <p class="p-legenda">Queda do Muro de Berlim</p>
+    </div>
 
-    <img src="img/img-1.jpg">
-    <p class="p-legenda">A América estará ao lado da Ucrânia pelo tempo que for preciso</p>
+    <p class="p-texto"> A queda do Muro de Berlim em 1989 e o fim da União Soviética geraram uma onda genuína de alegria e esperança no futuro – como provavelmente nunca mais se viu na história do Ocidente. A Unificação Alemã – que amedrontou a França e o Reino Unido, mas foi apoiada pelos Estados Unidos – ainda foi motivo de um certo desentendimento entre aliados, que foi ultrapassado por pressão americana.
+    </p>
+    
+    <p class="p-texto">Foi um momento de rara união, mas uma união sedimentada pelo triunfalismo, que mais tarde ou mais cedo traria problemas, como se veria a verificar durante a unipolaridade norte-americana. No entanto a história do Ocidente ficou profundamente marcada por estes acontecimentos, que foram uma espécie de culminar do sentido de liberdade que uniu os países dos dois lados do Atlântico desde o fim da II Guerra Mundial. </p>
+    
+    <div class="img-tt">
+      <img src="img/09_President_Bush_meets_privately_with_Solidarity_Leader_Lech_Walesa_of_Poland_in_the_residence_-_NARA_-_186403.jpg">
+      <p class="p-legenda">O presidente Bush reúne-se em privado com Wałęsa, em Novembro de 1989.</p>
+    </div>
 
-    <p class="p-texto">  O presidente morreu em 1924 e não chegou a ver a profunda crise em que caíram os estados dos dois lados do Atlântico. A queda abrupta da bolsa em 1929 nos Estados Unidos lançou país no período da Grande Depressão. A falência europeia do pós-guerra criou a base para o crescimento de partidos antidemocráticos em vários países europeus, notavelmente Benito Mussolini em Itália e Adolf Hitler na Alemanha. O Fascismo e o Nacional Socialismo tiveram um enorme sucesso entre os cidadãos comuns uma vez que, como o populismo hoje, prometiam soluções fáceis para problemas complexos, apontavam bodes expiatórios que redimiam italianos e alemães de culpa pela sua própria desgraça e prometiam a recuperação da grandiosidade dos seus países – especialmente a Alemanha – humilhada pela derrota na Grande Guerra e pela duríssima Paz de Versailles que foi obrigada a aceitar. Daí à tentativa de conquista da Europa foi um pequeno passo.     
-      <br><br>
-      Depois de um encontro tão profundo na I Guerra Mundial, Estados Unidos e Europa estavam de costas voltadas num momento determinante das suas histórias. Seria preciso esperar pelo ataque à base naval americana de Pearl Harbour pelo exército japonês, envolvido na frente do Pacífico da II Guerra Mundial ao lado do Eixo, para que os destinos da Europa e dos Estados Unidos se voltassem a encontrar. Mas desta feita, a Europa tinha assinado o seu declínio com a sua grande guerra civil, como lhe chamam alguns autores, e os Estados Unidos – e a União Soviética – eram as duas potências restantes que iriam dominar o mundo na segunda metade do século XX. 
-      </p>
+
   </div>
 
 
@@ -1873,6 +2660,28 @@ for (let i = 0; i < 12; i++) {
     
     $('#popup-' + [i]).css('display', 'block');
     event.stopPropagation();
+
+    console.log('asdasdas');
+    
+  });
+
+  $('#popup-' + [i]).click(function(event){
+  event.stopPropagation();
+});
+  
+
+}
+
+var btnsm = document.querySelectorAll("#btn-m > g");
+
+for (let i = 0; i < 12; i++) {
+
+  $('#botaom-' + [i]).click(function(event){
+    
+    $('#popup-' + [i]).css('display', 'block');
+    event.stopPropagation();
+
+    console.log('asdasdas');
     
   });
 
